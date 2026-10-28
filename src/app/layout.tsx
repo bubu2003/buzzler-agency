@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import MobileQuickBar from "@/components/MobileQuickBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +20,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://buzzler-agency.vercel.app"),
   title: "Buzzler Agency | Creative Digital Marketing for Hotels in Puri, Odisha",
   description:
     "Make your hotel the buzz of Puri. Video-first digital marketing, high-converting Meta & Google ads, and authentic influencer campaigns for Puri's premier hospitality brands.",
@@ -51,6 +53,7 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
       <body className="min-h-screen bg-[#FAF7F2] text-[#141413] antialiased selection:bg-[#F59E0B]/30 selection:text-black">
         {children}
+        <MobileQuickBar />
       </body>
     </html>
   );
