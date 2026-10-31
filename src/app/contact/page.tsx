@@ -103,7 +103,7 @@ export default function ContactQuotePage() {
             <div className="lg:col-span-5 space-y-6">
               {/* Direct WhatsApp Callout */}
               <a
-                href="https://wa.me/919437000000?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20request%20a%20marketing%20quote%20for%20my%20business%20in%20Puri."
+                href="https://wa.me/917873343141?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20request%20a%20marketing%20quote%20for%20my%20business%20in%20Puri."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block p-6 rounded-3xl bg-emerald-50 border border-emerald-200/80 hover:border-emerald-500 hover:shadow-md transition-all group"
@@ -122,13 +122,13 @@ export default function ContactQuotePage() {
                   </div>
                 </div>
                 <p className="text-xs text-stone-600 leading-relaxed">
-                  Connect directly with our founding team on WhatsApp: <strong>+91 94370 00000</strong>. Instant answers regarding shoot schedules and ad pricing.
+                  Connect directly with our founding team on WhatsApp: <strong>+91 78733 43141</strong>. Instant answers regarding shoot schedules and ad pricing.
                 </p>
               </a>
 
               {/* Direct Phone Callout */}
               <a
-                href="tel:+919437000000"
+                href="tel:+917873343141"
                 className="block p-6 rounded-3xl bg-white border border-stone-200 hover:border-stone-400 hover:shadow-md transition-all group"
               >
                 <div className="flex items-center gap-3.5 mb-2">
@@ -140,7 +140,7 @@ export default function ContactQuotePage() {
                       Direct Telephone
                     </span>
                     <h3 className="text-lg font-bold text-stone-900 font-serif mt-0.5">
-                      +91 94370 00000
+                      +91 78733 43141
                     </h3>
                   </div>
                 </div>
@@ -271,7 +271,7 @@ export default function ContactQuotePage() {
                       <input
                         type="tel"
                         required
-                        placeholder="+91 94370 00000"
+                        placeholder="+91 78733 43141"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"

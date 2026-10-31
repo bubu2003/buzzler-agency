@@ -89,7 +89,7 @@ export default function ClosingCTA() {
             {/* Quick Connect Cards */}
             <div className="space-y-3">
               <a
-                href="https://wa.me/919437000000?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20request%20a%20marketing%20quote%20for%20my%20business%20in%20Puri."
+                href="https://wa.me/917873343141?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20request%20a%20marketing%20quote%20for%20my%20business%20in%20Puri."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-between p-4 rounded-2xl bg-white border border-stone-200 hover:border-emerald-500 hover:shadow-md transition-all group"
@@ -103,7 +103,7 @@ export default function ClosingCTA() {
                       Fastest Response
                     </span>
                     <span className="text-sm font-bold text-stone-900">
-                      Chat on WhatsApp (+91 94370 00000)
+                      Chat on WhatsApp (+91 78733 43141)
                     </span>
                   </div>
                 </div>
@@ -111,7 +111,7 @@ export default function ClosingCTA() {
               </a>
 
               <a
-                href="tel:+919437000000"
+                href="tel:+917873343141"
                 className="flex items-center justify-between p-4 rounded-2xl bg-white border border-stone-200 hover:border-stone-400 hover:shadow-md transition-all group"
               >
                 <div className="flex items-center gap-3.5">
@@ -123,7 +123,7 @@ export default function ClosingCTA() {
                       Direct Phone
                     </span>
                     <span className="text-sm font-bold text-stone-900">
-                      +91 94370 00000 (Mon–Sat, 9:30am–7pm)
+                      +91 78733 43141 (Mon–Sat, 9:30am–7pm)
                     </span>
                   </div>
                 </div>

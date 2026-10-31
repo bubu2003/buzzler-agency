@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://buzzler-agency.vercel.app";
+  const baseUrl = "https://www.buzzler.co.in";
 
   const routes = [
     "",

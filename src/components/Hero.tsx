@@ -152,7 +152,7 @@ export default function Hero() {
             </Link>
 
             <a
-              href="https://wa.me/919437000000?text=Hi%20Buzzler,%20I'd%20like%20to%20know%20how%20you%20can%20help%20my%20business%20in%20Puri."
+              href="https://wa.me/917873343141?text=Hi%20Buzzler,%20I'd%20like%20to%20know%20how%20you%20can%20help%20my%20business%20in%20Puri."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-sm font-semibold hover:bg-emerald-100 transition-all"

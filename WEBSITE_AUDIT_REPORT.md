@@ -1,6 +1,6 @@
 # Comprehensive Website Audit, UX Review & SEO Content Strategy Report
 **Project:** Buzzler Agency (`buzzler-agency`)  
-**Domain / Live URL:** `https://buzzler-agency.vercel.app`  
+**Domain / Live URL:** `https://www.buzzler.co.in`  
 **Local Test Environment:** `http://localhost:3000` (Next.js 16.4.3 Turbopack, React 19.3.0, Tailwind CSS v4)  
 **Date of Audit:** October 31, 2026  
 **Auditor:** Senior Website Auditor, UX Reviewer & SEO Content Strategist  
@@ -209,7 +209,7 @@ The primary amber accent `#F59E0B` has a contrast ratio of only **2.14:1** when 
 - **H1:** `Get a customized growth marketing quote for your business.`
 - **Existing Description:** `Tell us about your brand in Puri, Bhubaneswar, or coastal Odisha. We will audit your current online footprint and prepare a tailor-made roadmap with transparent pricing.`
 - **Form Structure:** Very comprehensive (Category, Scale, Multi-Service Select, Budget).
-- **Issue:** Phone number `+91 94370 00000` is obviously a dummy number. If a live visitor attempts to dial or message, it fails. A disclaimer or real phone number is urgently needed.
+- **Issue:** Phone number `+91 78733 43141` is obviously a dummy number. If a live visitor attempts to dial or message, it fails. A disclaimer or real phone number is urgently needed.
 
 ---
 
@@ -291,8 +291,8 @@ The primary amber accent `#F59E0B` has a contrast ratio of only **2.14:1** when 
        "@context": "https://schema.org",
        "@type": "ProfessionalService",
        "name": "Buzzler Agency",
-       "url": "https://buzzler-agency.vercel.app",
-       "logo": "https://buzzler-agency.vercel.app/buzzler-logo.jpg",
+       "url": "https://www.buzzler.co.in",
+       "logo": "https://www.buzzler.co.in/buzzler-logo.jpg",
        "address": {
          "@type": "PostalAddress",
          "streetAddress": "Marine Drive Road, Swargadwar",
@@ -301,7 +301,7 @@ The primary amber accent `#F59E0B` has a contrast ratio of only **2.14:1** when 
          "postalCode": "752001",
          "addressCountry": "IN"
        },
-       "telephone": "+919437000000",
+       "telephone": "+917873343141",
        "areaServed": ["Puri", "Bhubaneswar", "Cuttack", "Konark"]
      }
      ```

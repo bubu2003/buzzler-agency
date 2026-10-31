@@ -121,7 +121,7 @@ export default function ServiceDetailView({ service }: { service: ServiceDetailP
         addressRegion: "Odisha",
         addressCountry: "IN",
       },
-      telephone: "+91-9437000000",
+      telephone: "+91-7873343141",
     },
     areaServed: {
       "@type": "City",
@@ -186,7 +186,7 @@ export default function ServiceDetailView({ service }: { service: ServiceDetailP
             </Link>
 
             <a
-              href={`https://wa.me/919437000000?text=Hi%20Buzzler,%20I'm%20inquiring%20about%20your%20${encodeURIComponent(
+              href={`https://wa.me/917873343141?text=Hi%20Buzzler,%20I'm%20inquiring%20about%20your%20${encodeURIComponent(
                 service.h1Title
               )}%20for%20my%20hotel%20in%20Puri.`}
               target="_blank"
@@ -542,7 +542,7 @@ export default function ServiceDetailView({ service }: { service: ServiceDetailP
                       <input
                         type="tel"
                         required
-                        placeholder="+91 94370 00000"
+                        placeholder="+91 78733 43141"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 text-xs sm:text-sm focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"

@@ -167,7 +167,7 @@ export default function ServicesHubPage() {
                           <ArrowUpRight className="w-3.5 h-3.5 text-[#F59E0B]" />
                         </Link>
                         <a
-                          href={`https://wa.me/919437000000?text=Hi%20Buzzler,%20I'm%20interested%20in%20${encodeURIComponent(
+                          href={`https://wa.me/917873343141?text=Hi%20Buzzler,%20I'm%20interested%20in%20${encodeURIComponent(
                             service.title
                           )}%20for%20my%20business%20in%20Puri.`}
                           target="_blank"

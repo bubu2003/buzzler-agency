@@ -43,7 +43,7 @@ export default function Footer() {
 
             <div className="flex items-center gap-3 pt-2">
               <a
-                href="https://wa.me/919437000000?text=Hi%20Buzzler..."
+                href="https://wa.me/917873343141?text=Hi%20Buzzler..."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-xl bg-stone-900 hover:bg-emerald-950 text-emerald-400 border border-stone-800 transition-colors"
@@ -52,7 +52,7 @@ export default function Footer() {
                 <MessageCircle className="w-4 h-4" />
               </a>
               <a
-                href="tel:+919437000000"
+                href="tel:+917873343141"
                 className="p-2 rounded-xl bg-stone-900 hover:bg-stone-800 text-stone-300 border border-stone-800 transition-colors"
                 title="Call"
               >

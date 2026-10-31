@@ -210,7 +210,7 @@ export default function AboutPage() {
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
               <a
-                href="https://wa.me/919437000000?text=Hi%20Buzzler,%20I'd%20like%20to%20learn%20more%20about%20working%20together."
+                href="https://wa.me/917873343141?text=Hi%20Buzzler,%20I'd%20like%20to%20learn%20more%20about%20working%20together."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-white/10 text-white text-xs sm:text-sm font-semibold hover:bg-white/20 border border-white/20 transition-colors"
