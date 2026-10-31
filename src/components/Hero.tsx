@@ -14,42 +14,78 @@ import {
   CheckCircle2,
   Volume2,
   Compass,
+  UtensilsCrossed,
+  Dumbbell,
+  GraduationCap,
   Building2,
-  Waves,
+  Store,
 } from "lucide-react";
 
-const hotelPresets = [
+export const industryPresets = [
   {
-    id: "beach",
-    label: "Beachfront Resort",
-    location: "Marine Drive & Golden Beach",
-    hook: "Sunrise sea-view balcony reels & Bengal weekend staycation ads",
-    views: "185K+ targeted views",
-    reach: "Kolkata, Ranchi & Bhubaneswar",
-    reelsHighlight: "Drone ocean flyover + candle-lit beach dining",
+    id: "cafe",
+    icon: UtensilsCrossed,
+    label: "Cafe & Restaurant",
+    categoryBadge: "F&B • Nightlife • Dining",
+    businessName: "The Coastal Bean & Grill",
+    location: "VIP Road & Sea Beach, Puri",
+    hook: "Sizzling seafood sizzler reels & weekend coastal live-music food vlog collabs",
+    views: "240K+ food lover views",
+    reach: "Puri, Cuttack & Bhubaneswar youth/families",
+    reelsHighlight: "Steam rising from claypot biryani + golden coffee latte art",
+    primaryMetric: "+45% Weekend Table Footfall",
+    monthlyDeliverable: "8x Sizzling 4K Food Reels + Local Foodie Collabs",
+    bgGradient: "radial-gradient(circle at 50% 30%, #f97316 0%, #1c1917 80%)",
   },
   {
-    id: "heritage",
-    label: "Temple Heritage Stay",
-    location: "Grand Road & Swargadwar",
-    hook: "Pilgrimage comfort storytelling & Mahaprasad culinary reels",
-    views: "140K+ family travelers",
-    reach: "Odisha, Bengal, Bihar & UP",
-    reelsHighlight: "Serene courtyard walk + seamless temple darshan guide",
+    id: "gym",
+    icon: Dumbbell,
+    label: "Gym & Fitness Studio",
+    categoryBadge: "Health • Strength • CrossFit",
+    businessName: "IronPulse Strength Club",
+    location: "Grand Road / College Square, Puri",
+    hook: "High-octane member transformation stories & free 3-day WhatsApp workout pass ads",
+    views: "165K+ local fitness views",
+    reach: "18-35 age group in Puri & surrounding colleges",
+    reelsHighlight: "Heavy barbell deadlifts + sweat-drenched cinematic athlete spotlights",
+    primaryMetric: "140+ Trial WhatsApp Leads / Mo",
+    monthlyDeliverable: "6x High-Energy Reels + Meta Membership Ad Funnel",
+    bgGradient: "radial-gradient(circle at 50% 30%, #ef4444 0%, #1c1917 80%)",
   },
   {
-    id: "homestay",
-    label: "Boutique Homestay / Villa",
-    location: "Chilika & Balukhand Coastal",
-    hook: "Quiet workstation reels & birdwatching slow-travel guides",
-    views: "95K+ nature seekers",
-    reach: "Bangalore, Kolkata & IT Hubs",
-    reelsHighlight: "Eco-cottage tour + local seafood boat dining",
+    id: "hotel",
+    icon: Building2,
+    label: "Hotel & Resort",
+    categoryBadge: "Hospitality • Tourism • Stays",
+    businessName: "Bay Breeze Ocean Resort",
+    location: "Marine Drive & Golden Beach, Puri",
+    hook: "Sunrise sea-view balcony reels & direct WhatsApp booking funnels bypassing OTAs",
+    views: "195K+ travelers reached",
+    reach: "Kolkata, Ranchi, Jamshedpur & Bhubaneswar",
+    reelsHighlight: "Drone ocean flyover + candle-lit beachfront dinner setup",
+    primaryMetric: "-25% OTA Commission Loss",
+    monthlyDeliverable: "4K Drone Balcony Tours + Kolkata Weekend Ad Funnel",
+    bgGradient: "radial-gradient(circle at 50% 30%, #f59e0b 0%, #1c1917 80%)",
+  },
+  {
+    id: "college",
+    icon: GraduationCap,
+    label: "School & College",
+    categoryBadge: "Education • Academics • Campus",
+    businessName: "Heritage International Academy",
+    location: "Puri-Bhubaneswar Highway Corridor",
+    hook: "Drone campus tour, smart-lab highlights, and high-trust admission season parent ads",
+    views: "310K+ parent & student views",
+    reach: "Coastal Odisha, Khordha, Puri & Cuttack districts",
+    reelsHighlight: "Robotics lab innovations + sports complex aerial drone tour",
+    primaryMetric: "380+ Verified Admission Inquiries",
+    monthlyDeliverable: "Campus Showcase Film + Google Search Admission Ads",
+    bgGradient: "radial-gradient(circle at 50% 30%, #3b82f6 0%, #1c1917 80%)",
   },
 ];
 
 export default function Hero() {
-  const [activePreset, setActivePreset] = useState(hotelPresets[0]);
+  const [activePreset, setActivePreset] = useState(industryPresets[0]);
   const [isPlayingReel, setIsPlayingReel] = useState(false);
 
   return (
@@ -64,7 +100,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-900/[0.04] border border-stone-300/80 mb-6 shadow-2xs hover:bg-stone-900/[0.07] transition-all">
             <span className="flex h-2 w-2 rounded-full bg-[#F59E0B] animate-pulse" />
             <span className="text-xs font-semibold uppercase tracking-wider text-stone-800">
-              Creative Agency for Puri Hospitality
+              Creative Growth Agency for Puri & Odisha Brands
             </span>
             <span className="text-stone-300">|</span>
             <span className="text-xs font-medium text-stone-600 flex items-center gap-1">
@@ -74,7 +110,7 @@ export default function Hero() {
 
           {/* Main Editorial Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#141413] leading-[1.08] mb-6 font-serif">
-            Make your hotel the{" "}
+            Make your brand the{" "}
             <span className="relative inline-block text-stone-900">
               buzz of Puri.
               <svg
@@ -93,15 +129,15 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* Concise supporting copy */}
-          <p className="text-lg sm:text-xl text-stone-600 max-w-2xl mb-8 leading-relaxed font-normal">
-            Video-first digital marketing, high-converting Meta & Google ads, and authentic local storytelling crafted for Puri's premier hotels, beach resorts, and hospitality brands.
+          {/* Concise supporting copy highlighting versatility */}
+          <p className="text-lg sm:text-xl text-stone-600 max-w-3xl mb-8 leading-relaxed font-normal">
+            Video-first creative content, high-converting Meta & Google ads, and authentic local storytelling crafted for **cafes, restaurants, gyms, hotels, schools & colleges** across Puri and Odisha.
           </p>
 
           {/* Dual CTAs + WhatsApp */}
           <div className="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto mb-10">
             <Link
-              href="#quote"
+              href="/contact"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#141413] text-[#FAF7F2] text-base font-semibold hover:bg-black transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
               <span>Let's Talk</span>
@@ -109,14 +145,14 @@ export default function Hero() {
             </Link>
 
             <Link
-              href="#work"
+              href="/work"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-stone-800 border border-stone-300 text-base font-semibold hover:bg-stone-50 transition-all shadow-2xs hover:-translate-y-0.5"
             >
               <span>Explore Our Work</span>
             </Link>
 
             <a
-              href="https://wa.me/919437000000?text=Hi%20Buzzler,%20I'd%20like%20to%20know%20how%20you%20can%20help%20my%20hotel%20in%20Puri."
+              href="https://wa.me/919437000000?text=Hi%20Buzzler,%20I'd%20like%20to%20know%20how%20you%20can%20help%20my%20business%20in%20Puri."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-sm font-semibold hover:bg-emerald-100 transition-all"
@@ -134,69 +170,67 @@ export default function Hero() {
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-[#F59E0B]" />
-              Deep Puri Tourism Knowledge
+              On-Ground in Puri & Bhubaneswar
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-[#F59E0B]" />
-              Multi-Lingual (EN • HI • OR • BN)
+              Multi-Lingual (Odia • Bengali • Hindi • English)
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-[#F59E0B]" />
-              Transparent Monthly Deliverables
+              Measurable Leads & Walk-In Traffic
             </span>
           </div>
         </div>
 
-        {/* Hero Interactive Clay-Style Tactile Visual */}
+        {/* Hero Interactive Clay-Style Multi-Industry Simulator */}
         <div className="mt-14 max-w-5xl mx-auto">
           <div className="bg-white/80 backdrop-blur-md rounded-3xl border border-stone-300/80 p-4 sm:p-6 shadow-xl relative overflow-hidden">
-            {/* Top Bar of the Interactive Mockup */}
+            {/* Top Bar of the Interactive Mockup with 4 Industry Switchers */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-4 border-b border-stone-200">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-stone-300" />
                 <div className="w-3 h-3 rounded-full bg-stone-300" />
                 <div className="w-3 h-3 rounded-full bg-stone-300" />
                 <span className="ml-2 text-xs font-mono uppercase tracking-wider text-stone-500 font-semibold">
-                  Buzzler Studio Preview • Hospitality Reel & Ads Engine
+                  Buzzler Reel & Growth Simulator
                 </span>
               </div>
-              {/* Hotel type selector pills */}
+
+              {/* Industry selector buttons */}
               <div className="flex flex-wrap gap-1.5">
-                {hotelPresets.map((preset) => (
-                  <button
-                    key={preset.id}
-                    onClick={() => setActivePreset(preset)}
-                    className={`text-xs px-3 py-1.5 rounded-full font-medium transition-all ${
-                      activePreset.id === preset.id
-                        ? "bg-[#141413] text-white shadow-xs"
-                        : "bg-stone-100 text-stone-600 hover:bg-stone-200/80"
-                    }`}
-                  >
-                    {preset.label}
-                  </button>
-                ))}
+                {industryPresets.map((preset) => {
+                  const Icon = preset.icon;
+                  return (
+                    <button
+                      key={preset.id}
+                      onClick={() => setActivePreset(preset)}
+                      className={`text-xs px-3 py-1.5 rounded-full font-medium transition-all flex items-center gap-1.5 cursor-pointer ${
+                        activePreset.id === preset.id
+                          ? "bg-[#141413] text-white shadow-xs"
+                          : "bg-stone-100 text-stone-600 hover:bg-stone-200/80"
+                      }`}
+                    >
+                      <Icon className="w-3.5 h-3.5 text-[#F59E0B]" />
+                      <span>{preset.label}</span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
             {/* Inner Interactive Showcase Grid */}
             <div className="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-              {/* Left Column: Vertical Hotel Reel Simulator */}
+              {/* Left Column: Vertical Dynamic Reel Simulator */}
               <div className="lg:col-span-5 flex justify-center">
-                <div className="relative w-64 h-[380px] sm:w-72 sm:h-[420px] rounded-3xl overflow-hidden shadow-2xl border-4 border-stone-900 bg-stone-900 text-white flex flex-col justify-between p-4 group">
-                  {/* Background simulated gradient / beach video poster */}
+                <div className="relative w-64 h-[390px] sm:w-72 sm:h-[430px] rounded-3xl overflow-hidden shadow-2xl border-4 border-stone-900 bg-stone-900 text-white flex flex-col justify-between p-4 group">
+                  {/* Background simulated gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/60 to-stone-800 -z-10" />
-                  
-                  {/* Subtle video ambient glow */}
+
+                  {/* Video ambient glow */}
                   <div
                     className="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-700 -z-20"
-                    style={{
-                      backgroundImage:
-                        activePreset.id === "beach"
-                          ? "radial-gradient(circle at 50% 30%, #f59e0b 0%, #1c1917 80%)"
-                          : activePreset.id === "heritage"
-                          ? "radial-gradient(circle at 50% 30%, #d97706 0%, #1c1917 80%)"
-                          : "radial-gradient(circle at 50% 30%, #0d9488 0%, #1c1917 80%)",
-                    }}
+                    style={{ backgroundImage: activePreset.bgGradient }}
                   />
 
                   {/* Reel Top Bar */}
@@ -207,7 +241,7 @@ export default function Hero() {
                     </span>
                     <button
                       onClick={() => setIsPlayingReel(!isPlayingReel)}
-                      className="p-1 rounded-full bg-black/50 hover:bg-black/80 text-white/80 hover:text-white transition-colors"
+                      className="p-1 rounded-full bg-black/50 hover:bg-black/80 text-white/80 hover:text-white transition-colors cursor-pointer"
                       aria-label="Sound toggle"
                     >
                       <Volume2 className="w-3.5 h-3.5" />
@@ -215,21 +249,24 @@ export default function Hero() {
                   </div>
 
                   {/* Reel Center Action */}
-                  <div className="flex flex-col items-center justify-center my-auto cursor-pointer" onClick={() => setIsPlayingReel(!isPlayingReel)}>
+                  <div
+                    className="flex flex-col items-center justify-center my-auto cursor-pointer"
+                    onClick={() => setIsPlayingReel(!isPlayingReel)}
+                  >
                     <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#F59E0B] group-hover:text-black transition-all shadow-lg text-white">
                       <Play className="w-6 h-6 ml-0.5 fill-current" />
                     </div>
                     <span className="mt-3 text-xs font-semibold text-white/90 drop-shadow-sm">
-                      {isPlayingReel ? "Playing Preview..." : "Tap to Preview Creative Reel"}
+                      {isPlayingReel ? "Playing Reel Preview..." : "Tap to Preview Creative Reel"}
                     </span>
                   </div>
 
                   {/* Reel Bottom Meta Overlay */}
                   <div className="space-y-2 text-left bg-black/60 backdrop-blur-md p-3 rounded-2xl border border-white/10">
                     <div className="flex items-center gap-2">
-                      <span className="text-xs font-bold text-amber-400">@buzzler.puri</span>
+                      <span className="text-xs font-bold text-amber-400">@buzzler.odisha</span>
                       <span className="text-[10px] bg-white/20 px-1.5 py-0.5 rounded text-white">
-                        Paid Partnership
+                        {activePreset.categoryBadge}
                       </span>
                     </div>
                     <p className="text-xs text-white/90 font-medium line-clamp-2">
@@ -241,14 +278,14 @@ export default function Hero() {
                         {activePreset.views}
                       </span>
                       <span className="text-amber-300 font-semibold text-[10px]">
-                        +34 Direct Booking DMs
+                        {activePreset.primaryMetric}
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Right Column: Strategic Campaign Dashboard */}
+              {/* Right Column: Strategic Growth Dashboard */}
               <div className="lg:col-span-7 text-left space-y-4">
                 <div className="space-y-1">
                   <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-800 bg-amber-100/70 px-2.5 py-1 rounded-full">
@@ -256,10 +293,10 @@ export default function Hero() {
                     Strategy Profile: {activePreset.label}
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-stone-900 font-serif">
-                    How Buzzler attracts visitors to {activePreset.location}
+                    How Buzzler attracts customers to {activePreset.businessName}
                   </h3>
                   <p className="text-sm text-stone-600">
-                    Tailored content angles tested on real hospitality buyer journeys during peak beach season, Durga Puja, and Rath Yatra.
+                    Customized creative angles and local ad geotargeting tailored to the buyer journey in Puri, Bhubaneswar & coastal Odisha.
                   </p>
                 </div>
 
@@ -267,7 +304,7 @@ export default function Hero() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                   <div className="p-3.5 rounded-2xl bg-[#FAF7F2] border border-stone-200">
                     <span className="text-[11px] uppercase font-bold tracking-wider text-stone-500">
-                      Content Hook
+                      Content Hook Angle
                     </span>
                     <p className="text-sm font-semibold text-stone-900 mt-1">
                       {activePreset.hook}
@@ -276,7 +313,7 @@ export default function Hero() {
 
                   <div className="p-3.5 rounded-2xl bg-[#FAF7F2] border border-stone-200">
                     <span className="text-[11px] uppercase font-bold tracking-wider text-stone-500">
-                      Ad Geotargeting
+                      Ad Geotargeting & Audience
                     </span>
                     <p className="text-sm font-semibold text-stone-900 mt-1">
                       {activePreset.reach}
@@ -287,24 +324,24 @@ export default function Hero() {
                 {/* Campaign Deliverables Checklist */}
                 <div className="p-4 rounded-2xl bg-amber-50/60 border border-amber-200/80 space-y-2">
                   <span className="text-xs font-bold text-amber-950 uppercase tracking-wider block">
-                    What Buzzler Deploys Every Month:
+                    What Buzzler Deploys For {activePreset.label}s:
                   </span>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-800 font-medium">
                     <div className="flex items-center gap-1.5">
                       <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                      <span>4x High-Production 4K Reels</span>
+                      <span>{activePreset.monthlyDeliverable}</span>
                     </div>
                     <div className="flex items-center gap-1.5">
                       <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                      <span>Meta & Google Ads Campaign Setup</span>
+                      <span>Meta & Google Local Ad Campaigns</span>
                     </div>
                     <div className="flex items-center gap-1.5">
                       <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                      <span>Local Influencer Collab Strategy</span>
+                      <span>Local Influencer Collaborations</span>
                     </div>
                     <div className="flex items-center gap-1.5">
                       <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                      <span>Transparent Booking Attribution</span>
+                      <span>Direct WhatsApp / Call Lead Tracking</span>
                     </div>
                   </div>
                 </div>
@@ -312,13 +349,13 @@ export default function Hero() {
                 {/* Action button inside mockup */}
                 <div className="pt-2 flex items-center justify-between">
                   <span className="text-xs text-stone-500">
-                    No lock-in contracts • Customized quote per property
+                    No lock-in contracts • Tailored quote per sector
                   </span>
                   <Link
-                    href="#quote"
+                    href={`/contact?industry=${activePreset.id}`}
                     className="inline-flex items-center gap-1.5 text-xs font-bold px-4 py-2 rounded-full bg-[#141413] text-white hover:bg-black transition-colors"
                   >
-                    <span>Request Strategy Quote</span>
+                    <span>Request {activePreset.label} Strategy</span>
                     <ArrowUpRight className="w-3 h-3 text-[#F59E0B]" />
                   </Link>
                 </div>

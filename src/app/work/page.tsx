@@ -18,9 +18,51 @@ import {
 
 const allProjects = [
   {
+    id: "coastal-bean",
+    slug: "/#work",
+    badge: "Cafe & Dining",
+    serviceCategory: "video",
+    propertyCategory: "cafe",
+    title: "The Coastal Bean Cafe & Roastery",
+    propertyType: "Artisanal Beachside Cafe & Roastery",
+    location: "VIP Road / Sea Beach, Puri",
+    summary:
+      "High-contrast sizzling food reels, artisanal pour-over macro cinematography, and weekend footfall Meta ads driving packed dining tables.",
+    deliverables: ["8x 4K Master Vertical Reels", "Local Foodie Creator Collabs", "Weekend Footfall Meta Ads", "WhatsApp Table Booking Hook"],
+    gradientTheme: "from-orange-600 via-amber-600 to-stone-900",
+  },
+  {
+    id: "ironpulse-fitness",
+    slug: "/#work",
+    badge: "Gym & Fitness",
+    serviceCategory: "ads",
+    propertyCategory: "gym",
+    title: "IronPulse Strength & CrossFit Club",
+    propertyType: "5,000 sq.ft Strength & Conditioning Facility",
+    location: "Grand Road / College Square, Puri",
+    summary:
+      "High-octane workout cinematography, member transformation stories, and a hyper-local Meta ad funnel delivering instant 3-day WhatsApp trial passes.",
+    deliverables: ["6x High-Energy Vertical Reels", "Member Transformation Interviews", "Hyper-Local Meta Ad Campaign", "Instant Trial Pass Bot"],
+    gradientTheme: "from-red-600 via-stone-800 to-stone-950",
+  },
+  {
+    id: "heritage-academy",
+    slug: "/#work",
+    badge: "School & College",
+    serviceCategory: "video",
+    propertyCategory: "education",
+    title: "Heritage International Academy & College",
+    propertyType: "Senior Secondary & Junior College",
+    location: "Puri-Bhubaneswar Highway Corridor",
+    summary:
+      "Campus drone flyovers, STEM lab showcases, and parent testimonial reels coupled with Google search ads driving 400+ admission inquiries.",
+    deliverables: ["Master 4K Campus Drone Tour", "Google Search Admission Ads", "Multi-Lingual Parent Testimonials", "Direct Admissions Desk Hook"],
+    gradientTheme: "from-blue-700 via-indigo-900 to-stone-950",
+  },
+  {
     id: "bay-breeze",
     slug: "/work/bay-breeze-resort",
-    badge: "Beachfront Luxury",
+    badge: "Beachfront Resort",
     serviceCategory: "video",
     propertyCategory: "resort",
     title: "Bay Breeze Grand Resort & Spa",
@@ -34,9 +76,9 @@ const allProjects = [
   {
     id: "jagannath-haveli",
     slug: "/work/jagannath-heritage-haveli",
-    badge: "Heritage Pilgrimage",
+    badge: "Heritage Stay",
     serviceCategory: "branding",
-    propertyCategory: "heritage",
+    propertyCategory: "resort",
     title: "Jagannath Heritage Haveli",
     propertyType: "Boutique 28-Room Heritage Stay",
     location: "Grand Road / Swargadwar, Puri",
@@ -48,9 +90,9 @@ const allProjects = [
   {
     id: "chilika-retreat",
     slug: "/work/chilika-eco-retreat",
-    badge: "Eco-Tourism & Nature",
+    badge: "Eco-Tourism",
     serviceCategory: "influencer",
-    propertyCategory: "eco",
+    propertyCategory: "resort",
     title: "Chilika Lagoon Eco-Retreat",
     propertyType: "18 Waterfront Cottages & Glamping",
     location: "Coastal Puri District, Satapada Road",
@@ -90,13 +132,13 @@ export default function WorkHubPage() {
           <div className="max-w-3xl mb-12">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-900 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-4">
               <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
-              Portfolio & Case Studies
+              Multi-Industry Portfolio & Case Studies
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#141413] font-serif leading-[1.12] mb-6">
-              Concept campaigns built for Puri hospitality.
+              Concept campaigns engineered for Puri & Odisha brands.
             </h1>
             <p className="text-base sm:text-lg text-stone-600 leading-relaxed font-normal">
-              Explore our documented case study roadmaps showing how Buzzler combines 4K drone cinematography, multi-lingual storytelling, and targeted ad funnels for coastal hotels.
+              Explore our documented case study roadmaps and execution frameworks showing how Buzzler combines 4K cinematography, strategic ad funnels, and creator marketing across cafes, gyms, colleges, and hotels.
             </p>
 
             {/* Ethics Transparency Pill */}
@@ -115,12 +157,12 @@ export default function WorkHubPage() {
             </span>
             {[
               { id: "all", label: "All Projects" },
-              { id: "video", label: "Video Production" },
-              { id: "branding", label: "Branding & Identity" },
-              { id: "influencer", label: "Influencer Campaigns" },
-              { id: "resort", label: "Beachfront Resorts" },
-              { id: "heritage", label: "Heritage Havelis" },
-              { id: "eco", label: "Eco-Tourism" },
+              { id: "cafe", label: "Cafes & Dining" },
+              { id: "gym", label: "Gyms & Fitness" },
+              { id: "education", label: "Schools & Colleges" },
+              { id: "resort", label: "Hotels & Resorts" },
+              { id: "video", label: "Video & Reels" },
+              { id: "ads", label: "Meta & Google Ads" },
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -215,10 +257,10 @@ export default function WorkHubPage() {
                 Founder Pilot Cohort
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold font-serif text-[#FAF7F2]">
-                Want your hotel to be our next documented case study?
+                Want your business to be our next documented case study?
               </h2>
               <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
-                We are onboarding our final pilot hotel partner in Puri. You receive comprehensive video production & ads setup at preferential introductory rates in exchange for documenting the booking results.
+                We are onboarding pilot partners across cafes, gyms, schools/colleges, and hotels in Puri and Bhubaneswar. You receive full video production & ad funnels at introductory rates in exchange for documenting growth metrics.
               </p>
             </div>
 

@@ -21,24 +21,27 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://buzzler-agency.vercel.app"),
-  title: "Buzzler Agency | Creative Digital Marketing for Hotels in Puri, Odisha",
+  title: "Buzzler Agency | Creative Digital Marketing for Cafes, Gyms, Schools & Stays in Puri, Odisha",
   description:
-    "Make your hotel the buzz of Puri. Video-first digital marketing, high-converting Meta & Google ads, and authentic influencer campaigns for Puri's premier hospitality brands.",
+    "Make your brand the buzz of Puri. Video-first social marketing, high-converting Meta & Google ads, and creator collaborations for cafes, gyms, colleges, schools, and hotels in Puri and Odisha.",
   keywords: [
     "digital marketing agency in Puri",
-    "hotel video marketing Puri",
-    "hotel marketing agency Odisha",
-    "hotel reels and Instagram marketing Puri",
-    "hospitality advertising Puri",
+    "social media marketing Puri",
+    "cafe restaurant marketing Puri",
+    "gym fitness advertising Puri",
+    "school college admission marketing Odisha",
+    "hotel digital marketing Puri",
+    "video reels ads production Puri Odisha",
+    "Meta ads agency Puri",
   ],
   authors: [{ name: "Buzzler Agency" }],
   icons: {
     icon: "/buzzler-logo.jpg",
   },
   openGraph: {
-    title: "Buzzler Agency | Digital Marketing for Hotels in Puri",
+    title: "Buzzler Agency | Creative Digital Marketing in Puri, Odisha",
     description:
-      "Make your hotel the buzz of Puri. High-impact video marketing and performance campaigns for hospitality brands.",
+      "Make your brand the buzz of Puri. High-impact video reels, performance ads, and creator campaigns for cafes, gyms, colleges, and hotels.",
     type: "website",
     locale: "en_IN",
   },

@@ -20,11 +20,11 @@ import {
 } from "lucide-react";
 
 const servicesList = [
-  "Social Media Video (4K Reels/Drone)",
+  "Social Media Video (4K Reels & Drone)",
   "Meta & Google Ads Management",
-  "Travel Influencer Marketing",
-  "Branding & Guest Collateral",
-  "Full-Season Hospitality Retainer",
+  "Influencer & Creator Collaborations",
+  "Brand Identity & Design Collateral",
+  "Full-Growth Retainer (Unified Marketing)",
 ];
 
 const budgetRanges = [
@@ -37,14 +37,14 @@ const budgetRanges = [
 export default function ContactQuotePage() {
   const [formData, setFormData] = useState({
     name: "",
-    hotelName: "",
+    businessName: "",
     phone: "",
     email: "",
-    propertyType: "Beachfront Ocean Resort",
-    roomCount: "20 - 50 Rooms",
-    services: ["Social Media Video (4K Reels/Drone)"],
+    businessCategory: "Cafe / Restaurant / Dining",
+    businessScale: "Established (High Footfall / 1-2 Outlets)",
+    services: ["Social Media Video (4K Reels & Drone)"],
     budget: "₹35,000 – ₹75,000 / month (Growth)",
-    targetSeason: "Before Upcoming Holiday Window",
+    targetSeason: "Immediate (This Month)",
     message: "",
   });
 
@@ -91,10 +91,10 @@ export default function ContactQuotePage() {
               Start The Conversation
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#141413] font-serif leading-[1.12] mb-6">
-              Get a customized marketing quote for your hotel.
+              Get a customized growth marketing quote for your business.
             </h1>
             <p className="text-base sm:text-lg text-stone-600 leading-relaxed font-normal">
-              Tell us about your property in Puri, Konark, or coastal Odisha. We will audit your current online presence and prepare a tailor-made roadmap with transparent pricing.
+              Tell us about your brand in Puri, Bhubaneswar, or coastal Odisha. We will audit your current online footprint and prepare a tailor-made roadmap with transparent pricing.
             </p>
           </div>
 
@@ -103,7 +103,7 @@ export default function ContactQuotePage() {
             <div className="lg:col-span-5 space-y-6">
               {/* Direct WhatsApp Callout */}
               <a
-                href="https://wa.me/919437000000?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20request%20a%20marketing%20quote%20for%20my%20hotel%20in%20Puri."
+                href="https://wa.me/919437000000?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20request%20a%20marketing%20quote%20for%20my%20business%20in%20Puri."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block p-6 rounded-3xl bg-emerald-50 border border-emerald-200/80 hover:border-emerald-500 hover:shadow-md transition-all group"
@@ -210,7 +210,7 @@ export default function ContactQuotePage() {
                     Quote Request Received!
                   </h2>
                   <p className="text-sm text-stone-600 max-w-md mx-auto">
-                    Thank you, <strong>{formData.name}</strong>. The Buzzler team will review <strong>{formData.hotelName || "your property"}</strong> and contact you via WhatsApp or phone at <strong>{formData.phone}</strong> within 24 hours.
+                    Thank you, <strong>{formData.name}</strong>. The Buzzler team will review <strong>{formData.businessName || "your business"}</strong> and contact you via WhatsApp or phone at <strong>{formData.phone}</strong> within 24 hours.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
@@ -223,14 +223,14 @@ export default function ContactQuotePage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <h2 className="text-2xl font-bold font-serif text-stone-900">
-                      Hotel Marketing Quote Request
+                      Business Growth Quote Request
                     </h2>
                     <p className="text-xs text-stone-500 mt-1">
                       Complete this quick form and we will calculate your recommended package scope.
                     </p>
                   </div>
 
-                  {/* Name & Hotel Name */}
+                  {/* Name & Business Name */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
@@ -247,15 +247,15 @@ export default function ContactQuotePage() {
                     </div>
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
-                        Hotel / Resort Name *
+                        Business / Brand Name *
                       </label>
                       <input
                         type="text"
                         required
-                        placeholder="e.g. Royal Sands Puri"
-                        value={formData.hotelName}
+                        placeholder="e.g. The Coastal Bean / IronPulse Gym"
+                        value={formData.businessName}
                         onChange={(e) =>
-                          setFormData({ ...formData, hotelName: e.target.value })
+                          setFormData({ ...formData, businessName: e.target.value })
                         }
                         className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"
                       />
@@ -283,7 +283,7 @@ export default function ContactQuotePage() {
                       </label>
                       <input
                         type="email"
-                        placeholder="manager@royalsands.com"
+                        placeholder="director@business.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"
@@ -291,42 +291,42 @@ export default function ContactQuotePage() {
                     </div>
                   </div>
 
-                  {/* Property Type & Room Inventory */}
+                  {/* Business Category & Scale */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
-                        Property Category
+                        Business Category
                       </label>
                       <select
-                        value={formData.propertyType}
+                        value={formData.businessCategory}
                         onChange={(e) =>
-                          setFormData({ ...formData, propertyType: e.target.value })
+                          setFormData({ ...formData, businessCategory: e.target.value })
                         }
                         className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"
                       >
-                        <option>Beachfront Ocean Resort</option>
-                        <option>Temple Heritage Stay / Haveli</option>
-                        <option>Boutique Homestay / Villa</option>
-                        <option>Budget Pilgrimage Hotel</option>
-                        <option>Eco-Resort / Lagoon Glamping</option>
+                        <option>Cafe / Restaurant / Bar / Dining</option>
+                        <option>Gym / Fitness / CrossFit Club</option>
+                        <option>School / College / Educational Institute</option>
+                        <option>Hotel / Resort / Homestay</option>
+                        <option>Clinic / Healthcare / Wellness / Salon</option>
+                        <option>Retail Store / Local Brand / Showroom</option>
                       </select>
                     </div>
 
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
-                        Room Inventory
+                        Business Scale / Footfall
                       </label>
                       <select
-                        value={formData.roomCount}
+                        value={formData.businessScale}
                         onChange={(e) =>
-                          setFormData({ ...formData, roomCount: e.target.value })
+                          setFormData({ ...formData, businessScale: e.target.value })
                         }
                         className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"
                       >
-                        <option>Under 20 Rooms</option>
-                        <option>20 - 50 Rooms</option>
-                        <option>50 - 100 Rooms</option>
-                        <option>100+ Rooms</option>
+                        <option>Boutique / Starter (Single Location)</option>
+                        <option>Established (High Footfall / 1-2 Outlets)</option>
+                        <option>Flagship / Large Campus / Multi-Branch</option>
                       </select>
                     </div>
                   </div>
@@ -376,11 +376,11 @@ export default function ContactQuotePage() {
                   {/* Notes & Specific Goals */}
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
-                      Specific Challenges or Deadlines (Optional)
+                      Specific Growth Goals or Deadlines (Optional)
                     </label>
                     <textarea
                       rows={3}
-                      placeholder="e.g. We want to fill mid-week vacancies, prepare for Rath Yatra, or reduce MakeMyTrip commissions..."
+                      placeholder="e.g. We want to pack weekend tables, drive student admissions, fill early morning gym slots, or launch our new location..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"

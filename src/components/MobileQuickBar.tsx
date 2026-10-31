@@ -16,7 +16,7 @@ export default function MobileQuickBar() {
         </a>
 
         <a
-          href="https://wa.me/919437000000?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20discuss%20marketing%20for%20my%20hotel%20in%20Puri."
+          href="https://wa.me/919437000000?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20discuss%20marketing%20for%20my%20business%20in%20Puri."
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 py-2.5 px-3 rounded-full bg-emerald-600 text-white text-xs font-bold flex items-center justify-center gap-1.5 hover:bg-emerald-500 active:scale-95 transition-all shadow-sm"

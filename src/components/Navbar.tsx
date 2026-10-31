@@ -70,6 +70,12 @@ export default function Navbar() {
               Work
             </Link>
             <Link
+              href="/#industries"
+              className="text-sm font-medium text-stone-700 hover:text-black hover:bg-stone-100/70 px-3 py-1.5 rounded-full transition-colors"
+            >
+              Industries
+            </Link>
+            <Link
               href="/services"
               className="text-sm font-medium text-stone-700 hover:text-black hover:bg-stone-100/70 px-3 py-1.5 rounded-full transition-colors"
             >
@@ -198,6 +204,13 @@ export default function Navbar() {
               className="px-3 py-2 text-sm font-semibold text-stone-800 hover:bg-stone-100 rounded-lg"
             >
               Work
+            </Link>
+            <Link
+              href="/#industries"
+              onClick={() => setMobileMenuOpen(false)}
+              className="px-3 py-2 text-sm font-semibold text-stone-800 hover:bg-stone-100 rounded-lg"
+            >
+              Industries We Scale
             </Link>
             <Link
               href="/services"

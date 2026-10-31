@@ -33,7 +33,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-xs text-stone-400 leading-relaxed max-w-sm">
-              The creative digital marketing agency dedicated to hotels, beach resorts, and hospitality brands across Puri, Konark, and coastal Odisha.
+              The creative digital marketing agency dedicated to cafes, gyms, colleges, schools, and hotels across Puri, Bhubaneswar, and coastal Odisha.
             </p>
 
             <div className="pt-2 flex items-center gap-2 text-xs text-stone-400">
@@ -183,7 +183,7 @@ export default function Footer() {
             </Link>
           </div>
           <p className="flex items-center gap-1 text-[11px]">
-            Crafted for Puri's coastal hoteliers <Heart className="w-3 h-3 text-[#F59E0B] fill-[#F59E0B]" />
+            Crafted for Odisha's ambitious local businesses <Heart className="w-3 h-3 text-[#F59E0B] fill-[#F59E0B]" />
           </p>
         </div>
       </div>

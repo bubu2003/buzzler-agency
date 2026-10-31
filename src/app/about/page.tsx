@@ -42,10 +42,10 @@ export default function AboutPage() {
               The Buzzler Story
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#141413] font-serif leading-[1.12] mb-6">
-              Born in Puri. Dedicated exclusively to coastal hospitality.
+              Born in Puri. Dedicated to local business excellence across Odisha.
             </h1>
             <p className="text-lg sm:text-xl text-stone-600 leading-relaxed font-medium">
-              We started Buzzler because we saw remarkable hotels along Golden Beach, Swargadwar, and Marine Drive surrender 25% of their revenues to distant OTA platforms simply because they lacked modern video and targeted local storytelling.
+              We started Buzzler because we saw remarkable businesses across Puri and Odisha — artisanal cafes, fitness gyms, leading schools & colleges, and coastal resorts — struggling to capture customer attention simply because they lacked modern video cinematography and high-intent local ad funnels.
             </p>
           </div>
 
@@ -55,22 +55,22 @@ export default function AboutPage() {
             <div className="lg:col-span-7 space-y-6 text-sm sm:text-base text-stone-700 leading-relaxed">
               <div className="p-8 rounded-3xl bg-white border border-stone-200 space-y-4 shadow-2xs">
                 <h2 className="text-2xl font-bold font-serif text-stone-900">
-                  Why generic metro agencies fail in Puri
+                  Why generic metro agencies fail in Puri & Odisha
                 </h2>
                 <p>
-                  Most digital marketing agencies are located in Delhi, Mumbai, or Bangalore. They don’t know that Kolkata families plan their Puri vacations during specific long-weekend windows. They don't know the exact sunrise golden-hour angles over Golden Beach. And they definitely don’t know how to shoot respectful cultural stories around Lord Jagannath temple traditions.
+                  Most digital marketing agencies are located in Delhi, Mumbai, or Bangalore. They don’t know local consumer rhythms in coastal Odisha. They don’t understand how beach cafes attract weekend youth, when parents evaluate schools and colleges, how gyms fill batch capacities, or how travelers from Kolkata plan weekend getaways.
                 </p>
                 <p>
-                  Buzzler was founded on the ground in Puri. We are on site within minutes. When the sea breeze is perfect at 6:00 AM, our drone is in the air. When an unexpected holiday surge occurs, our Meta ads are already running in West Bengal and Jharkhand.
+                  Buzzler was founded on the ground in Puri. We are on site within minutes. When the morning light is perfect, our cameras and drones are rolling. When an upcoming season or festival arrives, our targeted Meta and Google ad funnels are already capturing demand across Odisha, West Bengal, and Jharkhand.
                 </p>
               </div>
 
               <div className="p-8 rounded-3xl bg-white border border-stone-200 space-y-4 shadow-2xs">
                 <h2 className="text-2xl font-bold font-serif text-stone-900">
-                  Our Hospitality Philosophy: Video-First, Direct Bookings
+                  Our Philosophy: Video-First, Direct Inquiries & Footfall
                 </h2>
                 <p>
-                  We don’t believe in vanity metrics. A million views mean nothing if your front desk phone doesn’t ring. Every video reel we shoot, every Google ad keyword we target, and every influencer collaboration we curate has one single objective: <strong>putting direct revenue in your hotel bank account with zero OTA commission.</strong>
+                  We don’t believe in vanity metrics. A million views mean nothing if your phone doesn’t ring or tables remain empty. Every video reel we shoot, every Google ad keyword we target, and every influencer collaboration we curate has one single objective: <strong>driving verified customer inquiries, admissions, bookings, and footfall directly into your business.</strong>
                 </p>
               </div>
             </div>
@@ -142,7 +142,7 @@ export default function AboutPage() {
                 Guiding Principles
               </span>
               <h2 className="text-3xl font-bold font-serif text-stone-900 mt-2">
-                The 4 commitments we make to every hotel partner
+                The 4 commitments we make to every client partner
               </h2>
             </div>
 
@@ -151,7 +151,7 @@ export default function AboutPage() {
                 {
                   num: "01",
                   title: "Radical Transparency",
-                  desc: "We never invent fake statistics or bot views. All monthly reporting reflects verified phone calls and direct WhatsApp chats.",
+                  desc: "We never invent fake statistics or bot views. All monthly reporting reflects verified inquiries, walk-ins, and direct WhatsApp chats.",
                 },
                 {
                   num: "02",
@@ -161,12 +161,12 @@ export default function AboutPage() {
                 {
                   num: "03",
                   title: "Regional Nuance",
-                  desc: "We write ad copy in Bengali, Odia, Hindi, and English to speak natively to travelers from Kolkata, Ranchi, and Bhubaneswar.",
+                  desc: "We write ad copy in Odia, Bengali, Hindi, and English to speak natively to both local residents and regional visitors.",
                 },
                 {
                   num: "04",
-                  title: "OTA Independence",
-                  desc: "Every campaign is geared toward moving guest bookings to direct channels, preserving your 20-25% hard-earned margin.",
+                  title: "Direct Growth Focus",
+                  desc: "Every campaign is geared toward moving inquiries to direct channels, protecting your margins and building enduring brand equity.",
                 },
               ].map((val, idx) => (
                 <div
@@ -191,13 +191,13 @@ export default function AboutPage() {
           <div className="bg-[#141413] text-white rounded-3xl p-8 sm:p-12 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div className="space-y-2 max-w-xl">
               <span className="text-xs uppercase font-bold tracking-wider text-amber-400">
-                Puri Hospitality Partners
+                Puri Growth Partners
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold font-serif text-[#FAF7F2]">
-                Ready to make your property the buzz of Puri?
+                Ready to make your business the buzz of Puri?
               </h2>
               <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
-                Connect directly with our team to talk through your hotel’s upcoming season goals.
+                Connect directly with our team to talk through your brand’s upcoming seasonal campaigns and growth targets.
               </p>
             </div>
 

@@ -14,11 +14,16 @@ import {
   ExternalLink,
   Layers,
   Info,
+  UtensilsCrossed,
+  Dumbbell,
+  GraduationCap,
+  Building2,
 } from "lucide-react";
 
 interface ProjectDemo {
   id: string;
   badge: string;
+  industryTag: string;
   title: string;
   propertyType: string;
   location: string;
@@ -32,64 +37,88 @@ interface ProjectDemo {
 
 const projects: ProjectDemo[] = [
   {
+    id: "coastal-bean",
+    badge: "Concept Demo • Cafe & Restaurant",
+    industryTag: "Food & Dining",
+    title: "The Coastal Bean Cafe & Roastery",
+    propertyType: "Artisanal Beachside Cafe & Roastery",
+    location: "VIP Road / Sea Beach, Puri",
+    servicesProvided: ["4K Sizzling Food Reels", "Local Foodie Influencer Collabs", "Weekend Footfall Meta Ads"],
+    conceptObjective:
+      "Transform an artisanal beachside cafe into the #1 youth and tourist hotspot in Puri, driving packed weekend table queues and consistent weekday laptop-work diners.",
+    creativeExecution:
+      "High-contrast, macro food cinematography featuring sizzling seafood platters, steaming artisanal pour-overs, and cheesy pizza pulls, paired with trending audio and weekend date-night angles.",
+    sampleReelTitle: "Fresh Catch to Pour-Over: The Ultimate Beach Cafe Experience",
+    deliverablesList: [
+      "8x 4K Master Vertical Food & Ambience Reels",
+      "Invited 3 Local Food Influencers from Puri & Bhubaneswar",
+      "Radius-Fenced Meta Ads Driving WhatsApp Table Bookings",
+      "Google Business Profile Optimization for 'Best Cafe in Puri'",
+    ],
+    gradientTheme: "from-orange-600 via-amber-600 to-stone-900",
+  },
+  {
+    id: "ironpulse-fitness",
+    badge: "Concept Demo • Gym & Fitness",
+    industryTag: "Health & Fitness",
+    title: "IronPulse Strength & CrossFit Club",
+    propertyType: "Premium 5,000 sq.ft Strength & Conditioning Facility",
+    location: "Grand Road / College Square, Puri",
+    servicesProvided: ["Cinematic Workout Reels", "Transformation Interviews", "Free 3-Day Pass Meta Funnel"],
+    conceptObjective:
+      "Position IronPulse as the most elite training facility in Puri, filling early morning and evening batches with serious fitness enthusiasts and college youth.",
+    creativeExecution:
+      "High-octane workout cinematography featuring heavy deadlifts, kettlebell swings, and emotional member transformation stories with a frictionless 'Claim Free 3-Day Pass on WhatsApp' CTA.",
+    sampleReelTitle: "Heavy Metal & Hard Work: The IronPulse Transformation",
+    deliverablesList: [
+      "6x High-Energy Vertical Training Reels",
+      "Cinematic Before/After Member Video Testimonials",
+      "Hyper-Local Meta Ad Campaign Targeting 18-35 Age Group",
+      "Automated WhatsApp Greeting for Instant Trial Pass Delivery",
+    ],
+    gradientTheme: "from-red-600 via-stone-800 to-stone-950",
+  },
+  {
+    id: "heritage-academy",
+    badge: "Concept Demo • School & College",
+    industryTag: "Education & Academics",
+    title: "Heritage International Academy & College",
+    propertyType: "CBSE Affiliated Senior Secondary & Junior College",
+    location: "Puri-Bhubaneswar Highway Corridor",
+    servicesProvided: ["Campus Drone Film", "Admissions Lead Funnel", "Parent Testimonial Series"],
+    conceptObjective:
+      "Establish the institution as the premier choice for holistic academic excellence in coastal Odisha, driving over 400 verified parent admission inquiries ahead of the new academic session.",
+    creativeExecution:
+      "Inspiring campus drone flyovers showing modern STEM labs, sports complexes, and arts studios, coupled with authentic interviews with teachers, top rankers, and proud parents.",
+    sampleReelTitle: "Where Curiosity Meets Excellence: Welcome to Heritage Academy",
+    deliverablesList: [
+      "Master 4K Campus Drone Tour & Facility Showcase Film",
+      "Google Search Ads targeting 'Best CBSE School near Puri & Bhubaneswar'",
+      "Multi-Lingual Parent Testimonials (Odia, English & Hindi)",
+      "WhatsApp & Direct Calling Lead Capture Funnel for Admissions Office",
+    ],
+    gradientTheme: "from-blue-700 via-indigo-900 to-stone-950",
+  },
+  {
     id: "bay-breeze",
-    badge: "Concept Demo • Beachfront Luxury",
+    badge: "Concept Demo • Hotel & Resort",
+    industryTag: "Hospitality & Stays",
     title: "Bay Breeze Grand Resort & Spa",
-    propertyType: "54-Key Luxury Oceanfront Resort",
+    propertyType: "54-Key Luxury Oceanfront Beach Resort",
     location: "Marine Drive, Golden Beach, Puri",
-    servicesProvided: ["Cinematic Drone 4K", "Meta Booking Funnel", "Kolkata Weekend Angle"],
+    servicesProvided: ["Cinematic Drone 4K", "Direct Booking Meta Funnel", "Kolkata Weekend Angle"],
     conceptObjective:
       "Position the resort as the premier weekend getaway destination for affluent Kolkata and Bhubaneswar travelers looking for private ocean-view balconies and sunset beach dining.",
     creativeExecution:
       "A 6-part vertical video series capturing golden hour waves, chef's fresh seafood catch, and luxury bathroom amenities, paired with localized Bengali & English ad copy.",
     sampleReelTitle: "Golden Beach Sunrise to Candlelight Ocean Dining",
     deliverablesList: [
-      "6x 4K Master Vertical Reels",
-      "Drone Aerial Ocean Permitted Footage",
-      "Kolkata & Ranchi Geo-Fenced Meta Ad Sets",
-      "Click-to-WhatsApp Direct Reservation Hook",
+      "6x 4K Master Vertical Reels (Color-graded for Instagram)",
+      "Drone Aerial Ocean Permitted Footage Package",
+      "Kolkata & Ranchi Geo-Fenced Meta Direct WhatsApp Ad Sets",
+      "22% Commission Reduction Strategy Bypassing OTAs",
     ],
     gradientTheme: "from-amber-600 via-orange-500 to-amber-900",
-  },
-  {
-    id: "jagannath-haveli",
-    badge: "Concept Demo • Heritage Pilgrimage",
-    title: "Jagannath Heritage Haveli",
-    propertyType: "Boutique 28-Room Heritage Stay",
-    location: "Grand Road / Swargadwar, Puri",
-    servicesProvided: ["Brand Identity", "Cultural Content", "Multi-Lingual Audio"],
-    conceptObjective:
-      "Transform a traditional family pilgrimage hotel into an elevated cultural retreat that respects sacred Puri traditions while offering five-star comfort.",
-    creativeExecution:
-      "Multi-lingual storytelling in Odia, Bengali, and Hindi highlighting temple architecture, serene courtyard chants, Mahaprasad culinary traditions, and VIP darshan assistance.",
-    sampleReelTitle: "The Sacred Rhythm of Puri: A Morning at the Haveli",
-    deliverablesList: [
-      "Complete Brand Identity & Signage System",
-      "Multi-Lingual Scripted Cultural Video Series",
-      "In-Room Pilgrim Guide & Temple Etiquette Book",
-      "Family Suite Direct Booking Landing Page",
-    ],
-    gradientTheme: "from-stone-900 via-amber-800 to-stone-950",
-  },
-  {
-    id: "chilika-retreat",
-    badge: "Concept Demo • Eco-Tourism",
-    title: "Chilika Lagoon Eco-Retreat",
-    propertyType: "18 Waterfront Cottages & Glamping",
-    location: "Coastal Puri District, Satapada Road",
-    servicesProvided: ["Travel Influencer Expedition", "Google Search Ads", "Nature Storytelling"],
-    conceptObjective:
-      "Establish the retreat as the premier experiential nature getaway for birdwatchers, couples, and eco-travelers seeking dolphins and pristine coastal sunsets.",
-    creativeExecution:
-      "Organized an exclusive 3-day creator retreat with curated itineraries, sunrise boat expeditions, bonfire seafood sessions, and high-intent Google Search capture.",
-    sampleReelTitle: "Dolphins at Dawn: Escaping into Coastal Odisha",
-    deliverablesList: [
-      "4x Verified Travel Creator Collabs",
-      "Google Search Ads ('luxury resort near Chilika')",
-      "Commercial Content Licensing Archive",
-      "Seasonal Migratory Bird Watching Guide",
-    ],
-    gradientTheme: "from-teal-800 via-emerald-700 to-stone-900",
   },
 ];
 
@@ -105,13 +134,13 @@ export default function FeaturedWork() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-900 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-4">
               <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
-              Creative Portfolio Showcase
+              Multi-Industry Portfolio Showcase
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif mb-4">
-              Concept projects built for Puri's unique hospitality landscape.
+              Concept campaigns engineered for real business growth.
             </h2>
             <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-              To maintain 100% integrity, the case studies below are comprehensive concept & pilot demonstrations illustrating our creative direction, shot lists, and campaign setups for Puri properties.
+              To maintain 100% integrity, the case studies below are comprehensive concept & pilot demonstrations illustrating our creative direction, shot lists, and campaign setups across cafes, gyms, colleges, and hotels.
             </p>
 
             {/* Transparent Notice Pill */}
@@ -138,13 +167,14 @@ export default function FeaturedWork() {
             <button
               key={proj.id}
               onClick={() => setActiveProject(proj)}
-              className={`px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all ${
+              className={`px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 activeProject.id === proj.id
                   ? "bg-[#141413] text-white shadow-sm"
                   : "bg-white text-stone-700 hover:bg-stone-100 border border-stone-200"
               }`}
             >
-              {proj.title}
+              <span className="text-stone-400 mr-1.5 font-normal">[{proj.industryTag}]</span>
+              <span>{proj.title}</span>
             </button>
           ))}
         </div>
@@ -179,7 +209,7 @@ export default function FeaturedWork() {
                   <Play className="w-7 h-7 ml-1 fill-current" />
                 </div>
                 <p className="mt-4 text-xs uppercase tracking-wider font-semibold text-stone-300">
-                  Concept Reel Preview
+                  Concept Reel Storyboard
                 </p>
                 <h4 className="mt-1 text-base sm:text-lg font-bold text-white max-w-xs font-serif">
                   “{activeProject.sampleReelTitle}”
@@ -264,21 +294,15 @@ export default function FeaturedWork() {
               {/* Action Bar */}
               <div className="pt-8 mt-6 border-t border-stone-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <Link
-                  href={
-                    activeProject.id === "bay-breeze"
-                      ? "/work/bay-breeze-resort"
-                      : activeProject.id === "jagannath-haveli"
-                      ? "/work/jagannath-heritage-haveli"
-                      : "/work/chilika-eco-retreat"
-                  }
+                  href="/work"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-stone-900 hover:text-amber-700 transition-colors"
                 >
-                  <span>Read In-Depth Case Study</span>
+                  <span>Explore All Case Studies</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </Link>
 
                 <Link
-                  href={`#quote?projectRef=${activeProject.id}`}
+                  href={`/contact?projectRef=${activeProject.id}`}
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#141413] text-white text-xs font-bold hover:bg-black transition-colors shadow-sm"
                 >
                   <span>Build A Campaign Like This</span>
@@ -300,29 +324,29 @@ export default function FeaturedWork() {
                 {activeProject.title}
               </h4>
               <p className="text-xs text-stone-300">
-                This concept reel storyboard demonstrates our multi-stage camera movements (drone ocean approach → balcony master suite → sunset culinary table).
+                This storyboard demonstrates our multi-stage camera movements designed to hold viewer retention on Instagram.
               </p>
               <div className="p-4 rounded-xl bg-black/60 border border-stone-800 text-left text-xs space-y-2">
                 <div className="flex justify-between text-stone-400">
                   <span>Shot 1 (0:00 - 0:02):</span>
-                  <span className="text-amber-400">Golden Beach Waves</span>
+                  <span className="text-amber-400">High-Impact Visual Hook</span>
                 </div>
                 <div className="flex justify-between text-stone-400">
                   <span>Shot 2 (0:02 - 0:05):</span>
-                  <span className="text-amber-400">Balcony Curtain Breeze</span>
+                  <span className="text-amber-400">Facility / Product Sensory Detail</span>
                 </div>
                 <div className="flex justify-between text-stone-400">
                   <span>Shot 3 (0:05 - 0:08):</span>
-                  <span className="text-amber-400">Chef Plating Seafood</span>
+                  <span className="text-amber-400">Customer Emotion & Experience</span>
                 </div>
                 <div className="flex justify-between text-stone-400">
                   <span>Shot 4 (0:08 - 0:12):</span>
-                  <span className="text-amber-400">Direct WhatsApp Booking CTA</span>
+                  <span className="text-amber-400">Direct WhatsApp / Call CTA</span>
                 </div>
               </div>
               <button
                 onClick={() => setPreviewModalOpen(false)}
-                className="w-full py-2.5 rounded-full bg-amber-500 text-black font-bold text-xs hover:bg-amber-400 transition-colors"
+                className="w-full py-2.5 rounded-full bg-amber-500 text-black font-bold text-xs hover:bg-amber-400 transition-colors cursor-pointer"
               >
                 Close Preview
               </button>

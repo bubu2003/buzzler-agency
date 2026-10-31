@@ -17,14 +17,14 @@ import {
 const pillars = [
   {
     icon: MapPin,
-    title: "We Live and Breathe Puri",
-    subtitle: "Local Hospitality Nuance",
+    title: "We Live and Breathe Puri & Odisha",
+    subtitle: "Local Market Mastery",
     description:
-      "Unlike remote metro agencies, we are on the ground in Puri. We understand the distinct guest behaviors during Rath Yatra, Durga Puja week, Kolkata winter vacations, and spontaneous weekend drives from Bhubaneswar.",
+      "Unlike remote metro agencies, we are right here on the ground. We understand local student admission cycles, weekend dining surges from Bhubaneswar, festival footfall peaks, and holiday tourist behaviors.",
     points: [
-      "On-site filming without expensive travel overheads",
-      "Knowledge of Golden Beach, Marine Drive & Swargadwar traffic",
-      "Seasonal campaign timing aligned with Odisha tourism calendar",
+      "On-site filming within 24-48 hours across Puri, Konark & Bhubaneswar",
+      "In-depth knowledge of local consumer psychology and spending habits",
+      "Campaign calendar timed precisely to regional festivals & holiday surges",
     ],
   },
   {
@@ -32,35 +32,35 @@ const pillars = [
     title: "Video-First Creative Craft",
     subtitle: "Emotional Visual Storytelling",
     description:
-      "Travelers do not book hotels from dull static photo galleries anymore. We produce cinematic 4K vertical reels, ocean drone shots, and authentic guest experience shorts that create an immediate desire to visit.",
+      "People don't read dry brochures or boring static posters anymore. We produce cinematic 4K vertical reels, high-energy gym cinematics, drone campus tours, and food sizzlers that generate immediate customer action.",
     points: [
-      "Dedicated cinema cameras and licensed drone pilots",
+      "Dedicated cinema cameras, fast primes & licensed drone pilots",
       "Sound design synchronized with trending audio algorithms",
-      "Short-form content formatted for Instagram Reels and YouTube Shorts",
+      "Vertical video crafted specifically for Instagram Reels & YouTube Shorts",
     ],
   },
   {
     icon: Languages,
     title: "Four-Language Fluency",
-    subtitle: "English • Bengali • Hindi • Odia",
+    subtitle: "Odia • Bengali • Hindi • English",
     description:
-      "Puri's guest demographic is diverse. Bengali families seeking sea breeze, North Indian pilgrims visiting Lord Jagannath, and local Odia staycationers each respond to different cultural nuances.",
+      "Odisha's audience is multi-lingual and culturally nuanced. From local Odia youth and visiting Bengali tourists to North Indian pilgrims and corporate leaders, we write messaging that connects authentically.",
     points: [
-      "Localized ad copy that feels authentic, not machine-translated",
-      "Culturally sensitive storytelling honoring temple heritage",
-      "Multi-lingual video voiceovers and social captions",
+      "Localized ad copy that sounds native, not robotic machine translation",
+      "Culturally sensitive creative honoring local traditions and youth trends",
+      "Multi-lingual video voiceovers, subtitles, and social captions",
     ],
   },
   {
     icon: ShieldCheck,
     title: "Honest, Measurable ROI",
-    subtitle: "Zero Vanity Metrics",
+    subtitle: "Real Leads & Footfall, Not Bot Views",
     description:
-      "We focus on real business outcomes: direct Click-to-WhatsApp booking conversations, phone calls, and direct website bookings that reduce your painful 20-25% OTA commissions.",
+      "We judge our success by one metric: your bottom-line business growth. Verified phone calls, direct WhatsApp leads, table reservations, gym memberships, and student enrollment inquiries.",
     points: [
-      "Transparent monthly ad spend and direct inquiry tracking",
-      "Direct phone and WhatsApp lead capture optimization",
-      "No inflated follower bots or fake vanity metrics",
+      "Transparent monthly reporting of ad spend and cost-per-lead",
+      "Direct Click-to-WhatsApp conversion tracking",
+      "Zero inflated bot followers, fake reviews, or vanity metrics",
     ],
   },
 ];
@@ -76,10 +76,10 @@ export default function WhyBuzzler() {
             The Buzzler Advantage
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif mb-4">
-            Built from Puri, designed specifically for hoteliers.
+            Built in Puri. Driven by real business growth.
           </h2>
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-            Generic digital marketing agencies don't understand the hospitality season in Odisha. Here is why Puri hotel owners partner with Buzzler to turn empty rooms into booked weekends.
+            Generic digital agencies treat every business the same with cookie-cutter posts. Here is why ambitious cafes, gyms, colleges, and hotels in Puri and Odisha partner with Buzzler to scale.
           </p>
         </div>
 
@@ -123,23 +123,23 @@ export default function WhyBuzzler() {
           })}
         </div>
 
-        {/* Local Hospitality Comparison Strip */}
+        {/* Multi-Industry Callout Strip */}
         <div className="mt-16 bg-[#141413] rounded-3xl p-8 sm:p-10 text-white relative overflow-hidden shadow-xl">
           <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
             <div className="space-y-2 max-w-2xl">
               <span className="text-xs uppercase font-bold tracking-wider text-amber-400">
-                Puri Seasonality Insight
+                Puri & Odisha Business Insight
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold font-serif text-[#FAF7F2]">
-                Are your ads ready before the peak booking window?
+                Is your brand ready to outshine local competitors?
               </h3>
               <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
-                Travelers from Kolkata book 3 to 5 weeks in advance of Durga Puja and winter breaks. Buzzler ensures your reels and Google Search campaigns are humming well before competitors scramble.
+                Whether you're gearing up for weekend cafe rushes, the college admission season, summer gym fitness batches, or tourist holiday surges, Buzzler builds the engine that puts you ahead.
               </p>
             </div>
             <Link
-              href="#quote"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#F59E0B] text-black text-sm font-bold hover:bg-amber-400 transition-all shrink-0 shadow-md"
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#F59E0B] text-black text-sm font-bold hover:bg-amber-400 transition-all shrink-0 shadow-md cursor-pointer"
             >
               <span>Schedule A Free Strategy Call</span>
               <ArrowUpRight className="w-4 h-4" />

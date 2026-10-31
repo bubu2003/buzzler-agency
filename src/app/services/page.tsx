@@ -17,14 +17,17 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Services for Hotels in Puri, Odisha | Buzzler Agency",
+  title: "Digital Marketing Services in Puri & Odisha | Buzzler Agency",
   description:
-    "Explore Buzzler Agency's four core digital marketing services for hotels and resorts in Puri: Social Media Video, Meta & Google Ads, Influencer Marketing, and Branding.",
+    "Explore Buzzler Agency's four core digital marketing services for cafes, gyms, colleges, schools, and hotels in Puri: Social Media Video, Meta & Google Ads, Influencer Marketing, and Branding.",
   keywords: [
     "digital marketing services Puri",
-    "hotel marketing agency Odisha",
-    "Puri hospitality digital marketing",
-    "hotel video reels ads Puri"
+    "social media marketing agency Odisha",
+    "cafe restaurant marketing Puri",
+    "gym fitness advertising Puri",
+    "school college marketing Odisha",
+    "hotel digital marketing Puri",
+    "video reels ads Puri",
   ],
 };
 
@@ -34,30 +37,30 @@ const serviceHubList = [
     icon: Video,
     tag: "Core Visual Engine",
     title: "Social Media Video",
-    subtitle: "4K Drone, Cinematic Reels & Vertical Hotel Films",
+    subtitle: "4K Drone, Cinematic Reels & Vertical Business Content",
     description:
-      "Captivate travelers before they ever search an OTA. We script, film on-site in Puri with cinema cameras and licensed drone pilots, and produce high-emotion vertical reels formatted for Instagram and YouTube.",
+      "Captivate customers on Instagram & YouTube before they make their dining, fitness, admission, or travel decisions. We script, film on-site in Puri with cinema cameras and licensed drone pilots, and produce high-emotion vertical reels.",
     deliverables: [
       "4K vertical reels for Instagram & YouTube Shorts",
-      "Licensed drone aerial footage along Golden Beach & Marine Drive",
-      "Room category walkthroughs & presidential suite showcases",
-      "Culinary, breakfast buffet & beachfront dining coverage",
+      "Licensed drone aerial footage along coastal & campus locations",
+      "Product walkthroughs, facility tours & ambience showcases",
+      "Culinary, workout & classroom action cinematography",
       "Trending commercial audio synchronization & localized subtitles",
     ],
   },
   {
     slug: "/services/ads",
     icon: Target,
-    tag: "Direct Booking Engine",
+    tag: "Direct Acquisition Engine",
     title: "Meta & Google Ads",
-    subtitle: "High-Intent Search & Regional Geo-Targeting",
+    subtitle: "High-Intent Search & Hyper-Local Geo-Targeting",
     description:
-      "Stop surrendering 20-25% of your revenue to Booking.com. We capture high-intent travelers searching 'best hotel in Puri' and retarget affluent families across Kolkata, Ranchi, and Bhubaneswar with direct WhatsApp booking funnels.",
+      "Turn search intent into paying customers and direct inquiries. We capture high-intent users searching for cafes, gyms, colleges, or hotels and run precision Meta & Google ad funnels across Puri, Bhubaneswar, and Eastern India.",
     deliverables: [
-      "Google Search & Hotel Ads capturing high-intent booking queries",
+      "Google Search ads capturing high-intent local & regional queries",
       "Geo-targeted Instagram & Facebook video advertising campaigns",
-      "Click-to-WhatsApp direct reservation conversation ads",
-      "Timing calibrated to Durga Puja, Rath Yatra & winter vacations",
+      "Click-to-WhatsApp direct inquiry and booking conversation ads",
+      "Timing calibrated to festival seasons, admission cycles & weekends",
       "Transparent conversion tracking & ROAS reporting",
     ],
   },
@@ -66,31 +69,31 @@ const serviceHubList = [
     icon: Users2,
     tag: "Social Proof & Reach",
     title: "Influencer Marketing",
-    subtitle: "Vetted Travel Creators & Authentic Staycation Vlogs",
+    subtitle: "Vetted Local Creators & Experiential Vlogs",
     description:
-      "No inflated follower counts or useless free barter stays. We curate verified travel storytellers from West Bengal and Odisha with genuine audiences, script structured experiential itineraries, and secure commercial ad licensing.",
+      "No inflated follower counts or useless free barter deals. We curate verified food, fitness, education, and lifestyle creators from Odisha and West Bengal with genuine audiences, script structured experiential briefs, and secure commercial usage rights.",
     deliverables: [
       "Audience authenticity verification (eliminating fake follower bots)",
-      "Structured itinerary & stay experience briefs for creators",
+      "Structured experience and shoot briefs for creators",
       "Full commercial advertising usage rights for client ad campaigns",
-      "Co-authored Instagram reels with direct booking link-in-bio",
-      "Post-campaign reach & inquiry attribution reporting",
+      "Co-authored Instagram reels with direct link-in-bio & WhatsApp hooks",
+      "Post-campaign reach & verified footfall attribution reporting",
     ],
   },
   {
     slug: "/services/branding",
     icon: Palette,
-    tag: "Identity & RevPAR",
+    tag: "Identity & Value",
     title: "Branding & Identity",
-    subtitle: "Luxury Identity Suites & In-Room Guest Collateral",
+    subtitle: "Premium Visual Identity & Physical Customer Collateral",
     description:
-      "Command higher nightly rates and build lasting loyalty. From bespoke logos and signage to elegant keycard sleeves, in-room guest directories, and digital QR menus, we create a cohesive, elevated aesthetic.",
+      "Command higher pricing and build enduring local trust. From bespoke logos and signage to elegant menu designs, gym member welcome kits, college prospectus suites, and in-room hotel collateral, we create cohesive aesthetics.",
     deliverables: [
-      "Brand strategy, logo system & color typography tokens",
-      "In-room collateral: keycard sleeves, stationery & welcome guides",
-      "Restaurant, cafe & pool bar menu design (print & digital QR code)",
-      "Entrance facade signage & architectural photo direction",
-      "Editable Canva & Figma templates for hotel front-desk staff",
+      "Brand strategy, logo system & typography color tokens",
+      "Print & digital menus, brochures, and member onboarding kits",
+      "Environmental signage & architectural photo direction",
+      "Social media design templates & highlight cover suites",
+      "Editable Canva & Figma templates for client staff",
     ],
   },
 ];
@@ -118,10 +121,10 @@ export default function ServicesHubPage() {
               Four Specialized Pillars
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#141413] font-serif leading-[1.12] mb-6">
-              Digital marketing services built for hotels in Puri.
+              Digital marketing services engineered for Puri & Odisha brands.
             </h1>
             <p className="text-base sm:text-lg text-stone-600 leading-relaxed font-normal">
-              Every service is engineered specifically for the seasonal rhythms, regional guest demographics, and direct booking challenges of coastal Odisha hospitality.
+              Every service is calibrated specifically for the growth milestones, regional audience demographics, and footfall challenges of businesses across coastal Odisha.
             </p>
           </div>
 
@@ -166,7 +169,7 @@ export default function ServicesHubPage() {
                         <a
                           href={`https://wa.me/919437000000?text=Hi%20Buzzler,%20I'm%20interested%20in%20${encodeURIComponent(
                             service.title
-                          )}%20for%20my%20hotel%20in%20Puri.`}
+                          )}%20for%20my%20business%20in%20Puri.`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-semibold hover:bg-emerald-100 transition-colors"
@@ -203,13 +206,13 @@ export default function ServicesHubPage() {
           <div className="mt-16 bg-[#141413] text-white p-8 sm:p-12 rounded-3xl shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-8 relative overflow-hidden">
             <div className="space-y-2 max-w-2xl relative z-10">
               <span className="text-xs uppercase font-bold tracking-wider text-amber-400">
-                Integrated Hospitality Retainer
+                Integrated Growth Retainer
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold font-serif text-[#FAF7F2]">
                 Want the full multi-channel engine?
               </h3>
               <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
-                Combine monthly Video + Meta Ads + Influencer collaborations into one unified growth program for your property with guaranteed on-ground Puri service.
+                Combine monthly Video + Meta Ads + Creator collaborations into one unified growth program for your business with guaranteed on-ground Puri service.
               </p>
             </div>
             <Link

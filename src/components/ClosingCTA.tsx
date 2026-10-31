@@ -14,21 +14,32 @@ import {
 } from "lucide-react";
 
 const availableServices = [
-  "Social Media Video (Reels/Drone)",
-  "Meta & Google Ads",
-  "Influencer Marketing",
-  "Branding & Identity",
-  "Full Season Retainer",
+  "Social Media Video (4K Reels / Drone)",
+  "Meta & Google Ads Management",
+  "Influencer & Creator Collaborations",
+  "Branding & Print / Digital Collateral",
+  "Full Monthly Growth Retainer",
+];
+
+const businessCategories = [
+  "Cafe / Restaurant / Bar",
+  "Gym / Fitness / CrossFit Studio",
+  "School / College / Institute",
+  "Hotel / Resort / Homestay",
+  "Healthcare Clinic / Salon / Spa",
+  "Retail Showroom / Fashion Brand",
+  "Other Local Business",
 ];
 
 export default function ClosingCTA() {
   const [formData, setFormData] = useState({
     name: "",
-    hotelName: "",
+    businessName: "",
     phone: "",
     email: "",
-    services: ["Social Media Video (Reels/Drone)"],
-    propertyType: "Beach Resort",
+    businessCategory: "Cafe / Restaurant / Bar",
+    growthGoal: "Increase Weekend Footfall & Walk-Ins",
+    services: ["Social Media Video (4K Reels / Drone)"],
     message: "",
   });
 
@@ -68,17 +79,17 @@ export default function ClosingCTA() {
                 Start The Conversation
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif leading-[1.12]">
-                Ready to make your hotel the buzz of Puri?
+                Ready to make your brand the buzz of Puri?
               </h2>
               <p className="mt-4 text-stone-600 text-sm sm:text-base leading-relaxed">
-                Whether you need a single viral drone reel campaign before Rath Yatra or a complete direct booking engine, we're ready to tailor a strategy for your property.
+                Whether you need viral food reels for your cafe, new membership signups for your gym, student admissions for your college, or direct bookings for your resort, Buzzler is ready to tailor a strategy for you.
               </p>
             </div>
 
             {/* Quick Connect Cards */}
             <div className="space-y-3">
               <a
-                href="https://wa.me/919437000000?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20request%20a%20marketing%20quote%20for%20my%20hotel%20in%20Puri."
+                href="https://wa.me/919437000000?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20request%20a%20marketing%20quote%20for%20my%20business%20in%20Puri."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-between p-4 rounded-2xl bg-white border border-stone-200 hover:border-emerald-500 hover:shadow-md transition-all group"
@@ -131,7 +142,7 @@ export default function ClosingCTA() {
               <div className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
                 <span>
-                  <strong>On-Site Consultations:</strong> We visit your hotel in Puri, Konark, or Bhubaneswar for in-person walkthroughs.
+                  <strong>On-Site Consultations:</strong> We visit your business premises in Puri, Konark, or Bhubaneswar for in-person walkthroughs.
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
@@ -151,14 +162,14 @@ export default function ClosingCTA() {
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-bold font-serif text-stone-900">
-                  Quote Request Received!
+                  Proposal Request Received!
                 </h3>
                 <p className="text-sm text-stone-600 max-w-md mx-auto">
-                  Thank you, <strong>{formData.name}</strong>. The Buzzler team will review <strong>{formData.hotelName || "your property"}</strong> and contact you via WhatsApp / Phone at <strong>{formData.phone}</strong> within 24 hours.
+                  Thank you, <strong>{formData.name}</strong>. The Buzzler team will review <strong>{formData.businessName || "your business"}</strong> and contact you via WhatsApp / Phone at <strong>{formData.phone}</strong> within 24 hours.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="mt-4 px-6 py-2.5 rounded-full bg-stone-900 text-white text-xs font-bold hover:bg-black"
+                  className="mt-4 px-6 py-2.5 rounded-full bg-stone-900 text-white text-xs font-bold hover:bg-black cursor-pointer"
                 >
                   Submit Another Request
                 </button>
@@ -167,10 +178,10 @@ export default function ClosingCTA() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <h3 className="text-2xl font-bold font-serif text-stone-900">
-                    Request A Custom Proposal
+                    Request A Custom Growth Proposal
                   </h3>
                   <p className="text-xs text-stone-500 mt-1">
-                    Fill out the quick details below and we will prepare a tailored marketing scope.
+                    Fill out your business details below and we will prepare a tailored marketing scope.
                   </p>
                 </div>
 
@@ -191,15 +202,15 @@ export default function ClosingCTA() {
 
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
-                      Hotel / Resort Name *
+                      Business / Brand Name *
                     </label>
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Golden Sands Beach Resort"
-                      value={formData.hotelName}
+                      placeholder="e.g. Coastal Bean Cafe / IronPulse Gym"
+                      value={formData.businessName}
                       onChange={(e) =>
-                        setFormData({ ...formData, hotelName: e.target.value })
+                        setFormData({ ...formData, businessName: e.target.value })
                       }
                       className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent transition-all"
                     />
@@ -229,13 +240,52 @@ export default function ClosingCTA() {
                     </label>
                     <input
                       type="email"
-                      placeholder="manager@hotel.com"
+                      placeholder="owner@brand.com"
                       value={formData.email}
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
                       className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent transition-all"
                     />
+                  </div>
+                </div>
+
+                {/* Business Sector & Growth Goal */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
+                      Business Sector
+                    </label>
+                    <select
+                      value={formData.businessCategory}
+                      onChange={(e) =>
+                        setFormData({ ...formData, businessCategory: e.target.value })
+                      }
+                      className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"
+                    >
+                      {businessCategories.map((cat) => (
+                        <option key={cat}>{cat}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
+                      Primary Growth Goal
+                    </label>
+                    <select
+                      value={formData.growthGoal}
+                      onChange={(e) =>
+                        setFormData({ ...formData, growthGoal: e.target.value })
+                      }
+                      className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"
+                    >
+                      <option>Increase Weekend Footfall & Walk-Ins</option>
+                      <option>High-Volume Lead Generation (Members / Admissions)</option>
+                      <option>Direct WhatsApp Bookings / Orders</option>
+                      <option>Elevate Brand Prestige & Reputation</option>
+                      <option>Grand Opening / Re-launch Campaign</option>
+                    </select>
                   </div>
                 </div>
 
@@ -252,7 +302,7 @@ export default function ClosingCTA() {
                           type="button"
                           key={service}
                           onClick={() => toggleService(service)}
-                          className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-all ${
+                          className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-all cursor-pointer ${
                             selected
                               ? "bg-[#141413] text-[#F59E0B] border-[#141413]"
                               : "bg-[#FAF7F2] text-stone-700 border-stone-200 hover:border-stone-400"
@@ -265,48 +315,14 @@ export default function ClosingCTA() {
                   </div>
                 </div>
 
-                {/* Property Type & Location */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
-                      Property Category
-                    </label>
-                    <select
-                      value={formData.propertyType}
-                      onChange={(e) =>
-                        setFormData({ ...formData, propertyType: e.target.value })
-                      }
-                      className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"
-                    >
-                      <option>Beachfront Ocean Resort</option>
-                      <option>Temple Heritage Stay</option>
-                      <option>Boutique Homestay / Villa</option>
-                      <option>Budget / Pilgrim Hotel</option>
-                      <option>Restaurant / Cafe in Puri</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
-                      Target Timeframe
-                    </label>
-                    <select className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]">
-                      <option>Immediate (Within 2 weeks)</option>
-                      <option>Before Upcoming Holiday Season</option>
-                      <option>Rath Yatra / Long Weekend Window</option>
-                      <option>Exploring / General Inquiry</option>
-                    </select>
-                  </div>
-                </div>
-
                 {/* Message */}
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
-                    Specific Goals or Notes (Optional)
+                    Specific Goals or Target Timeline (Optional)
                   </label>
                   <textarea
                     rows={3}
-                    placeholder="Tell us about your room capacity, current booking challenges, or questions..."
+                    placeholder="Tell us about your current challenges, upcoming launch, admission window, or target goals..."
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
@@ -318,10 +334,10 @@ export default function ClosingCTA() {
                 {/* Submit button */}
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-[#141413] text-[#FAF7F2] text-sm font-bold hover:bg-black transition-all shadow-md hover:shadow-lg"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-[#141413] text-[#FAF7F2] text-sm font-bold hover:bg-black transition-all shadow-md hover:shadow-lg cursor-pointer"
                 >
                   <Send className="w-4 h-4 text-[#F59E0B]" />
-                  <span>Send Quote Request</span>
+                  <span>Send Proposal Request</span>
                 </button>
 
                 <p className="text-[11px] text-stone-400 text-center">
