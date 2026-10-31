@@ -7,28 +7,28 @@ import { MessageSquareQuote, Sparkles, ShieldAlert, ArrowUpRight, Award, CheckCi
 const pilotCards = [
   {
     id: "slot-1",
-    tag: "Pilot Reserved • Marine Drive",
-    category: "Beachfront Boutique Resort",
-    location: "Marine Drive, Puri",
-    campaignFocus: "High-season direct booking funnels & 4K sunset reel series.",
-    status: "Active Production (Case study video filming Nov 2026)",
-    disclaimer: "Official review & verified booking metrics will publish post-campaign.",
+    tag: "Pilot Reserved • Food & Dining",
+    category: "Artisanal Beachside Cafe & Roastery",
+    location: "VIP Road / Sea Beach, Puri",
+    campaignFocus: "4K sizzling culinary reels & weekend table-booking WhatsApp ads.",
+    status: "Active Production (Filming Nov 2026)",
+    disclaimer: "Official review & verified footfall metrics will publish post-campaign.",
   },
   {
     id: "slot-2",
-    tag: "Pilot Reserved • Temple Heritage",
-    category: "Heritage Suites & Pilgrim Hospitality",
-    location: "Grand Road, Puri",
-    campaignFocus: "Multi-lingual family cultural content & direct reservation concierge.",
+    tag: "Pilot Reserved • Fitness & Gym",
+    category: "Strength & Conditioning CrossFit Facility",
+    location: "Grand Road / College Square, Puri",
+    campaignFocus: "High-octane member transformation films & hyper-local trial pass funnels.",
     status: "Creative Onboarding Phase",
-    disclaimer: "Official review & verified booking metrics will publish post-campaign.",
+    disclaimer: "Official review & verified membership signups will publish post-campaign.",
   },
   {
     id: "slot-3",
     tag: "1 Final Pilot Slot Available",
-    category: "Chilika / Coastal Homestay or Eco-Retreat",
-    location: "Puri District Coastal Belt",
-    campaignFocus: "Creator travel staycation & Google Search intent capture.",
+    category: "Beachfront Resort or Academic Campus",
+    location: "Puri District Coastal Corridor",
+    campaignFocus: "Drone aerial cinematography & high-intent acquisition funnels.",
     status: "Open for Application",
     disclaimer: "Partner with Buzzler at preferential introductory rates in exchange for a joint case study.",
   },
@@ -45,16 +45,16 @@ export default function TestimonialsSection() {
             Transparency First
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif mb-4">
-            Pilot partner stories & review placeholders.
+            Founder pilot cohort: Documenting verified growth across Puri.
           </h2>
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-            We refuse to display fabricated testimonials or fake Google star ratings. Below are our documented pilot slots. Verified case studies and hotelier video reviews will be published as active campaigns conclude.
+            We refuse to display fabricated testimonials or fake Google star ratings. Below are our active pilot partner cohorts. Verified case studies and client video reviews will be published as active campaigns conclude.
           </p>
 
           <div className="mt-4 p-3.5 rounded-2xl bg-stone-100 border border-stone-200/80 flex items-start gap-3">
             <ShieldAlert className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
             <span className="text-xs text-stone-600 leading-normal">
-              <strong>Buzzler Policy:</strong> All reviews displayed on this website must be tied to verified hotel properties in Odisha with real founder attribution and verifiable booking outcomes.
+              <strong>Buzzler Policy:</strong> All reviews displayed on this website must be tied to verified business clients in Odisha with real founder attribution and verifiable growth outcomes.
             </span>
           </div>
         </div>
@@ -132,17 +132,17 @@ export default function TestimonialsSection() {
               Founder Pilot Initiative
             </span>
             <h4 className="text-lg font-bold font-serif text-stone-900">
-              Are you a Puri hotel owner looking to kickstart your video marketing?
+              Run an ambitious cafe, gym, college, or hotel in Puri? Claim your pilot slot.
             </h4>
             <p className="text-xs text-stone-600">
-              Join our inaugural showcase cohort. We provide complete video creative direction at introductory rates in exchange for documenting the project results.
+              Join our inaugural showcase cohort. We provide complete video creative direction and targeted ad funnels at introductory rates in exchange for documenting the project results.
             </p>
           </div>
           <Link
             href="#quote"
             className="shrink-0 px-6 py-3 rounded-full bg-[#141413] text-white text-xs font-bold hover:bg-black transition-all shadow-xs"
           >
-            Apply for Pilot Program
+            Apply for Pilot Cohort
           </Link>
         </div>
       </div>

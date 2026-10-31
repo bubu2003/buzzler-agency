@@ -352,7 +352,7 @@ export default function CaseStudyDetailView({ caseStudy }: { caseStudy: CaseStud
               <ArrowUpRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://wa.me/919437000000?text=Hi%20Buzzler,%20I'd%20like%20a%20campaign%20like%20your%20featured%20work%20for%20my%20hotel."
+              href="https://wa.me/919437000000?text=Hi%20Buzzler,%20I'd%20like%20a%20campaign%20like%20your%20featured%20work%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-white/10 text-white text-xs sm:text-sm font-semibold hover:bg-white/20 border border-white/20 transition-colors"

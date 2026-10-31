@@ -6,72 +6,79 @@ import ServiceDetailView, { ServiceDetailProps } from "@/components/ServiceDetai
 import { Target } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Meta & Google Ads for Hotels in Puri, Odisha | Buzzler Agency",
+  title: "Meta & Google Ads Agency in Puri & Odisha | Buzzler Agency",
   description:
-    "High-intent search ads and geo-targeted Instagram campaigns designed to capture travelers from Kolkata, Ranchi, and Bhubaneswar to generate direct hotel bookings.",
+    "High-intent search capture and hyper-local Meta & Google advertising funnels driving paying customers, members, admissions, and direct bookings in Puri and Odisha.",
   keywords: [
-    "Meta ads for hotels",
-    "Google ads for hotels Puri",
-    "hotel digital advertising Odisha",
-    "direct booking WhatsApp ads Puri",
-    "hotel marketing agency Puri"
+    "Meta ads agency Puri",
+    "Google ads agency Odisha",
+    "Puri advertising agency",
+    "local lead generation Puri",
+    "Puri business marketing",
   ],
 };
 
 const adsServiceData: ServiceDetailProps = {
   slug: "/services/ads",
   badge: "Paid Ads Management",
-  h1Title: "Meta & Google Ads Engine for Puri Hotels & Resorts",
-  subtitle: "High-intent search capture and regional social ads that slash 20-25% OTA commissions and drive direct booking inquiries.",
+  h1Title: "High-Intent Meta & Google Ads Engine in Puri & Odisha",
+  subtitle:
+    "Laser-targeted search capture and localized social funnels that drive paying table diners, gym trial signups, student admissions, and direct stays.",
   heroBlurb:
-    "Stop paying 20% to 25% of your nightly revenue to Booking.com and MakeMyTrip. We build targeted search and social advertising funnels that capture travelers at the exact moment they plan their Puri getaway, guiding them straight into direct WhatsApp and website reservations.",
+    "Stop wasting budget boosting random posts to audiences who will never buy. We engineer precision search and social advertising funnels that capture high-intent customers in Puri, Bhubaneswar, and Eastern India at the exact moment of decision, routing them straight into direct WhatsApp chats and qualified phone inquiries.",
   iconType: "ads",
   targetAudience: [
     {
-      tag: "Direct Booking Focus",
-      title: "Hotels Suffering High OTA Commissions",
+      tag: "Cafes & Dining",
+      title: "Restaurants & Beach Cafes",
       description:
-        "Replace expensive third-party commission fees with direct guest relationships that re-book year after year.",
+        "Hyper-local 15km geo-fenced Instagram ads driving packed tables, live-event crowds, and direct WhatsApp reservations without aggregator commissions.",
     },
     {
-      tag: "Weekend Fillers",
-      title: "Properties With Mid-Week & Off-Season Dips",
+      tag: "Gyms & Studios",
+      title: "Fitness & Strength Studios",
       description:
-        "Targeted flash-staycation ads reaching corporate and IT professionals in Bhubaneswar and Cuttack for quick weekend getaways.",
+        "Targeted lead capture funnels delivering instant 3-day trial passes to local fitness enthusiasts aged 18-38 via automated WhatsApp greetings.",
     },
     {
-      tag: "Seasonal Maximizers",
-      title: "Peak Holiday Season Campaigns",
+      tag: "Colleges & Schools",
+      title: "Academic Campuses & Institutes",
       description:
-        "Capture early family bookings from West Bengal and Jharkhand 4 to 6 weeks before Durga Puja, Rath Yatra, and winter school vacations.",
+        "High-intent Google Search and multi-lingual Meta ads capturing parents and prospective students ahead of competitive admission sessions.",
+    },
+    {
+      tag: "Hotels & Stays",
+      title: "Resorts & Heritage Stays",
+      description:
+        "Targeting affluent weekend travelers across Kolkata, Ranchi, and Bhubaneswar to bypass 20-25% OTA commissions with direct reservations.",
     },
   ],
   theProblem: {
-    painPoint: "OTAs take 20-25% commissions and hide guest contact data.",
+    painPoint: "Boosting random posts wastes budget with zero measurable local return.",
     explanation:
-      "When a guest books through an OTA, you surrender up to a quarter of your room rate, plus the guest belongs to the platform—not you. Meanwhile, generic ad agencies waste budget boosting Facebook posts to random people who will never visit Puri.",
+      "Most businesses in Puri spend money blindly clicking 'Boost Post' on Instagram or letting distant agencies run broad, unsegmented campaigns. You get vanity likes from random users, but empty cash registers. Meanwhile, precision search and geo-fenced ads deliver verified local customers at predictable acquisition costs.",
     buzzlerSolution:
-      "We run laser-targeted Google Search ads capturing high-intent terms like 'sea view resort Puri' and geo-fence Meta video ads to high-income postal codes in Kolkata, Ranchi, and Jamshedpur with direct Click-to-WhatsApp booking prompts.",
+      "We run laser-targeted Google Search ads capturing active local searchers and geo-fence Meta video ads with frictionless Click-to-WhatsApp hooks that produce immediate, trackable inquiries and footfall.",
   },
   deliverables: [
     {
-      category: "Google Search & Hotel Ads",
+      category: "Google Search & High-Intent Ads",
       items: [
-        "High-intent keyword bidding ('best hotel near Golden Beach', 'luxury Puri resort')",
-        "Negative keyword filtering to eliminate irrelevant and low-budget searches",
-        "Google Hotel Ads & Free Booking Links setup and sync",
-        "Call extension and location asset extensions tied to your Puri property",
-        "Landing page click and call conversion tracking",
+        "High-intent keyword bidding ('best cafe near Sea Beach', 'gym near Grand Road', 'admissions open Puri')",
+        "Negative keyword filtering to eliminate irrelevant and wasteful clicks",
+        "Google Maps & Local Service Extension optimization to capture neighborhood searches",
+        "Call extension and location asset extensions tied to your business phone line",
+        "Landing page click, call, and WhatsApp conversion tracking",
       ],
     },
     {
       category: "Meta (Instagram & Facebook) Funnels",
       items: [
-        "Geo-fencing to high-income neighborhoods in South Kolkata, Salt Lake, Ranchi & Bhubaneswar",
-        "Click-to-WhatsApp conversational ads with pre-filled room availability prompts",
-        "Dynamic video retargeting for website visitors who didn't complete a booking",
-        "Durga Puja, Rath Yatra, and long-weekend countdown campaign pushes",
-        "Bi-weekly ROAS and direct booking lead volume reporting",
+        "Hyper-local radius fencing (5km–20km) around Puri, Cuttack, and Bhubaneswar",
+        "Click-to-WhatsApp conversational ads with pre-filled inquiry prompts",
+        "Dynamic video retargeting for users who watched your reels or visited your page",
+        "Seasonal, festival, and weekend rush campaign scheduling",
+        "Bi-weekly ROAS, cost-per-lead, and verified inquiry volume reporting",
       ],
     },
   ],
@@ -89,7 +96,7 @@ const adsServiceData: ServiceDetailProps = {
       title: "Audience & Geo-Targeting Map",
       duration: "Days 5–7",
       description:
-        "We build customized audience segments: Bengali long-weekend travelers, road-trip families from Jharkhand, and corporate retreat planners in Odisha.",
+        "We build customized audience segments: local diners and youth in Puri/Bhubaneswar, fitness seekers, parents, and regional travelers.",
       output: "Target Audience Architecture",
     },
     {
@@ -97,7 +104,7 @@ const adsServiceData: ServiceDetailProps = {
       title: "Creative & Copy Integration",
       duration: "Days 8–10",
       description:
-        "We combine high-production video creative with localized copy in English, Bengali, and Hindi with clear room rate and balcony hooks.",
+        "We combine high-production video creative with localized copy in Odia, English, Bengali, and Hindi with irresistible local hooks.",
       output: "Ad Creative Suites (Feeds, Stories, Search Copy)",
     },
     {
@@ -105,7 +112,7 @@ const adsServiceData: ServiceDetailProps = {
       title: "Launch & ROAS Optimization",
       duration: "Ongoing",
       description:
-        "Daily bid management, keyword pruning, and budget reallocation to top-performing ad sets to maximize direct booking inquiries.",
+        "Daily bid management, negative keyword pruning, and budget reallocation to top-performing ad sets to maximize customer acquisition.",
       output: "Bi-Weekly ROI & Lead Quality Reports",
     },
   ],
@@ -115,48 +122,51 @@ const adsServiceData: ServiceDetailProps = {
       {
         id: "local-search",
         title: "Puri Local Search Capture",
-        metric: "Google Ads Only",
-        detail: "Focuses strictly on high-intent searchers actively looking for hotels in Puri to capture immediate bookings.",
+        metric: "Google Search Ads",
+        detail:
+          "Focuses strictly on high-intent searchers actively looking for your specific services in Puri to capture immediate paying demand.",
       },
       {
         id: "multi-channel",
-        title: "Meta + Google Booking Engine",
-        metric: "Google Search + Instagram Ads",
-        detail: "Our standard performance package combining high-intent Google search with visual Instagram & WhatsApp booking funnels.",
+        title: "Meta + Google Growth Engine",
+        metric: "Search + Video Ads",
+        detail:
+          "Our standard performance package combining high-intent Google search with visual Instagram & WhatsApp conversation funnels.",
       },
       {
         id: "peak-season",
-        title: "Festival Blitz Campaign",
-        metric: "High-Volume Multi-State Push",
-        detail: "Aggressive 6-week campaign scaling into West Bengal, Jharkhand, Bihar, and Odisha ahead of Durga Puja or Rath Yatra.",
+        title: "High-Volume Scaling Push",
+        metric: "Multi-Region Blitz",
+        detail:
+          "Aggressive multi-channel campaign scaling across Odisha, West Bengal, and Jharkhand for festival pushes, admission cycles, or summer drives.",
       },
     ],
   },
   faqs: [
     {
-      question: "How do direct WhatsApp booking ads work?",
+      question: "How do Click-to-WhatsApp ads work for local businesses?",
       answer:
-        "When a prospective traveler in Kolkata clicks your ad on Instagram or Facebook, it immediately opens a WhatsApp conversation with your front desk with a pre-filled message: 'Hi, I'm interested in room rates for [Dates]'. This allows your team to close bookings instantly with personal care.",
+        "When an interested person in Puri or Bhubaneswar clicks your ad on Instagram or Facebook, it immediately opens a WhatsApp conversation with your business with a pre-filled greeting: 'Hi, I'd like to book a table / claim a trial pass / inquire about admissions'. Your team closes inquiries immediately with personal care.",
     },
     {
       question: "What monthly ad spend budget do we need?",
       answer:
-        "We typically recommend a starting ad budget of ₹15,000 to ₹35,000/month for boutique properties, scaling up during peak travel seasons. All ad spend is paid directly to Google and Meta, with 100% transparency.",
+        "We typically recommend a starting ad budget of ₹15,000 to ₹35,000/month for single-location businesses, scaling up during peak customer seasons. All ad spend is paid directly to Google and Meta with 100% financial transparency.",
     },
     {
-      question: "Can we track how many bookings came from your ads?",
+      question: "Can we track how many customers came from your ads?",
       answer:
-        "Yes. We track phone calls, Click-to-WhatsApp conversations, and direct website booking confirmations so you know exactly which campaigns generated revenue.",
+        "Yes. We track phone calls, Click-to-WhatsApp chats, and website form fills so you know exactly which campaigns generated actual business inquiries.",
     },
     {
-      question: "Why target travelers from West Bengal and Jharkhand specifically?",
+      question: "Why run ads locally in Puri and Bhubaneswar?",
       answer:
-        "Over 60% of leisure hotel stays in Puri are driven by West Bengal and neighboring eastern states. Target-timing ads before long weekends and festive holidays yields the highest return on investment.",
+        "Consumers in coastal Odisha actively discover new brands on Instagram and compare options on Google. Local radius ads ensure 100% of your budget reaches people who can physically visit your venue or enroll in your institution.",
     },
     {
       question: "How quickly do campaigns go live?",
       answer:
-        "Once tracking pixels and ad accounts are connected, your campaigns are typically live and generating inquiries within 5 to 7 business days.",
+        "Once tracking setup and ad copy are approved, your campaigns are typically live and generating inquiries within 5 to 7 business days.",
     },
   ],
   relatedServices: [
@@ -173,7 +183,7 @@ const adsServiceData: ServiceDetailProps = {
     {
       title: "Branding & Identity",
       slug: "/services/branding",
-      blurb: "Upgrade your website and booking collateral to convert ad visitors at higher nightly rates.",
+      blurb: "Upgrade your visual assets and physical customer collateral to convert traffic at higher margins.",
     },
   ],
 };

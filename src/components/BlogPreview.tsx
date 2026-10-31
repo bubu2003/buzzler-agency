@@ -6,31 +6,31 @@ import { BookOpen, ArrowUpRight, Calendar, Clock, Tag } from "lucide-react";
 
 const articles = [
   {
-    category: "Hotel Marketing",
-    title: "10 Proven Ways Puri Hotels Can Get More Direct Bookings Without OTAs",
+    category: "Cafe & Restaurant Marketing",
+    title: "The Weekend Rush: How Coastal Cafes & Restaurants Pack Tables with 4K Food Reels",
     excerpt:
-      "How leading coastal resorts reduce their 20% commission load through Click-to-WhatsApp ads and cinematic room walkthroughs.",
+      "How artisanal beach eateries bypass heavy food delivery aggregator commissions using high-contrast food sizzlers and Click-to-WhatsApp table reservations.",
     readTime: "5 min read",
     date: "October 2026",
-    tag: "Direct Bookings",
+    tag: "Dining Footfall",
   },
   {
-    category: "Puri Tourism Trends",
-    title: "Rath Yatra Marketing Checklist: When to Launch Your Hospitality Ads",
+    category: "Fitness & Gym Growth",
+    title: "Gym Membership Funnels: Turning Seasonal Resolutions into Loyal Annual Members",
     excerpt:
-      "Why starting your Meta and Google ad campaigns 6 weeks ahead of Rath Yatra secures premium family bookings before competitors.",
+      "Why high-octane workout cinematography paired with automated 3-day trial pass WhatsApp bots consistently outperforms generic gym flyers.",
+    readTime: "6 min read",
+    date: "October 2026",
+    tag: "Member Acquisition",
+  },
+  {
+    category: "Institutes & Stays",
+    title: "Campus Drone Films & Local SEO: How Regional Odisha Brands Dominate High-Intent Search",
+    excerpt:
+      "Capturing parents, students, and travelers at the exact moment they search Google Maps and evaluating competitors across coastal Odisha.",
     readTime: "7 min read",
     date: "October 2026",
-    tag: "Peak Seasons",
-  },
-  {
-    category: "Local SEO & Social",
-    title: "Google Business Profile & Instagram Reels: The Local Puri Hotel Playbook",
-    excerpt:
-      "Optimizing your local map ranking for 'beachfront resort near Swargadwar' and synchronizing with viral reel geotags.",
-    readTime: "4 min read",
-    date: "October 2026",
-    tag: "Local SEO",
+    tag: "Search & Inquiries",
   },
 ];
 
@@ -42,17 +42,17 @@ export default function BlogPreview() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-xs font-semibold uppercase tracking-wider mb-3">
               <BookOpen className="w-3.5 h-3.5 text-[#F59E0B]" />
-              Hospitality Insights
+              Local Growth Insights
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif">
-              Actionable hotel marketing strategies for Puri.
+              Field notes & marketing playbooks for Puri & Odisha brands.
             </h2>
           </div>
           <Link
             href="#quote"
             className="inline-flex items-center gap-1.5 text-xs font-bold text-stone-900 hover:text-amber-700 transition-colors"
           >
-            <span>Subscribe for Puri Tourism Updates</span>
+            <span>Subscribe for Local Growth Updates</span>
             <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>

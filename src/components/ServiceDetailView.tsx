@@ -480,7 +480,7 @@ export default function ServiceDetailView({ service }: { service: ServiceDetailP
                     <span>On-Site in Puri, Odisha</span>
                   </div>
                   <p>
-                    We provide in-person property walkthroughs for hotels located on Marine Drive, Swargadwar, VIP Road, Konark, and Bhubaneswar.
+                    We provide in-person discovery walkthroughs for businesses located across Marine Drive, Swargadwar, VIP Road, Grand Road, Konark, and Bhubaneswar.
                   </p>
                 </div>
               </div>
@@ -495,7 +495,7 @@ export default function ServiceDetailView({ service }: { service: ServiceDetailP
                       Inquiry Received
                     </h3>
                     <p className="text-xs text-stone-600 max-w-sm mx-auto">
-                      Thank you, <strong>{formData.name}</strong>. We will review <strong>{formData.hotelName || "your property"}</strong> and contact you regarding <strong>{service.badge}</strong> within 24 hours.
+                      Thank you, <strong>{formData.name}</strong>. We will review <strong>{formData.hotelName || "your business"}</strong> and contact you regarding <strong>{service.badge}</strong> within 24 hours.
                     </p>
                     <button
                       onClick={() => setSubmitted(false)}
@@ -522,12 +522,12 @@ export default function ServiceDetailView({ service }: { service: ServiceDetailP
                       </div>
                       <div>
                         <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1">
-                          Hotel / Resort Name *
+                          Business / Brand Name *
                         </label>
                         <input
                           type="text"
                           required
-                          placeholder="e.g. Swargadwar Heritage Suites"
+                          placeholder="e.g. The Coastal Bean / IronPulse Gym"
                           value={formData.hotelName}
                           onChange={(e) => setFormData({ ...formData, hotelName: e.target.value })}
                           className="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 text-xs sm:text-sm focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"
@@ -555,7 +555,7 @@ export default function ServiceDetailView({ service }: { service: ServiceDetailP
                       </label>
                       <textarea
                         rows={2}
-                        placeholder={`Tell us about your room count or timeline for ${service.badge}...`}
+                        placeholder={`Tell us about your business goals or timeline for ${service.badge}...`}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         className="w-full px-3.5 py-2.5 rounded-xl border border-stone-200 text-xs sm:text-sm focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"

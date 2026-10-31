@@ -155,7 +155,7 @@ export default function Navbar() {
 
             {/* WhatsApp Quick Link */}
             <a
-              href="https://wa.me/919437000000?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20discuss%20marketing%20for%20my%20hotel%20in%20Puri."
+              href="https://wa.me/919437000000?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20discuss%20marketing%20for%20my%20business%20in%20Puri."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200/60 rounded-full transition-colors"
@@ -238,7 +238,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="px-3 py-2 text-sm font-semibold text-stone-800 hover:bg-stone-100 rounded-lg flex items-center justify-between"
             >
-              <span>Hotel Strategy Blueprint</span>
+              <span>Growth Strategy Blueprint</span>
               <span className="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full font-bold">
                 TOOL
               </span>
@@ -280,7 +280,7 @@ export default function Navbar() {
             </div>
 
             <a
-              href="https://wa.me/919437000000?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20discuss%20marketing%20for%20my%20hotel%20in%20Puri."
+              href="https://wa.me/919437000000?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20discuss%20marketing%20for%20my%20business%20in%20Puri."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 py-2.5 text-sm font-semibold text-emerald-900 bg-emerald-100/80 rounded-xl"

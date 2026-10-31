@@ -6,72 +6,79 @@ import ServiceDetailView, { ServiceDetailProps } from "@/components/ServiceDetai
 import { Users2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Hospitality Influencer Marketing in Puri, Odisha | Buzzler Agency",
+  title: "Influencer Marketing & Creator Collaborations in Odisha | Buzzler Agency",
   description:
-    "Curated travel, food, and lifestyle creators who deliver authentic hotel stay reviews, viral reels, and commercial ad licensing for Puri resorts.",
+    "Curated food, fitness, education, and travel creators delivering authentic reviews, viral reels, and commercial ad licensing for brands in Puri and Odisha.",
   keywords: [
-    "influencer marketing for hotels Odisha",
-    "travel influencers Puri",
-    "hotel influencer marketing India",
-    "resort staycation collaborations Puri",
-    "hospitality creator campaigns Odisha"
+    "influencer marketing agency Odisha",
+    "food influencers Puri",
+    "fitness creators Bhubaneswar",
+    "travel creators Puri",
+    "creator marketing Odisha",
   ],
 };
 
 const influencerServiceData: ServiceDetailProps = {
   slug: "/services/influencer-marketing",
   badge: "Influencer Marketing",
-  h1Title: "Vetted Travel & Lifestyle Creator Campaigns for Puri Hotels",
-  subtitle: "Hand-picked travel creators who produce authentic staycation vlogs, honest reviews, and commercial ad assets with real engagement.",
+  h1Title: "Vetted Creator Collaborations & Influencer Campaigns in Odisha",
+  subtitle:
+    "Hand-picked regional creators who produce authentic foodie reviews, workout spotlights, campus tours, and staycation vlogs with real local engagement.",
   heroBlurb:
-    "Tired of unvetted influencers requesting free luxury stays while delivering zero bookings? Buzzler manages your creator partnerships end-to-end. We select verified travel storytellers from West Bengal and Odisha with genuine audiences, script structured experiential itineraries, and secure full commercial usage rights so you can run their viral videos as paid ads.",
+    "Tired of unvetted influencers demanding free meals, free gym access, or free stays while delivering zero paying customers? Buzzler manages your creator partnerships end-to-end. We select verified storytellers from Odisha and West Bengal with genuine local audiences, script structured experiential briefs, and secure commercial ad usage rights so their viral reels fuel your ad campaigns for months.",
   iconType: "influencer",
   targetAudience: [
     {
-      tag: "Experience Showcase",
-      title: "Resorts with Unique Amenities",
+      tag: "Food & Dining",
+      title: "Cafes, Bakeries & Restaurants",
       description:
-        "Infinity ocean pools, private cabanas, wellness spas, and curated seafood dining that creators naturally want to film and share.",
+        "Local food bloggers and foodies from Puri, Cuttack, and Bhubaneswar for signature menu tastings, sizzling dish reviews, and weekend table rushes.",
     },
     {
-      tag: "Cultural Authority",
-      title: "Heritage Hotels & Boutique Stays",
+      tag: "Health & Fitness",
+      title: "Gyms, CrossFit & Wellness Studios",
       description:
-        "Creators who appreciate temple architecture, artisanal Odia textiles, and sacred Mahaprasad culinary traditions.",
+        "Respected regional fitness athletes and strength coaches showcasing gym floor equipment, coaching quality, and authentic transformation journeys.",
     },
     {
-      tag: "Nature & Eco-Tourism",
-      title: "Coastal Retreats & Lagoon Camps",
+      tag: "Education & Academics",
+      title: "Schools, Colleges & Institutes",
       description:
-        "Eco-travel vloggers and adventure photographers showcasing dolphin safaris, birdwatching trails, and pristine beach sunsets.",
+        "Inspiring education vloggers, alumni, and student ambassadors touring modern campus facilities, STEM labs, and sports grounds.",
+    },
+    {
+      tag: "Hospitality & Stays",
+      title: "Beach Resorts & Boutique Stays",
+      description:
+        "Verified travel vloggers capturing sunrise balcony views, fresh seafood dining, and slow-travel weekend getaways.",
     },
   ],
   theProblem: {
-    painPoint: "90% of influencer barter stays produce zero direct hotel revenue.",
+    painPoint: "90% of free influencer barter deals produce zero actual paying customers.",
     explanation:
-      "Hotels in Puri frequently host self-proclaimed creators who upload a couple of poorly lit stories with fake bot engagement, check out, and leave the hotel with zero business outcomes or usable assets.",
+      "Businesses in Puri frequently host self-proclaimed creators who upload a couple of poorly lit stories to fake bot followers, leave with a free experience, and deliver zero new customers or reusable assets.",
     buzzlerSolution:
-      "We strictly vet creator demographics (demanding 60%+ audience concentration in Kolkata, Bhubaneswar, and Eastern India), enforce contractual shot lists, and secure whitelisting/licensing rights so their content fuels your direct booking ad campaigns for months.",
+      "We strictly audit creator demographics (demanding 60%+ audience concentration in Odisha, West Bengal, and Eastern India), enforce contractual shot lists, and secure full commercial usage rights so their content fuels your paid ad campaigns.",
   },
   deliverables: [
     {
       category: "Creator Discovery & Contractual Vetting",
       items: [
-        "Vetting creator audience authenticity (eliminating fake follower bots)",
-        "Demographic matching targeting affluent families and millennial couples in West Bengal and Odisha",
-        "Negotiation of commercial content rights, stay terms, and publishing schedules",
-        "Comprehensive legal agreement protecting your property rules and brand standards",
-        "Itinerary curation (welcome experience, dining highlight, sunrise shoot)",
+        "Vetting creator audience authenticity (eliminating fake follower bots and engagement pods)",
+        "Demographic matching targeting real local consumers in Puri, Bhubaneswar, and Eastern India",
+        "Negotiation of commercial content rights, collaboration terms, and publishing schedules",
+        "Comprehensive legal agreement protecting your brand standards and venue rules",
+        "Experience brief curation (signature dish tasting, workout session, campus walkthrough, resort stay)",
       ],
     },
     {
       category: "Content Delivery & Commercial Licensing",
       items: [
-        "High-retention 9:16 vertical reels featuring honest room tours and amenities",
-        "Tagged Instagram co-author posts with direct booking link-in-bio inclusion",
+        "High-retention 9:16 vertical reels featuring authentic reactions and product showcases",
+        "Tagged Instagram co-author posts with direct WhatsApp / booking link-in-bio inclusion",
         "Full commercial ad usage rights granted to Buzzler to run as Meta ads",
-        "High-resolution photographic asset archive for your hotel website",
-        "Post-campaign reach, engagement, and direct booking DM attribution analysis",
+        "High-resolution photographic asset archive for your website and social feed",
+        "Post-campaign reach, verified comments, and direct message lead attribution analysis",
       ],
     },
   ],
@@ -81,29 +88,29 @@ const influencerServiceData: ServiceDetailProps = {
       title: "Creator Selection & Roster",
       duration: "Days 1–5",
       description:
-        "We identify 2 to 4 creators whose aesthetic and audience align precisely with your hotel's ideal guest profile.",
+        "We identify 2 to 4 creators whose aesthetic, credibility, and follower demographics align precisely with your ideal customer profile.",
       output: "Vetted Creator Roster & Audience Analytics",
     },
     {
       step: "02",
-      title: "Stay Itinerary & Briefing",
+      title: "Experience Brief & Shot List",
       duration: "Days 6–10",
       description:
-        "We craft a detailed briefing document outlining mandatory shot angles, hotel amenities to feature, and key message points.",
-      output: "Approved Itinerary & Mandatory Shot List",
+        "We craft a detailed briefing document outlining mandatory shot angles, products or features to highlight, and clear promotional call-to-actions.",
+      output: "Approved Brief & Mandatory Shot List",
     },
     {
       step: "03",
-      title: "On-Site Stay & Content Capture",
-      duration: "During Stay",
+      title: "On-Site Shoot & Experience",
+      duration: "Shoot Day",
       description:
-        "The creator visits your property, experiences your hospitality, and captures cinematic footage under our strategic brief.",
+        "The creator visits your venue, experiences your service, and captures engaging, genuine footage under our strategic supervision.",
       output: "Raw Content Review & Approval",
     },
     {
       step: "04",
       title: "Publishing & Ad Whitelisting",
-      duration: "Post-Stay",
+      duration: "Post-Shoot",
       description:
         "Content goes live with strategic tagging. Top-performing reels are converted directly into targeted Meta advertising campaigns.",
       output: "Live Posts, Ad Amplification & Final ROI Report",
@@ -114,29 +121,32 @@ const influencerServiceData: ServiceDetailProps = {
     options: [
       {
         id: "solo-spotlight",
-        title: "Micro-Creator Staycation Push",
-        metric: "1 Verified Travel Creator",
-        detail: "Single weekend creator visit yielding 2 collaborative reels, 10+ stories, and high-res photo assets.",
+        title: "Single Creator Spotlight",
+        metric: "1 Verified Creator",
+        detail:
+          "Single dedicated creator visit yielding 2 collaborative reels, 10+ stories, and high-res photo assets with full commercial rights.",
       },
       {
         id: "creator-duo",
-        title: "Blogger & Culinary Duo",
-        metric: "2 Curated Creators (Travel + Food)",
-        detail: "One creator highlights the resort rooms and ocean deck; the other showcases your restaurant and seafood specialties.",
+        title: "Creator Duo Campaign",
+        metric: "2 Curated Creators",
+        detail:
+          "Two creators with complementary audiences (e.g., foodie + lifestyle or fitness athlete + youth creator) for cross-pollinated reach.",
       },
       {
         id: "seasonal-squad",
-        title: "Festival Season Creator Expedition",
-        metric: "3-4 Creators Ahead of Holiday Rush",
-        detail: "Coordinated creator campaign 4 weeks before Rath Yatra or Durga Puja to create undeniable viral buzz in Kolkata and Bhubaneswar.",
+        title: "Festival / Launch Creator Expedition",
+        metric: "3-4 Creators Ahead of Key Season",
+        detail:
+          "Coordinated creator squad ahead of Rath Yatra, Durga Puja, college admissions, or gym New Year drives to create undeniable regional hype.",
       },
     ],
   },
   faqs: [
     {
-      question: "Do we have to pay creators cash, or is it barter for a free room stay?",
+      question: "Do we have to pay creators cash, or is it barter?",
       answer:
-        "Top-tier travel creators with authentic, high-converting audiences usually require a modest production fee alongside complimentary room and board. Micro-creators may work on barter if the stay experience is premium. We negotiate the best possible arrangement based on expected return.",
+        "Top-tier creators with authentic, high-converting audiences usually require a modest production fee alongside complimentary product or service experience. Micro-creators may work on barter if the experience is premium. We negotiate the best arrangement for your ROI.",
     },
     {
       question: "Can we use their videos on our own social channels and paid ads?",
@@ -146,34 +156,34 @@ const influencerServiceData: ServiceDetailProps = {
     {
       question: "How do you verify an influencer isn't using fake followers?",
       answer:
-        "We analyze third-party audience data: follower location (ensuring majority are in West Bengal, Odisha, and neighboring states), engagement authenticity ratio, comment quality, and historical post performance.",
+        "We analyze third-party audience data: follower geography (ensuring majority are in Odisha, West Bengal, and neighboring states), engagement authenticity ratio, comment quality, and past campaign performance.",
     },
     {
       question: "Can we review and approve their reels before they are posted?",
       answer:
-        "Yes. Creators submit their draft reels for brand review prior to publication to ensure factual accuracy regarding your room rates, amenities, and policies.",
+        "Yes. Creators submit their draft reels for brand review prior to publication to ensure factual accuracy regarding your pricing, offerings, and policies.",
     },
     {
-      question: "What if a creator posts a negative review?",
+      question: "What if a creator posts an unaligned review?",
       answer:
-        "Our structured itinerary and on-site briefing ensure expectations are aligned before they arrive. In the rare event of a service mishap, our on-site team resolves it immediately during their stay.",
+        "Our structured experience brief and on-site guidance ensure expectations are fully aligned before they shoot, protecting your brand reputation.",
     },
   ],
   relatedServices: [
     {
       title: "Social Media Video",
       slug: "/services/video",
-      blurb: "Complement creator footage with our own 4K drone and cinema-grade property reels.",
+      blurb: "Complement creator footage with our own 4K drone and cinema-grade brand reels.",
     },
     {
       title: "Meta & Google Ads",
       slug: "/services/ads",
-      blurb: "Turn viral influencer reels into high-converting paid ads targeting Kolkata travelers.",
+      blurb: "Turn viral influencer reels into high-converting paid ads targeting local customers.",
     },
     {
       title: "Branding & Identity",
       slug: "/services/branding",
-      blurb: "Ensure your guest touchpoints and photo corners match the influencer hype.",
+      blurb: "Ensure your physical venue touchpoints and aesthetics match the influencer hype.",
     },
   ],
 };

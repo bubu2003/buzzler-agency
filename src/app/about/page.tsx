@@ -118,17 +118,17 @@ export default function AboutPage() {
               <div className="p-6 rounded-3xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-950 space-y-2">
                 <div className="flex items-center gap-2 font-bold text-sm">
                   <ShieldCheck className="w-4 h-4 text-amber-700" />
-                  <span>Meet us in person in Puri</span>
+                  <span>Meet us in person on Marine Drive</span>
                 </div>
                 <p className="text-stone-700 leading-relaxed">
-                  We believe in building face-to-face trust. We invite hoteliers to meet us at our Marine Drive base or invite our team for a property walkthrough and complimentary video audit.
+                  We believe in building face-to-face trust. We invite business founders and directors to meet us at our Marine Drive base or invite our team for an on-site walkthrough and complimentary marketing audit.
                 </p>
                 <div className="pt-2">
                   <Link
                     href="/contact"
                     className="inline-flex items-center gap-1 font-bold text-amber-900 hover:text-black"
                   >
-                    <span>Schedule an on-site property visit →</span>
+                    <span>Schedule an on-site brand audit →</span>
                   </Link>
                 </div>
               </div>

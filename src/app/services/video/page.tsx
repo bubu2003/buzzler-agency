@@ -6,71 +6,78 @@ import ServiceDetailView, { ServiceDetailProps } from "@/components/ServiceDetai
 import { Video } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Hotel Video Production & Reels in Puri, Odisha | Buzzler Agency",
+  title: "4K Video Production & Reels in Puri, Odisha | Buzzler Agency",
   description:
-    "High-production 4K vertical reels, licensed drone beach flyovers, and cinematic suite walkthroughs for hotels and resorts in Puri, Odisha.",
+    "High-production 4K vertical reels, licensed drone cinematography, and cinematic brand films for cafes, gyms, colleges, and hotels in Puri, Odisha.",
   keywords: [
-    "hotel video production Puri",
-    "hotel video marketing Odisha",
-    "hotel reels and Instagram marketing Puri",
-    "drone shoot for hotels Puri",
-    "resort video marketing Puri"
+    "video production Puri",
+    "reels agency Puri",
+    "commercial video shoot Odisha",
+    "drone shoot Puri",
+    "social media video marketing Puri",
   ],
 };
 
 const videoServiceData: ServiceDetailProps = {
   slug: "/services/video",
   badge: "Social Media Video",
-  h1Title: "Hotel Video Marketing & 4K Reel Production in Puri",
-  subtitle: "Cinematic drone footage, vertical social reels, and suite films that turn scrolling tourists into confirmed direct guests.",
+  h1Title: "4K Video Marketing & Reel Production in Puri & Odisha",
+  subtitle:
+    "Cinematic drone footage, vertical social reels, and brand films that turn scrolling viewers into paying customers, members, and patrons.",
   heroBlurb:
-    "Modern travelers browse Instagram and YouTube Shorts before ever searching on Google or OTAs. We script, film on-site in Puri with cinema cameras and licensed drone pilots, and edit punchy vertical content designed to evoke emotion and drive direct bookings.",
+    "Modern consumers in Puri and Bhubaneswar browse Instagram and YouTube Shorts before deciding where to dine, which gym to join, which college to trust, or where to vacation. We script, film on-site with cinema cameras and licensed drone pilots, and produce high-retention vertical reels engineered to evoke emotion and drive immediate action.",
   iconType: "video",
   targetAudience: [
     {
-      tag: "Marine Drive & Golden Beach",
-      title: "Beachfront Luxury Resorts",
+      tag: "Cafes & Dining",
+      title: "Restaurants, Cafes & Food Hotspots",
       description:
-        "Capture sunrise over the Bay of Bengal, private balcony ocean views, poolside cocktails, and candlelit seafood dinners on the sand.",
+        "Sizzling seafood platters, artisan pour-overs, live chef kitchen action, and buzzing weekend dining atmospheres that drive packed table queues.",
     },
     {
-      tag: "Grand Road & Swargadwar",
-      title: "Temple Stays & Heritage Haveli",
+      tag: "Gyms & Fitness",
+      title: "Strength & Fitness Studios",
       description:
-        "Storytelling highlighting serene courtyards, traditional Mahaprasad dining, authentic Odia hospitality, and VIP temple darshan assistance.",
+        "High-octane workout cinematography, heavy deadlifts, certified trainer spotlights, and emotional member transformation stories.",
     },
     {
-      tag: "Chilika & Balukhand Coastal Belt",
-      title: "Eco-Retreats & Boutique Villas",
+      tag: "Colleges & Schools",
+      title: "Academic Campuses & Institutes",
       description:
-        "Highlighting quiet slow-travel, dolphin boat excursions, lush nature walks, and restorative weekend getaways from IT hubs.",
+        "Inspiring campus drone flyovers, modern STEM lab tours, sporting facility showcases, and authentic student & parent testimonials.",
+    },
+    {
+      tag: "Hotels & Stays",
+      title: "Beach Resorts & Heritage Havelis",
+      description:
+        "Balcony sunrise ocean flyovers, tranquil courtyard dining, and luxury suite tours that drive direct WhatsApp reservations.",
     },
   ],
   theProblem: {
-    painPoint: "Static hotel photos no longer sell rooms in 2026.",
+    painPoint: "Static photos and dry flyers no longer capture customer attention in 2026.",
     explanation:
-      "Most hotels in Puri rely on outdated, wide-angle photos uploaded years ago to Google and MakeMyTrip. Travelers find them sterile and uninspiring. Meanwhile, properties using dynamic vertical video capture 5x more attention on Instagram and build immediate booking desire.",
+      "Most local businesses in Puri rely on outdated photos, boring posters, or shaky phone snapshots. Prospective customers scroll right past without feeling any emotion. Meanwhile, local brands using cinematic vertical video capture 5x more attention on Instagram and build immediate brand trust.",
     buzzlerSolution:
-      "We produce high-contrast, color-graded 4K vertical reels featuring real movement, immersive audio design, and direct booking calls-to-action that stand out in Bengal and Odisha travelers' social feeds.",
+      "We produce high-contrast, color-graded 4K vertical reels featuring crisp audio design, rhythmic editing, and direct-response Click-to-WhatsApp hooks that make your brand stand out across Odisha.",
   },
   deliverables: [
     {
       category: "Cinematography & On-Site Filming",
       items: [
-        "On-location filming in Puri using 4K/60fps cinema-grade cameras",
-        "Licensed drone aerial footage of oceanfront, beach access, and architecture",
-        "Master suite walkthroughs, bathroom luxury amenities, and lighting angles",
-        "Restaurant, live seafood grill, and breakfast buffet culinary coverage",
-        "Staff hospitality moments and authentic guest check-in experience",
+        "On-location filming in Puri & Bhubaneswar using 4K/60fps cinema-grade cameras",
+        "Licensed drone aerial footage of coastal landscapes, facades, and campus grounds",
+        "Macro detail cinematography (sizzling dishes, workout lifts, lab equipment, suite views)",
+        "Authentic customer, member, student, or guest experience walkthroughs",
+        "Professional lighting setup and wireless directional audio recording",
       ],
     },
     {
       category: "Post-Production & Social Optimization",
       items: [
-        "9:16 vertical edits tailored for Instagram Reels & YouTube Shorts",
-        "Trending, commercially licensed background audio and sound effects",
-        "Dynamic on-screen subtitles and hook titles in English, Bengali, or Hindi",
-        "Color grading matching warm coastal golden hour tones",
+        "9:16 vertical edits tailored specifically for Instagram Reels & YouTube Shorts",
+        "Trending, commercially licensed background audio and dynamic sound effects",
+        "Punchy on-screen subtitles and hook titles in Odia, English, Bengali, or Hindi",
+        "Color grading matching warm, premium coastal aesthetic tones",
         "Direct Click-to-WhatsApp call-to-action endings on every video",
       ],
     },
@@ -78,10 +85,10 @@ const videoServiceData: ServiceDetailProps = {
   processSteps: [
     {
       step: "01",
-      title: "Shot List & Storyboard",
+      title: "Shot List & Creative Brief",
       duration: "Days 1–3",
       description:
-        "We visit your hotel, identify your strongest USPs (sea-view balcony, heritage courtyard, culinary specialty), and script targeted video hooks.",
+        "We audit your brand, identify your strongest USPs (signature dish, gym floor equipment, modern labs, ocean views), and script targeted video hooks.",
       output: "Approved 6-Reel Storyboard & Filming Schedule",
     },
     {
@@ -89,7 +96,7 @@ const videoServiceData: ServiceDetailProps = {
       title: "On-Site Production Shoot",
       duration: "Days 4–5",
       description:
-        "Our Puri-based crew shoots dawn golden hour drone footage, room walkthroughs, and sunset dining with minimal disruption to your guests.",
+        "Our Puri-based crew shoots golden hour drone footage, detail macro shots, and customer interactions with minimal disruption to your daily operations.",
       output: "Raw 4K Cinema & Aerial Footage Archive",
     },
     {
@@ -97,7 +104,7 @@ const videoServiceData: ServiceDetailProps = {
       title: "Edit, Color & Sound",
       duration: "Days 6–9",
       description:
-        "Video editing, speed ramping, sound design, color grading, and subtitle typography designed for maximum retention on Instagram.",
+        "High-retention editing, speed ramping, sound design, color grading, and localized subtitle typography optimized for the Instagram algorithm.",
       output: "Ready-to-Publish Master Reel Files",
     },
     {
@@ -105,7 +112,7 @@ const videoServiceData: ServiceDetailProps = {
       title: "Publishing & Ad Amplification",
       duration: "Day 10+",
       description:
-        "We schedule reels during optimal engagement windows and hook top-performing creative directly into your Meta advertising campaigns.",
+        "We schedule reels during peak local engagement windows and plug top-performing creative directly into Meta advertising campaigns.",
       output: "Published Content & Engagement Report",
     },
   ],
@@ -114,34 +121,37 @@ const videoServiceData: ServiceDetailProps = {
     options: [
       {
         id: "starter",
-        title: "Seasonal Spotlight Package",
+        title: "Starter Spotlight Package",
         metric: "4 Master 4K Reels",
-        detail: "Ideal for boutique homestays or heritage properties wanting fresh social proof ahead of upcoming holiday weekends.",
+        detail:
+          "Ideal for cafes, boutique gyms, or newly opened local outlets wanting fresh social proof and immediate footfall.",
       },
       {
         id: "growth",
-        title: "Full Resort Growth Engine",
+        title: "Full Brand Growth Engine",
         metric: "8 Master Reels + Drone Coverage",
-        detail: "Our most popular package for mid to large beachfront hotels on Marine Drive needing comprehensive room, dining, and drone coverage.",
+        detail:
+          "Our most popular package for established restaurants, fitness centers, resorts, or campuses needing comprehensive visual dominance.",
       },
       {
         id: "annual",
-        title: "Year-Round Content Retainer",
+        title: "Year-Round Creative Retainer",
         metric: "6 Reels Every Month + Event Coverage",
-        detail: "Continuous year-round production covering Rath Yatra, Durga Puja, winter holidays, and monsoon getaways.",
+        detail:
+          "Continuous year-round production covering festival rushes, admission seasons, summer membership drives, and new product launches.",
       },
     ],
   },
   faqs: [
     {
-      question: "Will filming disturb our staying hotel guests?",
+      question: "Will filming disrupt our customers or daily operations?",
       answer:
-        "Never. We schedule drone and exterior shoots at dawn (6:00 AM – 7:30 AM) when beaches and balconies are tranquil. Interior room and dining shoots are coordinated around guest check-outs and non-peak restaurant hours.",
+        "Never. For cafes and restaurants, we film during prep hours or non-peak times. For gyms, we film during dedicated creator windows. Drone exterior shoots happen during early morning golden hours (6:00 AM – 7:30 AM).",
     },
     {
       question: "Do you handle drone permissions and regulations in Puri?",
       answer:
-        "Yes, our drone pilots operate in accordance with DGCA guidelines and local administrative protocols along the Puri coastline and Marine Drive zone.",
+        "Yes, our drone pilots operate in accordance with DGCA guidelines and local administrative protocols along the Puri coastline, campus zones, and urban corridors.",
     },
     {
       question: "Can we use these videos for Meta and Google Ads?",
@@ -149,9 +159,9 @@ const videoServiceData: ServiceDetailProps = {
         "Yes! You receive 100% unrestricted commercial usage rights. The reels are formatted specifically so you can run them as Instagram Feed, Story, and Reels ads.",
     },
     {
-      question: "Can you provide subtitles in Bengali and Hindi?",
+      question: "Can you provide subtitles in Odia, Bengali, Hindi, and English?",
       answer:
-        "Yes. We specialize in localized multi-lingual hooks (Bengali, Hindi, Odia, English) to capture travelers from Kolkata, Ranchi, and Bhubaneswar effectively.",
+        "Yes. We specialize in localized multi-lingual captions and hooks to capture local residents in Odisha as well as regional tourists from West Bengal and Jharkhand.",
     },
     {
       question: "What is the typical turnaround time?",
@@ -163,17 +173,17 @@ const videoServiceData: ServiceDetailProps = {
     {
       title: "Meta & Google Ads",
       slug: "/services/ads",
-      blurb: "Put your new video reels in front of thousands of high-intent travelers from Bengal and Jharkhand.",
+      blurb: "Put your new video reels in front of thousands of high-intent local customers and regional tourists.",
     },
     {
       title: "Influencer Marketing",
       slug: "/services/influencer-marketing",
-      blurb: "Pair your video production with vetted travel creators who document their stay in Puri.",
+      blurb: "Pair your video production with vetted food, fitness, and lifestyle creators in Odisha.",
     },
     {
       title: "Branding & Identity",
       slug: "/services/branding",
-      blurb: "Elevate your property's visual presence with bespoke guest collateral and signage.",
+      blurb: "Elevate your business's visual presence with cohesive physical and digital design assets.",
     },
   ],
 };
