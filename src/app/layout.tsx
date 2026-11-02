@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
       { url: "/icon.png", type: "image/png", sizes: "192x192" },
-      { url: "/buzzler-logo.jpg", sizes: "512x512" },
+      { url: "/buzzler-logo-transparent.png", sizes: "512x512" },
     ],
     apple: [
       { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
