@@ -36,7 +36,15 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Buzzler Agency" }],
   icons: {
-    icon: "/buzzler-logo.jpg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "192x192" },
+      { url: "/buzzler-logo.jpg", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
   },
   openGraph: {
     title: "Buzzler Agency | Creative Digital Marketing in Puri, Odisha",
