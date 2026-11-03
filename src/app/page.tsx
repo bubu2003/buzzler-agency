@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ReelsShowcase from "@/components/ReelsShowcase";
 import IndustryShowcase from "@/components/IndustryShowcase";
 import ServicesGrid from "@/components/ServicesGrid";
 import FeaturedWork from "@/components/FeaturedWork";
-import ReelsShowcase from "@/components/ReelsShowcase";
 import WhyBuzzler from "@/components/WhyBuzzler";
 import InteractiveStrategyTool from "@/components/InteractiveStrategyTool";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -17,10 +17,10 @@ export default function Home() {
     <main className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#141413]">
       <Navbar />
       <Hero />
+      <ReelsShowcase />
       <IndustryShowcase />
       <ServicesGrid />
       <FeaturedWork />
-      <ReelsShowcase />
       <WhyBuzzler />
       <InteractiveStrategyTool />
       <TestimonialsSection />

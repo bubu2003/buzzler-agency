@@ -151,7 +151,7 @@ export default function IndustryShowcase() {
               <button
                 key={ind.id}
                 onClick={() => setActiveTab(idx)}
-                className={`px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 cursor-pointer ${
+                className={`px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 cursor-pointer min-h-[42px] ${
                   activeTab === idx
                     ? "bg-[#141413] text-white shadow-sm"
                     : "bg-white text-stone-700 hover:bg-stone-100 border border-stone-200"

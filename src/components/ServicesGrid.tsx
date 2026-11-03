@@ -165,7 +165,7 @@ export default function ServicesGrid() {
                         ? "/services/influencer-marketing"
                         : "/services/branding"
                     }
-                    className="inline-flex items-center gap-1 text-xs font-bold text-stone-900 hover:text-amber-700 transition-colors"
+                    className="inline-flex items-center gap-1 text-xs font-bold text-stone-900 hover:text-amber-700 transition-colors py-2 min-h-[40px]"
                   >
                     <span>View Deep-Dive & Process</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
@@ -173,7 +173,7 @@ export default function ServicesGrid() {
 
                   <Link
                     href={`/contact?service=${service.id}`}
-                    className="text-xs font-semibold text-amber-800 bg-amber-100/70 hover:bg-amber-200/80 px-2.5 py-1 rounded-full transition-colors"
+                    className="text-xs font-semibold text-amber-900 bg-amber-100/80 hover:bg-amber-200/80 px-3.5 py-2 min-h-[40px] flex items-center rounded-full transition-colors"
                   >
                     Inquire Quote
                   </Link>

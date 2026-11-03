@@ -155,14 +155,14 @@ export default function ReelsShowcase() {
                 href="https://www.instagram.com/shreedhamtownship/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-bold hover:opacity-90 transition-all shadow-xs"
+                className="inline-flex items-center gap-2 px-4 py-2.5 min-h-[44px] rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-bold hover:opacity-90 transition-all shadow-xs"
               >
                 <InstagramIcon className="w-3.5 h-3.5" />
                 <span>Visit @shreedhamtownship on Instagram</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
 
-              <span className="text-xs text-stone-500 bg-white border border-stone-200 px-3 py-1.5 rounded-full font-medium">
+              <span className="text-xs text-stone-600 bg-white border border-stone-200 px-3.5 py-2.5 min-h-[44px] flex items-center rounded-full font-medium">
                 📍 Location: Puri Coastal Corridor, Odisha
               </span>
             </div>
@@ -170,7 +170,7 @@ export default function ReelsShowcase() {
 
           <Link
             href="/work/shreedham-township"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-900 hover:text-black bg-amber-100/80 hover:bg-amber-200/80 px-4 py-2.5 rounded-full transition-colors shrink-0"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-900 hover:text-black bg-amber-100/80 hover:bg-amber-200/80 px-4 py-2.5 min-h-[44px] rounded-full transition-colors shrink-0"
           >
             <span>Read Full Shreedham Case Study</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -209,7 +209,7 @@ export default function ReelsShowcase() {
 
                 <button
                   onClick={handleMuteToggle}
-                  className="p-2 rounded-full bg-black/60 hover:bg-black/90 backdrop-blur-md text-white border border-white/10 transition-all cursor-pointer"
+                  className="p-2.5 min-w-[38px] min-h-[38px] flex items-center justify-center rounded-full bg-black/60 hover:bg-black/90 backdrop-blur-md text-white border border-white/10 transition-all cursor-pointer"
                   aria-label="Toggle Audio"
                 >
                   {isMuted ? <VolumeX className="w-4 h-4 text-amber-300" /> : <Volume2 className="w-4 h-4 text-amber-400" />}

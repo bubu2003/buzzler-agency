@@ -21,12 +21,14 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.buzzler.co.in"),
-  title: "Buzzler Agency | Creative Digital Marketing for Cafes, Gyms, Schools & Stays in Puri, Odisha",
+  title: "Buzzler Agency | Creative Performance Marketing & 4K Reels in Puri, Odisha",
   description:
-    "Make your brand the buzz of Puri. Video-first social marketing, high-converting Meta & Google ads, and creator collaborations for cafes, gyms, colleges, schools, and hotels in Puri and Odisha.",
+    "Make your brand the buzz of Puri. High-converting 4K video reels, Meta & Google ads, and WhatsApp lead funnels for real estate, cafes, gyms, colleges, and hotels in Puri and Odisha.",
   keywords: [
     "digital marketing agency in Puri",
     "social media marketing Puri",
+    "real estate marketing Puri",
+    "plotted township marketing Odisha",
     "cafe restaurant marketing Puri",
     "gym fitness advertising Puri",
     "school college admission marketing Odisha",
@@ -47,11 +49,19 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
   },
   openGraph: {
-    title: "Buzzler Agency | Creative Digital Marketing in Puri, Odisha",
+    title: "Buzzler Agency | Creative Performance Marketing in Puri, Odisha",
     description:
-      "Make your brand the buzz of Puri. High-impact video reels, performance ads, and creator campaigns for cafes, gyms, colleges, and hotels.",
+      "Make your brand the buzz of Puri. High-impact video reels, performance ads, and WhatsApp customer funnels for real estate, dining, gyms, and hospitality.",
     type: "website",
     locale: "en_IN",
+    images: [
+      {
+        url: "/buzzler-logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Buzzler Agency Puri Odisha",
+      },
+    ],
   },
 };
 
@@ -107,7 +117,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-[#FAF7F2] text-[#141413] antialiased selection:bg-[#F59E0B]/30 selection:text-black">
+      <body className="min-h-screen bg-[#FAF7F2] text-[#141413] antialiased selection:bg-[#F59E0B]/30 selection:text-black pb-20 md:pb-0">
         {children}
         <MobileQuickBar />
       </body>
