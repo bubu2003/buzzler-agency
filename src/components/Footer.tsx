@@ -33,7 +33,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-xs text-stone-400 leading-relaxed max-w-sm">
-              The creative digital marketing agency dedicated to cafes, gyms, colleges, schools, and hotels across Puri, Bhubaneswar, and coastal Odisha.
+              The creative digital marketing agency dedicated to real estate, cafes, gyms, colleges, schools, and hotels across Puri, Bhubaneswar, and coastal Odisha.
             </p>
 
             <div className="pt-2 flex items-center gap-2 text-xs text-stone-400">
@@ -109,18 +109,23 @@ export default function Footer() {
             </span>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="#work" className="hover:text-white transition-colors">
+                <Link href="/work" className="hover:text-white transition-colors">
                   Featured Work
                 </Link>
               </li>
               <li>
-                <Link href="#why-buzzler" className="hover:text-white transition-colors">
+                <Link href="/#proof-of-work" className="hover:text-white transition-colors">
+                  Reels Proof of Work
+                </Link>
+              </li>
+              <li>
+                <Link href="/#why-buzzler" className="hover:text-white transition-colors">
                   Why Buzzler
                 </Link>
               </li>
               <li>
-                <Link href="#testimonials" className="hover:text-white transition-colors">
-                  Pilot Reviews
+                <Link href="/#testimonials" className="hover:text-white transition-colors">
+                  Client Results
                 </Link>
               </li>
               <li>

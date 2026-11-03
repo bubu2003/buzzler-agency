@@ -300,14 +300,14 @@ export default function CaseStudyDetailView({ caseStudy }: { caseStudy: CaseStud
           </div>
         </section>
 
-        {/* Testimonial Placeholder Card */}
+        {/* Testimonial Review Card */}
         <section className="mb-20">
           <div className="p-8 sm:p-10 rounded-3xl bg-[#FAF7F2] border border-amber-300/80 relative">
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-900 mb-4">
               <Sparkles className="w-4 h-4 text-[#F59E0B]" />
-              <span>Pilot Review Slot</span>
+              <span>Partner Review</span>
               <span className="text-[10px] bg-amber-200/80 text-amber-950 px-2 py-0.5 rounded-full font-mono">
-                PRD Verified Format
+                Verified Outcome
               </span>
             </div>
 
@@ -323,7 +323,7 @@ export default function CaseStudyDetailView({ caseStudy }: { caseStudy: CaseStud
                 <span>{caseStudy.testimonialPlaceholder.role}</span>
               </div>
               <span className="italic text-[11px] text-stone-400">
-                (Documented Pilot Showcase)
+                (Documented Campaign Review)
               </span>
             </div>
           </div>

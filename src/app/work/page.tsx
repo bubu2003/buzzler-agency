@@ -16,11 +16,50 @@ import {
   Filter,
 } from "lucide-react";
 
-const allProjects = [
+interface ProjectItem {
+  id: string;
+  slug: string;
+  badge: string;
+  serviceCategory: string;
+  propertyCategory: string;
+  title: string;
+  propertyType: string;
+  location: string;
+  summary: string;
+  deliverables: string[];
+  gradientTheme: string;
+  isVerified?: boolean;
+  instagramUrl?: string;
+  instagramHandle?: string;
+}
+
+const allProjects: ProjectItem[] = [
+  {
+    id: "shreedham-township",
+    slug: "/work/shreedham-township",
+    badge: "✨ Verified Client Work",
+    serviceCategory: "video",
+    propertyCategory: "realestate",
+    title: "Shreedham Township Puri",
+    propertyType: "Premium Gated Plotted Township & Land",
+    location: "Puri Coastal Corridor, Odisha",
+    summary:
+      "5 master vertical Instagram reels produced in Odia & Hindi, combining viral local hooks ('Rate sunile shock heijibe') with middle-class investment psychology and WhatsApp inquiry funnels.",
+    deliverables: [
+      "5x 4K Master Vertical Instagram Reels",
+      "Multilingual Odia & Hindi Scriptwriting & Voiceovers",
+      "High-Retention Storylines & Regret Angles",
+      "Instagram Video Distribution & WhatsApp Lead Funnel",
+    ],
+    gradientTheme: "from-amber-600 via-stone-900 to-stone-950",
+    isVerified: true,
+    instagramUrl: "https://www.instagram.com/shreedhamtownship/?hl=en",
+    instagramHandle: "@shreedhamtownship",
+  },
   {
     id: "coastal-bean",
     slug: "/#work",
-    badge: "Cafe & Dining",
+    badge: "Strategic Blueprint",
     serviceCategory: "video",
     propertyCategory: "cafe",
     title: "The Coastal Bean Cafe & Roastery",
@@ -34,7 +73,7 @@ const allProjects = [
   {
     id: "ironpulse-fitness",
     slug: "/#work",
-    badge: "Gym & Fitness",
+    badge: "Strategic Blueprint",
     serviceCategory: "ads",
     propertyCategory: "gym",
     title: "IronPulse Strength & CrossFit Club",
@@ -48,7 +87,7 @@ const allProjects = [
   {
     id: "heritage-academy",
     slug: "/#work",
-    badge: "School & College",
+    badge: "Strategic Blueprint",
     serviceCategory: "video",
     propertyCategory: "education",
     title: "Heritage International Academy & College",
@@ -62,7 +101,7 @@ const allProjects = [
   {
     id: "bay-breeze",
     slug: "/work/bay-breeze-resort",
-    badge: "Beachfront Resort",
+    badge: "Hospitality Framework",
     serviceCategory: "video",
     propertyCategory: "resort",
     title: "Bay Breeze Grand Resort & Spa",
@@ -76,7 +115,7 @@ const allProjects = [
   {
     id: "jagannath-haveli",
     slug: "/work/jagannath-heritage-haveli",
-    badge: "Heritage Stay",
+    badge: "Heritage Brand Framework",
     serviceCategory: "branding",
     propertyCategory: "resort",
     title: "Jagannath Heritage Haveli",
@@ -90,7 +129,7 @@ const allProjects = [
   {
     id: "chilika-retreat",
     slug: "/work/chilika-eco-retreat",
-    badge: "Eco-Tourism",
+    badge: "Eco-Tourism Framework",
     serviceCategory: "influencer",
     propertyCategory: "resort",
     title: "Chilika Lagoon Eco-Retreat",
@@ -132,20 +171,20 @@ export default function WorkHubPage() {
           <div className="max-w-3xl mb-12">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-900 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-4">
               <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
-              Multi-Industry Portfolio & Case Studies
+              Proven Work & Industry Blueprints
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#141413] font-serif leading-[1.12] mb-6">
-              Concept campaigns engineered for Puri & Odisha brands.
+              Client work & growth campaigns engineered for Odisha brands.
             </h1>
             <p className="text-base sm:text-lg text-stone-600 leading-relaxed font-normal">
-              Explore our documented case study roadmaps and execution frameworks showing how Buzzler combines 4K cinematography, strategic ad funnels, and creator marketing across cafes, gyms, colleges, and hotels.
+              Explore our live client deliverables—including 5 master vertical reels produced for Shreedham Township, Puri—alongside specialized growth playbooks crafted for local hospitality, dining, and fitness businesses.
             </p>
 
-            {/* Ethics Transparency Pill */}
-            <div className="mt-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-amber-100/70 border border-amber-300/70 text-xs text-amber-950 font-medium">
-              <Info className="w-4 h-4 text-amber-800 shrink-0" />
+            {/* Production Notice Pill */}
+            <div className="mt-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-amber-100/80 border border-amber-300 text-xs text-amber-950 font-medium">
+              <CheckCircle2 className="w-4 h-4 text-amber-700 shrink-0" />
               <span>
-                <strong>Client Ethics Policy:</strong> All projects below are comprehensive concept & pilot demonstrations. Verified live client case studies publish following active campaign completion.
+                <strong>Verified Production:</strong> Shreedham Township is an active client campaign in Puri with 5 live multilingual Instagram Reels.
               </span>
             </div>
           </div>
@@ -156,7 +195,8 @@ export default function WorkHubPage() {
               <Filter className="w-3.5 h-3.5" /> Filter:
             </span>
             {[
-              { id: "all", label: "All Projects" },
+              { id: "all", label: "All Work" },
+              { id: "realestate", label: "Real Estate & Land" },
               { id: "cafe", label: "Cafes & Dining" },
               { id: "gym", label: "Gyms & Fitness" },
               { id: "education", label: "Schools & Colleges" },
@@ -183,7 +223,11 @@ export default function WorkHubPage() {
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="bg-white rounded-3xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between group"
+                className={`bg-white rounded-3xl border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group ${
+                  project.isVerified
+                    ? "border-amber-400 ring-2 ring-amber-400/20"
+                    : "border-stone-200 hover:border-amber-400"
+                }`}
               >
                 {/* Visual Header Slate */}
                 <div className={`p-6 sm:p-8 bg-stone-900 text-white relative overflow-hidden`}>
@@ -192,8 +236,14 @@ export default function WorkHubPage() {
                     <span className="bg-black/50 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-amber-300 border border-white/10">
                       {project.badge}
                     </span>
-                    <span className="text-stone-300 text-[11px] font-mono">
-                      [CONCEPT DEMO]
+                    <span
+                      className={`text-[11px] font-mono px-2 py-0.5 rounded-full ${
+                        project.isVerified
+                          ? "bg-amber-400 text-black font-bold"
+                          : "text-stone-300 bg-black/40"
+                      }`}
+                    >
+                      {project.isVerified ? "✨ LIVE CLIENT" : "STRATEGY PLAYBOOK"}
                     </span>
                   </div>
 
@@ -211,7 +261,7 @@ export default function WorkHubPage() {
                 {/* Body Content */}
                 <div className="p-6 sm:p-7 flex flex-col justify-between flex-1">
                   <div className="space-y-4">
-                    <span className="text-[11px] uppercase font-bold tracking-wider text-amber-800 bg-amber-50 px-2.5 py-1 rounded-md inline-block">
+                    <span className="text-[11px] uppercase font-bold tracking-wider text-amber-800 bg-amber-50 px-2.5 py-1 rounded-md inline-block font-semibold">
                       {project.propertyType}
                     </span>
 
@@ -235,42 +285,19 @@ export default function WorkHubPage() {
                   {/* Card Bottom CTA Link */}
                   <div className="pt-6 mt-6 border-t border-stone-100 flex items-center justify-between">
                     <span className="text-xs font-semibold text-stone-500">
-                      View Full Case Study
+                      {project.isVerified ? "View 5 Live Reels & Case Study" : "View Strategy Blueprint"}
                     </span>
                     <Link
                       href={project.slug}
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#141413] text-white text-xs font-bold hover:bg-black transition-colors"
+                      className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-stone-100 group-hover:bg-[#141413] group-hover:text-white text-xs font-bold transition-all"
                     >
-                      <span>Read Study</span>
+                      <span>Explore</span>
                       <ArrowUpRight className="w-3.5 h-3.5 text-[#F59E0B]" />
                     </Link>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Founder Pilot Program Invitation Banner */}
-          <div className="bg-[#141413] text-white rounded-3xl p-8 sm:p-12 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-            <div className="space-y-2 max-w-xl">
-              <span className="text-xs uppercase font-bold tracking-wider text-amber-400">
-                Founder Pilot Cohort
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-bold font-serif text-[#FAF7F2]">
-                Want your business to be our next documented case study?
-              </h2>
-              <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
-                We are onboarding pilot partners across cafes, gyms, schools/colleges, and hotels in Puri and Bhubaneswar. You receive full video production & ad funnels at introductory rates in exchange for documenting growth metrics.
-              </p>
-            </div>
-
-            <Link
-              href="/#quote"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#F59E0B] text-black text-xs sm:text-sm font-bold hover:bg-amber-400 transition-colors shrink-0 shadow-md"
-            >
-              <span>Apply for Pilot Program</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </Link>
           </div>
         </div>
       </section>

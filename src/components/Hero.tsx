@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowUpRight,
   Play,
+  Pause,
   Sparkles,
   MapPin,
   TrendingUp,
@@ -13,6 +14,7 @@ import {
   MessageSquare,
   CheckCircle2,
   Volume2,
+  VolumeX,
   Compass,
   UtensilsCrossed,
   Dumbbell,
@@ -22,6 +24,23 @@ import {
 } from "lucide-react";
 
 export const industryPresets = [
+  {
+    id: "realestate",
+    icon: Building2,
+    label: "Real Estate & Township",
+    categoryBadge: "✨ Live Client • Shreedham Township",
+    businessName: "Shreedham Township Puri",
+    location: "Puri Coastal Corridor, Odisha",
+    hook: "“Rate sunile shock heijibe” native Odia hook & middle-class land asset investment reels",
+    views: "5 Master Reels Live",
+    reach: "Puri, Bhubaneswar, Cuttack & NRI Odias",
+    reelsHighlight: "Odia viral hook + Puri infrastructure boom & affordable plot plans",
+    primaryMetric: "Direct WhatsApp Inquiries",
+    monthlyDeliverable: "5x 4K Master Vertical Reels + High-Retention Scriptwriting",
+    bgGradient: "radial-gradient(circle at 50% 30%, #f59e0b 0%, #1c1917 80%)",
+    videoSrc: "/videos/shreedham/shreedham-rate-shock-odia.mp4",
+    handle: "@shreedhamtownship",
+  },
   {
     id: "cafe",
     icon: UtensilsCrossed,
@@ -36,6 +55,8 @@ export const industryPresets = [
     primaryMetric: "+45% Weekend Table Footfall",
     monthlyDeliverable: "8x Sizzling 4K Food Reels + Local Foodie Collabs",
     bgGradient: "radial-gradient(circle at 50% 30%, #f97316 0%, #1c1917 80%)",
+    videoSrc: undefined,
+    handle: "@buzzler.odisha",
   },
   {
     id: "gym",
@@ -51,6 +72,8 @@ export const industryPresets = [
     primaryMetric: "140+ Trial WhatsApp Leads / Mo",
     monthlyDeliverable: "6x High-Energy Reels + Meta Membership Ad Funnel",
     bgGradient: "radial-gradient(circle at 50% 30%, #ef4444 0%, #1c1917 80%)",
+    videoSrc: undefined,
+    handle: "@buzzler.odisha",
   },
   {
     id: "hotel",
@@ -66,6 +89,8 @@ export const industryPresets = [
     primaryMetric: "-25% OTA Commission Loss",
     monthlyDeliverable: "4K Drone Balcony Tours + Kolkata Weekend Ad Funnel",
     bgGradient: "radial-gradient(circle at 50% 30%, #f59e0b 0%, #1c1917 80%)",
+    videoSrc: undefined,
+    handle: "@buzzler.odisha",
   },
   {
     id: "college",
@@ -81,12 +106,38 @@ export const industryPresets = [
     primaryMetric: "380+ Verified Admission Inquiries",
     monthlyDeliverable: "Campus Showcase Film + Google Search Admission Ads",
     bgGradient: "radial-gradient(circle at 50% 30%, #3b82f6 0%, #1c1917 80%)",
+    videoSrc: undefined,
+    handle: "@buzzler.odisha",
   },
 ];
 
 export default function Hero() {
   const [activePreset, setActivePreset] = useState(industryPresets[0]);
   const [isPlayingReel, setIsPlayingReel] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  const toggleReelPlayback = () => {
+    if (activePreset.videoSrc && videoRef.current) {
+      if (isPlayingReel) {
+        videoRef.current.pause();
+        setIsPlayingReel(false);
+      } else {
+        videoRef.current.play().catch(() => {});
+        setIsPlayingReel(true);
+      }
+    } else {
+      setIsPlayingReel(!isPlayingReel);
+    }
+  };
+
+  const toggleMute = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
 
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-dot-pattern">
@@ -100,7 +151,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-900/[0.04] border border-stone-300/80 mb-6 shadow-2xs hover:bg-stone-900/[0.07] transition-all">
             <span className="flex h-2 w-2 rounded-full bg-[#F59E0B] animate-pulse" />
             <span className="text-xs font-semibold uppercase tracking-wider text-stone-800">
-              Creative Growth Agency for Puri & Odisha Brands
+              Creative Performance Marketing for Puri & Odisha Brands
             </span>
             <span className="text-stone-300">|</span>
             <span className="text-xs font-medium text-stone-600 flex items-center gap-1">
@@ -131,70 +182,51 @@ export default function Hero() {
 
           {/* Concise supporting copy highlighting versatility */}
           <p className="text-lg sm:text-xl text-stone-600 max-w-3xl mb-8 leading-relaxed font-normal">
-            Video-first creative content, high-converting Meta & Google ads, and authentic local storytelling crafted for **cafes, restaurants, gyms, hotels, schools & colleges** across Puri and Odisha.
+            Video-first creative content, high-converting Meta & Google ads, and authentic local storytelling crafted for <strong>real estate, cafes, restaurants, gyms, hotels, schools & colleges</strong> across Puri and Odisha.
           </p>
 
           {/* Dual CTAs + WhatsApp */}
           <div className="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto mb-10">
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#141413] text-[#FAF7F2] text-base font-semibold hover:bg-black transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-[#141413] text-[#FAF7F2] font-semibold text-sm hover:bg-black hover:scale-105 transition-all shadow-md group"
             >
-              <span>Let's Talk</span>
-              <ArrowUpRight className="w-4 h-4 text-[#F59E0B]" />
-            </Link>
-
-            <Link
-              href="/work"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-stone-800 border border-stone-300 text-base font-semibold hover:bg-stone-50 transition-all shadow-2xs hover:-translate-y-0.5"
-            >
-              <span>Explore Our Work</span>
+              <span>Get Free Growth Audit</span>
+              <ArrowUpRight className="w-4 h-4 text-[#F59E0B] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>
 
             <a
-              href="https://wa.me/917873343141?text=Hi%20Buzzler,%20I'd%20like%20to%20know%20how%20you%20can%20help%20my%20business%20in%20Puri."
+              href="https://wa.me/917873343141?text=Hi%20Buzzler,%20I'd%20like%20to%20discuss%20marketing%20for%20my%20business%20in%20Puri."
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-sm font-semibold hover:bg-emerald-100 transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-white text-stone-800 font-semibold text-sm hover:bg-stone-50 border border-stone-300 shadow-2xs hover:shadow-xs transition-all"
             >
-              <MessageSquare className="w-4 h-4 text-emerald-600 fill-emerald-600" />
-              <span>Direct WhatsApp</span>
+              <MessageSquare className="w-4 h-4 text-emerald-600" />
+              <span>Chat on WhatsApp</span>
             </a>
           </div>
 
-          {/* Credibility mini-strip */}
-          <div className="flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs text-stone-500 font-medium pb-2 border-b border-stone-200/80">
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#F59E0B]" />
-              Video-First Creative Direction
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#F59E0B]" />
-              On-Ground in Puri & Bhubaneswar
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#F59E0B]" />
-              Multi-Lingual (Odia • Bengali • Hindi • English)
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#F59E0B]" />
-              Measurable Leads & Walk-In Traffic
+          {/* Proof of Work Highlight Pill */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-amber-100/80 border border-amber-300/80 text-xs text-amber-950 font-medium mb-12">
+            <Sparkles className="w-4 h-4 text-amber-700 shrink-0" />
+            <span>
+              <strong>Proof of Work:</strong> 5 live vertical reels produced for <strong>Shreedham Township</strong> in Puri. Tap below to preview.
             </span>
           </div>
         </div>
 
-        {/* Hero Interactive Clay-Style Multi-Industry Simulator */}
-        <div className="mt-14 max-w-5xl mx-auto">
-          <div className="bg-white/80 backdrop-blur-md rounded-3xl border border-stone-300/80 p-4 sm:p-6 shadow-xl relative overflow-hidden">
-            {/* Top Bar of the Interactive Mockup with 4 Industry Switchers */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-4 border-b border-stone-200">
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-stone-300" />
-                <div className="w-3 h-3 rounded-full bg-stone-300" />
-                <div className="w-3 h-3 rounded-full bg-stone-300" />
-                <span className="ml-2 text-xs font-mono uppercase tracking-wider text-stone-500 font-semibold">
-                  Buzzler Reel & Growth Simulator
+        {/* Tactile Multi-Industry Proof Simulator */}
+        <div className="mt-4 max-w-5xl mx-auto">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200/90 shadow-xl relative">
+            {/* Header bar of the simulator */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-stone-100 gap-4">
+              <div>
+                <span className="text-[11px] font-bold uppercase tracking-wider text-amber-700 bg-amber-100/70 px-2.5 py-1 rounded-full">
+                  Live Reel & Funnel Engine
                 </span>
+                <h2 className="text-lg font-bold text-stone-900 mt-1 font-serif">
+                  Select your sector to see how Buzzler creates demand:
+                </h2>
               </div>
 
               {/* Industry selector buttons */}
@@ -204,7 +236,10 @@ export default function Hero() {
                   return (
                     <button
                       key={preset.id}
-                      onClick={() => setActivePreset(preset)}
+                      onClick={() => {
+                        setActivePreset(preset);
+                        setIsPlayingReel(false);
+                      }}
                       className={`text-xs px-3 py-1.5 rounded-full font-medium transition-all flex items-center gap-1.5 cursor-pointer ${
                         activePreset.id === preset.id
                           ? "bg-[#141413] text-white shadow-xs"
@@ -224,47 +259,69 @@ export default function Hero() {
               {/* Left Column: Vertical Dynamic Reel Simulator */}
               <div className="lg:col-span-5 flex justify-center">
                 <div className="relative w-64 h-[390px] sm:w-72 sm:h-[430px] rounded-3xl overflow-hidden shadow-2xl border-4 border-stone-900 bg-stone-900 text-white flex flex-col justify-between p-4 group">
-                  {/* Background simulated gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/60 to-stone-800 -z-10" />
+                  {/* If video source exists, play actual video */}
+                  {activePreset.videoSrc ? (
+                    <video
+                      ref={videoRef}
+                      src={activePreset.videoSrc}
+                      playsInline
+                      loop
+                      preload="metadata"
+                      muted={isMuted}
+                      className="absolute inset-0 w-full h-full object-cover"
+                      onPlay={() => setIsPlayingReel(true)}
+                      onPause={() => setIsPlayingReel(false)}
+                    />
+                  ) : (
+                    <>
+                      {/* Background simulated gradient */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/60 to-stone-800 -z-10" />
+                      <div
+                        className="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-700 -z-20"
+                        style={{ backgroundImage: activePreset.bgGradient }}
+                      />
+                    </>
+                  )}
 
-                  {/* Video ambient glow */}
-                  <div
-                    className="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-700 -z-20"
-                    style={{ backgroundImage: activePreset.bgGradient }}
-                  />
+                  {/* Gradient shade for readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/50 pointer-events-none" />
 
                   {/* Reel Top Bar */}
-                  <div className="flex items-center justify-between text-xs font-medium">
+                  <div className="flex items-center justify-between text-xs font-medium z-10">
                     <span className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-xs text-[11px] text-amber-300 border border-white/10">
                       <Sparkles className="w-3 h-3 text-[#F59E0B]" />
                       Buzzler 4K Reel
                     </span>
-                    <button
-                      onClick={() => setIsPlayingReel(!isPlayingReel)}
-                      className="p-1 rounded-full bg-black/50 hover:bg-black/80 text-white/80 hover:text-white transition-colors cursor-pointer"
-                      aria-label="Sound toggle"
-                    >
-                      <Volume2 className="w-3.5 h-3.5" />
-                    </button>
+                    {activePreset.videoSrc && (
+                      <button
+                        onClick={toggleMute}
+                        className="p-1 rounded-full bg-black/50 hover:bg-black/80 text-white/80 hover:text-white transition-colors cursor-pointer"
+                        aria-label="Sound toggle"
+                      >
+                        {isMuted ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
+                      </button>
+                    )}
                   </div>
 
                   {/* Reel Center Action */}
                   <div
-                    className="flex flex-col items-center justify-center my-auto cursor-pointer"
-                    onClick={() => setIsPlayingReel(!isPlayingReel)}
+                    className="flex flex-col items-center justify-center my-auto cursor-pointer z-10"
+                    onClick={toggleReelPlayback}
                   >
-                    <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#F59E0B] group-hover:text-black transition-all shadow-lg text-white">
-                      <Play className="w-6 h-6 ml-0.5 fill-current" />
-                    </div>
-                    <span className="mt-3 text-xs font-semibold text-white/90 drop-shadow-sm">
-                      {isPlayingReel ? "Playing Reel Preview..." : "Tap to Preview Creative Reel"}
+                    {!isPlayingReel && (
+                      <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#F59E0B] group-hover:text-black transition-all shadow-lg text-white">
+                        <Play className="w-6 h-6 ml-0.5 fill-current" />
+                      </div>
+                    )}
+                    <span className="mt-3 text-xs font-semibold text-white/90 drop-shadow-sm bg-black/40 px-2.5 py-1 rounded-full">
+                      {isPlayingReel ? "Playing Active Reel • Tap to Pause" : "Tap to Play Video Reel"}
                     </span>
                   </div>
 
                   {/* Reel Bottom Meta Overlay */}
-                  <div className="space-y-2 text-left bg-black/60 backdrop-blur-md p-3 rounded-2xl border border-white/10">
+                  <div className="space-y-2 text-left bg-black/65 backdrop-blur-md p-3 rounded-2xl border border-white/10 z-10">
                     <div className="flex items-center gap-2">
-                      <span className="text-xs font-bold text-amber-400">@buzzler.odisha</span>
+                      <span className="text-xs font-bold text-amber-400">{activePreset.handle}</span>
                       <span className="text-[10px] bg-white/20 px-1.5 py-0.5 rounded text-white">
                         {activePreset.categoryBadge}
                       </span>
@@ -347,7 +404,7 @@ export default function Hero() {
                 </div>
 
                 {/* Action button inside mockup */}
-                <div className="pt-2 flex items-center justify-between">
+                <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <span className="text-xs text-stone-500">
                     No lock-in contracts • Tailored quote per sector
                   </span>

@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import IndustryShowcase from "@/components/IndustryShowcase";
 import ServicesGrid from "@/components/ServicesGrid";
 import FeaturedWork from "@/components/FeaturedWork";
+import ReelsShowcase from "@/components/ReelsShowcase";
 import WhyBuzzler from "@/components/WhyBuzzler";
 import InteractiveStrategyTool from "@/components/InteractiveStrategyTool";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -19,6 +20,7 @@ export default function Home() {
       <IndustryShowcase />
       <ServicesGrid />
       <FeaturedWork />
+      <ReelsShowcase />
       <WhyBuzzler />
       <InteractiveStrategyTool />
       <TestimonialsSection />

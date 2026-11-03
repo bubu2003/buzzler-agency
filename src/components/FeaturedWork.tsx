@@ -1,24 +1,25 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
   Sparkles,
   ArrowUpRight,
   Play,
+  Pause,
   Film,
   MapPin,
   Compass,
   CheckCircle2,
   ExternalLink,
+  Volume2,
+  VolumeX,
   Layers,
   Info,
-  UtensilsCrossed,
-  Dumbbell,
-  GraduationCap,
   Building2,
 } from "lucide-react";
+import InstagramIcon from "@/components/icons/InstagramIcon";
 
 interface ProjectDemo {
   id: string;
@@ -33,12 +34,46 @@ interface ProjectDemo {
   sampleReelTitle: string;
   deliverablesList: string[];
   gradientTheme: string;
+  isVerifiedClient?: boolean;
+  videoSrc?: string;
+  instagramUrl?: string;
+  instagramHandle?: string;
 }
 
 const projects: ProjectDemo[] = [
   {
+    id: "shreedham-township",
+    badge: "✨ Verified Client Work • Real Estate",
+    industryTag: "Real Estate & Township",
+    title: "Shreedham Township Puri",
+    propertyType: "Premium Gated Plotted Township & Villa Land",
+    location: "Puri Coastal Corridor, Odisha",
+    isVerifiedClient: true,
+    videoSrc: "/videos/shreedham/shreedham-rate-shock-odia.mp4",
+    instagramUrl: "https://www.instagram.com/shreedhamtownship/?hl=en",
+    instagramHandle: "@shreedhamtownship",
+    servicesProvided: [
+      "5x Master Vertical Reels",
+      "Bilingual Scripting (Odia/Hindi)",
+      "High-Impact Viral Hooks",
+      "WhatsApp Lead Inquiries",
+    ],
+    conceptObjective:
+      "Drive qualified plot inquiries for premium land near Puri by connecting the upcoming infrastructure boom, Jagannath Puri spiritual heritage, and smart salaried financial habits.",
+    creativeExecution:
+      "High-energy native Odia hook 'Rate sunile shock heijibe' combined with relatable Hindi financial angles on middle-class salary allocation and real estate investment timing.",
+    sampleReelTitle: "Rate Sunile Shock Heijibe: Puri Real Estate Smart Investment",
+    deliverablesList: [
+      "5x 4K Master Vertical Instagram Reels (Odia & Hindi)",
+      "Native Odia Voiceover & Scriptwriting for High Retention",
+      "Puri Corridor Growth & Land Appreciation Storylines",
+      "Direct Click-to-WhatsApp Lead Flow Architecture",
+    ],
+    gradientTheme: "from-amber-600 via-stone-900 to-stone-950",
+  },
+  {
     id: "coastal-bean",
-    badge: "Concept Demo • Cafe & Restaurant",
+    badge: "Strategic Blueprint • Cafe & Dining",
     industryTag: "Food & Dining",
     title: "The Coastal Bean Cafe & Roastery",
     propertyType: "Artisanal Beachside Cafe & Roastery",
@@ -59,7 +94,7 @@ const projects: ProjectDemo[] = [
   },
   {
     id: "ironpulse-fitness",
-    badge: "Concept Demo • Gym & Fitness",
+    badge: "Strategic Blueprint • Gym & Fitness",
     industryTag: "Health & Fitness",
     title: "IronPulse Strength & CrossFit Club",
     propertyType: "Premium 5,000 sq.ft Strength & Conditioning Facility",
@@ -80,7 +115,7 @@ const projects: ProjectDemo[] = [
   },
   {
     id: "heritage-academy",
-    badge: "Concept Demo • School & College",
+    badge: "Strategic Blueprint • School & College",
     industryTag: "Education & Academics",
     title: "Heritage International Academy & College",
     propertyType: "CBSE Affiliated Senior Secondary & Junior College",
@@ -101,7 +136,7 @@ const projects: ProjectDemo[] = [
   },
   {
     id: "bay-breeze",
-    badge: "Concept Demo • Hotel & Resort",
+    badge: "Strategic Blueprint • Hotel & Resort",
     industryTag: "Hospitality & Stays",
     title: "Bay Breeze Grand Resort & Spa",
     propertyType: "54-Key Luxury Oceanfront Beach Resort",
@@ -124,30 +159,64 @@ const projects: ProjectDemo[] = [
 
 export default function FeaturedWork() {
   const [activeProject, setActiveProject] = useState(projects[0]);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   const [previewModalOpen, setPreviewModalOpen] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        videoRef.current.play().catch(() => {});
+        setIsPlaying(true);
+      }
+    } else {
+      setPreviewModalOpen(true);
+    }
+  };
+
+  const toggleMute = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
 
   return (
     <section id="work" className="py-24 bg-[#FAF7F2] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Heading & Honest Disclosure */}
+        {/* Section Heading & Proof-of-Work Context */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-900 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-4">
               <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
-              Multi-Industry Portfolio Showcase
+              Proven Work & Industry Blueprints
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif mb-4">
-              Concept campaigns engineered for real business growth.
+              Real campaigns engineered for verifiable business growth.
             </h2>
             <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-              To maintain 100% integrity, the case studies below are comprehensive concept & pilot demonstrations illustrating our creative direction, shot lists, and campaign setups across cafes, gyms, colleges, and hotels.
+              Explore our live client deliverables—including 5 high-converting vertical reels for Shreedham Township, Puri—alongside specialized growth playbooks crafted for local hospitality, fitness, and dining brands.
             </p>
 
-            {/* Transparent Notice Pill */}
-            <div className="mt-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-amber-100/70 border border-amber-300/60 text-xs text-amber-950 font-medium">
-              <Info className="w-4 h-4 text-amber-800 shrink-0" />
+            {/* Verified Work Pill */}
+            <div className="mt-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-amber-100/90 border border-amber-300 text-xs text-amber-950 font-medium">
+              <CheckCircle2 className="w-4 h-4 text-amber-700 shrink-0" />
               <span>
-                <strong>Transparency Note:</strong> As per Buzzler's ethics policy, client names and statistics are not fabricated. Live client case studies will publish following their scheduled campaign run.
+                <strong>Verified Production:</strong> Shreedham Township is an active client campaign in Puri. Check the live Instagram reels below or visit{" "}
+                <a
+                  href="https://www.instagram.com/shreedhamtownship/?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold underline text-amber-900 hover:text-black"
+                >
+                  @shreedhamtownship
+                </a>
+                .
               </span>
             </div>
           </div>
@@ -156,7 +225,7 @@ export default function FeaturedWork() {
             href="/work"
             className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-900 hover:text-black bg-amber-100/80 hover:bg-amber-200/80 px-4 py-2 rounded-full transition-colors shrink-0"
           >
-            <span>View All Work & Case Studies</span>
+            <span>View All Case Studies & Blueprints</span>
             <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>
@@ -166,14 +235,20 @@ export default function FeaturedWork() {
           {projects.map((proj) => (
             <button
               key={proj.id}
-              onClick={() => setActiveProject(proj)}
-              className={`px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+              onClick={() => {
+                setActiveProject(proj);
+                setIsPlaying(false);
+              }}
+              className={`px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer flex items-center gap-1.5 ${
                 activeProject.id === proj.id
                   ? "bg-[#141413] text-white shadow-sm"
                   : "bg-white text-stone-700 hover:bg-stone-100 border border-stone-200"
               }`}
             >
-              <span className="text-stone-400 mr-1.5 font-normal">[{proj.industryTag}]</span>
+              {proj.isVerifiedClient && (
+                <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
+              )}
+              <span className="text-stone-400 mr-1 font-normal">[{proj.industryTag}]</span>
               <span>{proj.title}</span>
             </button>
           ))}
@@ -183,44 +258,93 @@ export default function FeaturedWork() {
         <div className="bg-white rounded-3xl border border-stone-200 shadow-xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12">
             {/* Visual Reel Stage Preview */}
-            <div className="lg:col-span-5 p-6 sm:p-8 bg-stone-900 text-white flex flex-col justify-between relative overflow-hidden">
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${activeProject.gradientTheme} opacity-80 -z-10`}
-              />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.6)_100%)] -z-10" />
+            <div className="lg:col-span-5 p-6 sm:p-8 bg-stone-900 text-white flex flex-col justify-between relative overflow-hidden min-h-[460px]">
+              {/* If Video Source exists, embed playable video */}
+              {activeProject.videoSrc ? (
+                <>
+                  <video
+                    ref={videoRef}
+                    src={activeProject.videoSrc}
+                    playsInline
+                    loop
+                    preload="metadata"
+                    muted={isMuted}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    onPlay={() => setIsPlaying(true)}
+                    onPause={() => setIsPlaying(false)}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/60 pointer-events-none" />
+                </>
+              ) : (
+                <>
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${activeProject.gradientTheme} opacity-80 -z-10`}
+                  />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.6)_100%)] -z-10" />
+                </>
+              )}
 
               {/* Top Meta info */}
               <div className="flex items-center justify-between z-10">
-                <span className="text-[11px] uppercase tracking-wider font-bold bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-amber-300">
+                <span className="text-[11px] uppercase tracking-wider font-bold bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-amber-300">
                   {activeProject.badge}
                 </span>
-                <span className="text-xs text-stone-300 flex items-center gap-1">
+
+                {activeProject.videoSrc && (
+                  <button
+                    onClick={toggleMute}
+                    className="p-1.5 rounded-full bg-black/60 hover:bg-black/80 backdrop-blur-md text-white border border-white/10 transition-colors cursor-pointer"
+                    aria-label="Sound Toggle"
+                  >
+                    {isMuted ? <VolumeX className="w-3.5 h-3.5 text-amber-300" /> : <Volume2 className="w-3.5 h-3.5 text-amber-400" />}
+                  </button>
+                )}
+
+                <span className="text-xs text-stone-300 flex items-center gap-1 bg-black/40 px-2 py-0.5 rounded-full backdrop-blur-xs">
                   <MapPin className="w-3.5 h-3.5 text-amber-400" />
                   {activeProject.location.split(",")[0]}
                 </span>
               </div>
 
-              {/* Center Simulated Video Slate */}
-              <div className="my-12 flex flex-col items-center text-center z-10">
-                <div
-                  onClick={() => setPreviewModalOpen(true)}
+              {/* Center Play / Action */}
+              <div className="my-auto flex flex-col items-center text-center z-10 py-6">
+                <button
+                  onClick={togglePlay}
                   className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center hover:scale-110 hover:bg-[#F59E0B] hover:text-black transition-all cursor-pointer shadow-xl text-white group"
+                  aria-label={isPlaying ? "Pause video" : "Play video"}
                 >
-                  <Play className="w-7 h-7 ml-1 fill-current" />
-                </div>
+                  {isPlaying ? (
+                    <Pause className="w-7 h-7 fill-current" />
+                  ) : (
+                    <Play className="w-7 h-7 ml-1 fill-current" />
+                  )}
+                </button>
                 <p className="mt-4 text-xs uppercase tracking-wider font-semibold text-stone-300">
-                  Concept Reel Storyboard
+                  {activeProject.isVerifiedClient ? "Tap to Play Active Reel" : "Video Strategy Blueprint"}
                 </p>
                 <h4 className="mt-1 text-base sm:text-lg font-bold text-white max-w-xs font-serif">
                   “{activeProject.sampleReelTitle}”
                 </h4>
+
+                {activeProject.instagramUrl && (
+                  <a
+                    href={activeProject.instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 hover:bg-white/30 text-white text-[11px] font-semibold border border-white/20 transition-all"
+                  >
+                    <InstagramIcon className="w-3 h-3 text-pink-400" />
+                    <span>Watch on {activeProject.instagramHandle}</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                )}
               </div>
 
               {/* Bottom Visual Highlights */}
-              <div className="space-y-2 bg-black/60 backdrop-blur-md p-4 rounded-2xl border border-white/10 z-10">
+              <div className="space-y-2 bg-black/70 backdrop-blur-md p-4 rounded-2xl border border-white/10 z-10">
                 <div className="flex items-center justify-between text-xs">
-                  <span className="text-amber-400 font-semibold">Production Specs:</span>
-                  <span className="text-stone-300">4K HDR • 9:16 Vertical</span>
+                  <span className="text-amber-400 font-semibold">Production Deliverable:</span>
+                  <span className="text-stone-300">4K HDR • 9:16 Vertical Reel</span>
                 </div>
                 <div className="flex flex-wrap gap-1.5 pt-1">
                   {activeProject.servicesProvided.map((service, idx) => (
@@ -293,13 +417,23 @@ export default function FeaturedWork() {
 
               {/* Action Bar */}
               <div className="pt-8 mt-6 border-t border-stone-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <Link
-                  href="/work"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-stone-900 hover:text-amber-700 transition-colors"
-                >
-                  <span>Explore All Case Studies</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </Link>
+                {activeProject.isVerifiedClient ? (
+                  <Link
+                    href="/work/shreedham-township"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-900 hover:text-black transition-colors"
+                  >
+                    <span>Read Shreedham Township Case Study</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </Link>
+                ) : (
+                  <Link
+                    href="/work"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-stone-900 hover:text-amber-700 transition-colors"
+                  >
+                    <span>Explore All Industry Work</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </Link>
+                )}
 
                 <Link
                   href={`/contact?projectRef=${activeProject.id}`}
@@ -313,7 +447,7 @@ export default function FeaturedWork() {
           </div>
         </div>
 
-        {/* Video Preview Modal (Interactive affordance) */}
+        {/* Video Preview Modal for non-video items */}
         {previewModalOpen && (
           <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
             <div className="bg-stone-900 border border-stone-700 rounded-3xl max-w-md w-full p-6 text-white text-center space-y-4 animate-in fade-in zoom-in-95 duration-200">
@@ -324,7 +458,7 @@ export default function FeaturedWork() {
                 {activeProject.title}
               </h4>
               <p className="text-xs text-stone-300">
-                This storyboard demonstrates our multi-stage camera movements designed to hold viewer retention on Instagram.
+                This campaign framework demonstrates our high-retention video formula crafted for Odisha businesses.
               </p>
               <div className="p-4 rounded-xl bg-black/60 border border-stone-800 text-left text-xs space-y-2">
                 <div className="flex justify-between text-stone-400">
@@ -348,7 +482,7 @@ export default function FeaturedWork() {
                 onClick={() => setPreviewModalOpen(false)}
                 className="w-full py-2.5 rounded-full bg-amber-500 text-black font-bold text-xs hover:bg-amber-400 transition-colors cursor-pointer"
               >
-                Close Preview
+                Close Blueprint
               </button>
             </div>
           </div>
