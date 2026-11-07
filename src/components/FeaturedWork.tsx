@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   Sparkles,
@@ -15,9 +14,6 @@ import {
   ExternalLink,
   Volume2,
   VolumeX,
-  Layers,
-  Info,
-  Building2,
 } from "lucide-react";
 import InstagramIcon from "@/components/icons/InstagramIcon";
 
@@ -43,7 +39,7 @@ interface ProjectDemo {
 const projects: ProjectDemo[] = [
   {
     id: "shreedham-township",
-    badge: "✨ Verified Client Work • Real Estate",
+    badge: "Verified Client Project • Real Estate",
     industryTag: "Real Estate & Township",
     title: "Shreedham Township Puri",
     propertyType: "Premium Gated Plotted Township & Villa Land",
@@ -55,32 +51,32 @@ const projects: ProjectDemo[] = [
     servicesProvided: [
       "5x Master Vertical Reels",
       "Bilingual Scripting (Odia/Hindi)",
-      "High-Impact Viral Hooks",
+      "Attention-Grabbing Video Hooks",
       "WhatsApp Lead Inquiries",
     ],
     conceptObjective:
-      "Drive qualified plot inquiries for premium land near Puri by connecting upcoming infrastructure developments, Jagannath Puri spiritual heritage, and smart financial habits.",
+      "Create awareness and generate plot-related inquiries for Shreedham Township by highlighting its location near Puri, regional development context and potential as a long-term property investment.",
     creativeExecution:
-      "High-energy native Odia hook 'Rate sunile shock heijibe' combined with relatable financial angles on salary allocation and long-term land asset value in coastal Odisha.",
+      "The campaign uses a native Odia opening hook, relatable financial messaging and property-focused storytelling to introduce the project to audiences interested in real estate around Puri.",
     sampleReelTitle: "Rate Sunile Shock Heijibe: Puri Real Estate Smart Investment",
     deliverablesList: [
-      "5x 4K Master Vertical Instagram Reels (Odia & Hindi)",
-      "Native Odia Voiceover & Scriptwriting for High Retention",
-      "Puri Corridor Growth & Land Appreciation Storylines",
-      "Direct Click-to-WhatsApp Lead Flow Architecture",
+      "5 Vertical Instagram Reels in Odia and Hindi",
+      "Odia Voiceover and Campaign Scriptwriting",
+      "Location and Property-Focused Video Storytelling",
+      "Click-to-WhatsApp Inquiry Campaign Integration",
     ],
     gradientTheme: "from-amber-600 via-stone-900 to-stone-950",
   },
   {
     id: "coastal-bean",
-    badge: "Strategic Blueprint • Cafe & Dining",
+    badge: "Sample Campaign Concept • Cafe & Dining",
     industryTag: "Food & Dining",
     title: "The Coastal Bean Cafe & Roastery",
     propertyType: "Artisanal Beachside Cafe & Roastery",
     location: "VIP Road / Sea Beach, Puri",
     servicesProvided: ["4K Sizzling Food Reels", "Local Foodie Influencer Collabs", "Weekend Footfall Meta Ads"],
     conceptObjective:
-      "Position an artisanal beachside cafe as a premier youth and tourist destination in Puri, driving weekend table reservations and weekday cafe visits.",
+      "Develop a marketing approach for a beachside cafe in Puri, using food photography, short-form videos and local advertising to increase awareness and encourage customer inquiries.",
     creativeExecution:
       "High-contrast, macro food cinematography featuring signature seafood platters, steaming artisanal pour-overs, and cheesy pizza pulls, paired with trending audio and weekend dining angles.",
     sampleReelTitle: "Fresh Catch to Pour-Over: The Ultimate Beach Cafe Experience",
@@ -94,14 +90,14 @@ const projects: ProjectDemo[] = [
   },
   {
     id: "ironpulse-fitness",
-    badge: "Strategic Blueprint • Gym & Fitness",
+    badge: "Sample Campaign Concept • Gym & Fitness",
     industryTag: "Health & Fitness",
     title: "IronPulse Strength & CrossFit Club",
     propertyType: "Premium Strength & Conditioning Facility",
     location: "Grand Road / College Square, Puri",
     servicesProvided: ["Cinematic Workout Reels", "Transformation Interviews", "Free 3-Day Pass Meta Funnel"],
     conceptObjective:
-      "Position IronPulse as a premier training facility in Puri, filling morning and evening workout batches with fitness enthusiasts and young professionals.",
+      "Develop a fitness marketing strategy focused on showcasing gym facilities, training experiences and membership options to attract relevant local audiences in Puri.",
     creativeExecution:
       "High-energy workout cinematography featuring heavy compound lifts, conditioning drills, and authentic member transformation stories with a frictionless 'Claim Free 3-Day Pass on WhatsApp' CTA.",
     sampleReelTitle: "Heavy Metal & Hard Work: The IronPulse Transformation",
@@ -115,14 +111,14 @@ const projects: ProjectDemo[] = [
   },
   {
     id: "heritage-academy",
-    badge: "Strategic Blueprint • School & College",
+    badge: "Sample Campaign Concept • Education",
     industryTag: "Education & Academics",
     title: "Heritage International Academy & College",
     propertyType: "Senior Secondary & Junior College",
     location: "Puri-Bhubaneswar Highway Corridor",
     servicesProvided: ["Campus Showcase Film", "Admissions Lead Funnel", "Parent Testimonial Series"],
     conceptObjective:
-      "Establish the institution as a trusted choice for academic excellence in coastal Odisha, generating qualified parent admission inquiries ahead of the new academic session.",
+      "Create an institutional marketing strategy that showcases campus facilities, academic programmes and student experiences to support awareness and admission inquiries.",
     creativeExecution:
       "Inspiring campus films highlighting modern STEM labs, sports infrastructure, and library facilities, coupled with authentic interviews with teachers, achievers, and parents.",
     sampleReelTitle: "Where Curiosity Meets Excellence: Welcome to Heritage Academy",
@@ -136,14 +132,14 @@ const projects: ProjectDemo[] = [
   },
   {
     id: "bay-breeze",
-    badge: "Strategic Blueprint • Hotel & Resort",
+    badge: "Sample Campaign Concept • Hospitality",
     industryTag: "Hospitality & Stays",
     title: "Bay Breeze Grand Resort & Spa",
     propertyType: "Luxury Oceanfront Beach Resort",
     location: "Marine Drive, Golden Beach, Puri",
     servicesProvided: ["Cinematic Aerial 4K", "Direct Booking Meta Funnel", "Regional Traveler Campaign"],
     conceptObjective:
-      "Position the resort as a premier weekend getaway destination for Kolkata and Bhubaneswar travelers looking for ocean-view balconies and beachside dining.",
+      "Promote a hotel or resort through destination videos, property showcases and targeted advertising aimed at travelers considering stays in Puri.",
     creativeExecution:
       "A vertical video series capturing golden-hour coastal waves, chef's fresh seafood preparations, and luxury room amenities, paired with localized ad copy for regional travelers.",
     sampleReelTitle: "Golden Beach Sunrise to Candlelight Ocean Dining",
@@ -164,14 +160,16 @@ export default function FeaturedWork() {
   const [previewModalOpen, setPreviewModalOpen] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  const togglePlay = () => {
+  const togglePlay = async () => {
     if (videoRef.current) {
       if (isPlaying) {
         videoRef.current.pause();
-        setIsPlaying(false);
       } else {
-        videoRef.current.play().catch(() => {});
-        setIsPlaying(true);
+        try {
+          await videoRef.current.play();
+        } catch (error) {
+          console.error("Video playback failed:", error);
+        }
       }
     } else {
       setPreviewModalOpen(true);
@@ -194,13 +192,17 @@ export default function FeaturedWork() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-900 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-4">
               <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
-              Proven Work & Industry Blueprints
+              Client Work &amp; Campaign Concepts
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif mb-4">
-              Real campaigns engineered for verifiable business growth.
+              Creative Campaigns, Video Production &amp; Brand Strategies
             </h2>
             <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-              Explore our live client deliverables—including 5 high-converting vertical reels for Shreedham Township, Puri—alongside specialized growth playbooks crafted for local hospitality, fitness, and dining brands.
+              Explore our creative work and campaign concepts for businesses in
+              Odisha. From video production for Shreedham Township in Puri to
+              marketing strategies for hospitality, fitness, education and dining
+              brands, see how we approach branding, content creation and digital
+              advertising.
             </p>
 
             {/* Verified Work Pill */}
@@ -236,8 +238,14 @@ export default function FeaturedWork() {
             <button
               key={proj.id}
               onClick={() => {
+                if (videoRef.current) {
+                  videoRef.current.pause();
+                  videoRef.current.currentTime = 0;
+                }
                 setActiveProject(proj);
                 setIsPlaying(false);
+                setIsMuted(true);
+                setPreviewModalOpen(false);
               }}
               className={`px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer flex items-center gap-1.5 ${
                 activeProject.id === proj.id
@@ -263,6 +271,7 @@ export default function FeaturedWork() {
               {activeProject.videoSrc ? (
                 <>
                   <video
+                    key={activeProject.id}
                     ref={videoRef}
                     src={activeProject.videoSrc}
                     playsInline
@@ -344,7 +353,7 @@ export default function FeaturedWork() {
               <div className="space-y-2 bg-black/70 backdrop-blur-md p-4 rounded-2xl border border-white/10 z-10">
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-amber-400 font-semibold">Production Deliverable:</span>
-                  <span className="text-stone-300">4K HDR • 9:16 Vertical Reel</span>
+                  <span className="text-stone-300">4K • 9:16 Vertical Reel</span>
                 </div>
                 <div className="flex flex-wrap gap-1.5 pt-1">
                   {activeProject.servicesProvided.map((service, idx) => (
@@ -389,7 +398,7 @@ export default function FeaturedWork() {
                 {/* Creative Execution */}
                 <div>
                   <span className="text-xs uppercase font-bold tracking-wider text-stone-500 block mb-1.5">
-                    Creative & Video Approach
+                    Creative &amp; Video Approach
                   </span>
                   <p className="text-sm text-stone-600 leading-relaxed">
                     {activeProject.creativeExecution}
@@ -439,7 +448,7 @@ export default function FeaturedWork() {
                   href={`/contact?projectRef=${activeProject.id}`}
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#141413] text-white text-xs font-bold hover:bg-black transition-colors shadow-sm"
                 >
-                  <span>Build A Campaign Like This</span>
+                  <span>Discuss a Similar Project</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-[#F59E0B]" />
                 </Link>
               </div>
@@ -449,12 +458,17 @@ export default function FeaturedWork() {
 
         {/* Video Preview Modal for non-video items */}
         {previewModalOpen && (
-          <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="preview-modal-title"
+            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+          >
             <div className="bg-stone-900 border border-stone-700 rounded-3xl max-w-md w-full p-6 text-white text-center space-y-4 animate-in fade-in zoom-in-95 duration-200">
               <div className="w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center mx-auto">
                 <Film className="w-6 h-6" />
               </div>
-              <h4 className="text-lg font-bold font-serif text-white">
+              <h4 id="preview-modal-title" className="text-lg font-bold font-serif text-white">
                 {activeProject.title}
               </h4>
               <p className="text-xs text-stone-300">
@@ -471,7 +485,7 @@ export default function FeaturedWork() {
                 </div>
                 <div className="flex justify-between text-stone-400">
                   <span>Shot 3 (0:05 - 0:08):</span>
-                  <span className="text-amber-400">Customer Emotion & Experience</span>
+                  <span className="text-amber-400">Customer Emotion &amp; Experience</span>
                 </div>
                 <div className="flex justify-between text-stone-400">
                   <span>Shot 4 (0:08 - 0:12):</span>
