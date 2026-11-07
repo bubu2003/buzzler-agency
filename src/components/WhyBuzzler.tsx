@@ -25,7 +25,7 @@ const pillars = [
   {
     icon: Video,
     title: "Creative Video Production & Storytelling",
-    subtitle: "Emotional Visual Storytelling",
+    subtitle: "Professional Video & Visual Storytelling",
     description:
       "We create visual content that helps businesses showcase their products, services and experiences. From Instagram Reels and YouTube Shorts to campus films, property walkthroughs and promotional videos, our approach combines planning, filming and post-production.",
     points: [
@@ -41,7 +41,7 @@ const pillars = [
     description:
       "We understand that audiences across Odisha and neighboring regions communicate in different languages. Our multilingual content approach helps businesses connect with local customers, regional visitors and wider audiences through relevant messaging.",
     points: [
-      "Localized ad copy that sounds native and culturally resonant",
+      "Ad copy and messaging adapted to regional languages and audiences",
       "Creative concepts that respect local traditions while embracing modern trends",
       "Multilingual video voiceovers, subtitles, and social captions",
     ],
@@ -62,7 +62,11 @@ const pillars = [
 
 export default function WhyBuzzler() {
   return (
-    <section id="why-buzzler" className="py-24 bg-white border-b border-stone-200 relative overflow-hidden">
+    <section
+      id="why-buzzler"
+      aria-labelledby="why-buzzler-heading"
+      className="py-24 bg-white border-b border-stone-200 relative overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
@@ -70,7 +74,10 @@ export default function WhyBuzzler() {
             <SunMedium className="w-3.5 h-3.5 text-[#F59E0B]" />
             The Buzzler Advantage
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif mb-4">
+          <h2
+            id="why-buzzler-heading"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif mb-4"
+          >
             A Creative Agency in Odisha Focused on Business Growth
           </h2>
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
@@ -109,8 +116,8 @@ export default function WhyBuzzler() {
                   </p>
 
                   <div className="space-y-2.5 pt-4 border-t border-stone-200/80">
-                    {pillar.points.map((pt, pIdx) => (
-                      <div key={pIdx} className="flex items-start gap-2.5 text-xs text-stone-800 font-medium">
+                    {pillar.points.map((pt) => (
+                      <div key={pt} className="flex items-start gap-2.5 text-xs text-stone-800 font-medium">
                         <CheckCircle className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
                         <span>{pt}</span>
                       </div>
