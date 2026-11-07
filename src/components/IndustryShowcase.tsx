@@ -10,11 +10,6 @@ import {
   Sparkles,
   ArrowUpRight,
   CheckCircle2,
-  TrendingUp,
-  Users,
-  Video,
-  Target,
-  ChevronRight,
   Store,
 } from "lucide-react";
 
@@ -23,19 +18,19 @@ const industries = [
     id: "cafe",
     icon: UtensilsCrossed,
     title: "Cafes & Restaurants",
-    tagline: "Turn Mouthwatering Food Reels Into Consistent Weekend Table Bookings",
+    tagline: "Creative Marketing That Helps Cafes and Restaurants Attract More Customers",
     badge: "F&B & Dining",
     painPoint:
       "Struggling with slow mid-week footfall and relying heavily on aggregator discounts that reduce your operating margins.",
     buzzlerEngine:
-      "We produce high-contrast, sizzling 4K food shorts, collaborate with local food creators in Puri & Bhubaneswar, and run targeted weekend table-booking WhatsApp ads that drive genuine walk-ins.",
+      "We create engaging food videos, collaborate with relevant local food creators, and develop targeted social media and WhatsApp advertising campaigns to help restaurants promote their menus, offers, and dining experiences.",
     deliverables: [
       "4K vertical reels of signature dishes, live mocktails & dining ambience",
       "Local food creator collaborations & trending Instagram audio styling",
       "Google Business Profile optimization for 'best cafe near me' & local food searches",
       "Weekend brunch & festive promotional ad campaigns",
     ],
-    metricSample: "Consistent Weekend Table Bookings & Walk-In Demand",
+    campaignObjective: "Table Reservations and Local Customer Inquiries",
     sampleClientType: "Beachfront Cafes, Multi-Cuisine Restaurants, Bakeries & Cloud Kitchens",
     ctaText: "Get Cafe Marketing Plan",
   },
@@ -43,19 +38,19 @@ const industries = [
     id: "gym",
     icon: Dumbbell,
     title: "Gyms & Fitness Centers",
-    tagline: "Attract Committed Members Through Transformation Storytelling",
+    tagline: "Build Your Fitness Brand Through Video and Targeted Advertising",
     badge: "Health & Fitness",
     painPoint:
       "High member churn, slow afternoon batches, and competing against discount gyms without building distinct brand value.",
     buzzlerEngine:
-      "We film intense, cinematic workout reels and authentic member transformation stories. Then we run hyper-local Meta ad funnels targeting local fitness seekers with a 'Free 3-Day Trial Pass' delivered straight to WhatsApp.",
+      "We produce workout videos, trainer profiles, and member stories, then develop targeted Meta advertising campaigns to help fitness businesses promote memberships, trial sessions, and special offers.",
     deliverables: [
       "High-energy workout cinematography featuring gym equipment & trainers",
       "Member transformation video interviews building real community proof",
       "Geo-targeted Meta ads offering instant WhatsApp 3-day workout passes",
       "Seasonal membership drives (New Year, Summer fitness, Student specials)",
     ],
-    metricSample: "Steady Stream of Qualified Trial Pass & Membership Leads",
+    campaignObjective: "Trial Sessions and Membership Inquiries",
     sampleClientType: "Strength Gyms, CrossFit Boxes, Yoga Centers & MMA Studios",
     ctaText: "Get Gym Growth Plan",
   },
@@ -63,19 +58,19 @@ const industries = [
     id: "hotel",
     icon: Building2,
     title: "Hotels & Resorts",
-    tagline: "Increase Direct Traveler Bookings and Build Long-Term Loyalty",
+    tagline: "Promote Your Hotel or Resort to Travelers Across Odisha and Beyond",
     badge: "Hospitality & Tourism",
     painPoint:
       "Heavy commission payouts to booking portals and low brand recall among repeat visitors from neighboring states.",
     buzzlerEngine:
-      "We produce cinematic 4K aerial beach views, room walkthroughs, and targeted social ad campaigns focused on travelers from Kolkata, Ranchi, and Bhubaneswar planning weekend trips to Puri.",
+      "We create property showcases, room walkthroughs, and destination-focused video content, supported by social media and advertising campaigns designed to reach travelers considering stays in Puri and other destinations.",
     deliverables: [
       "Cinematic aerial ocean flyovers and room walkthroughs",
       "Weekend getaway social ad campaigns targeting Kolkata & Bhubaneswar",
       "Direct Click-to-WhatsApp inquiry funnels for vacationers",
       "Multilingual copy and subtitles in Bengali, Odia, Hindi, and English",
     ],
-    metricSample: "Direct WhatsApp & Website Booking Inquiries",
+    campaignObjective: "Direct Booking and Travel Inquiries",
     sampleClientType: "Beachfront Resorts, Heritage Havelis, Homestays & Eco-Camps",
     ctaText: "Get Hotel Marketing Plan",
   },
@@ -83,19 +78,19 @@ const industries = [
     id: "college",
     icon: GraduationCap,
     title: "Schools & Colleges",
-    tagline: "Inspire Parent Confidence & Drive Qualified Student Admissions",
+    tagline: "Build Institutional Visibility and Generate Admission Inquiries",
     badge: "Education & Academics",
     painPoint:
       "Fierce regional competition and parents being unaware of your modern academic infrastructure and student achievements.",
     buzzlerEngine:
-      "We produce high-trust campus showcase films, student innovation spotlights, and targeted Google Search + Meta admission inquiry campaigns across Odisha during peak admission windows.",
+      "We produce campus showcase films, student stories, and facility highlights, supported by Google Search and Meta advertising campaigns to help educational institutions reach prospective students and parents.",
     deliverables: [
       "Campus showcase films highlighting laboratories, libraries & sports facilities",
       "Parent & student testimonial video series building institutional trust",
       "Google Search ads on high-intent terms ('CBSE school Puri', 'College admissions Odisha')",
       "WhatsApp & direct phone inquiry capture for admissions desks",
     ],
-    metricSample: "Qualified Parent Inquiries Across Admission Windows",
+    campaignObjective: "Admission and Course Inquiries",
     sampleClientType: "K-12 CBSE Schools, Degree Colleges, Coaching Hubs & Skill Institutes",
     ctaText: "Get College Admission Plan",
   },
@@ -103,19 +98,19 @@ const industries = [
     id: "retail",
     icon: Store,
     title: "Retail & Local Brands",
-    tagline: "Bring High-Intent Walk-Ins Into Your Store, Showroom, or Clinic",
+    tagline: "Showcase Your Products and Reach More Local Customers",
     badge: "Retail & Lifestyle",
     painPoint:
       "Losing customer attention to online platforms and needing strong local social proof to win footfall.",
     buzzlerEngine:
-      "We showcase your collection, products, or professional expertise through relatable vertical video, running local radius-targeted ads that guide customers right to your store.",
+      "We showcase products, collections, and customer experiences through engaging vertical videos and locally targeted advertising campaigns to help retailers increase brand visibility and promote their offerings.",
     deliverables: [
       "Product showcase reels, customer trial videos & festive launch shoots",
       "Google Maps local optimization to capture nearby shoppers",
       "Local festival collection campaigns (Rath Yatra, Diwali, Wedding season)",
       "Customer review generation process for Google and Instagram",
     ],
-    metricSample: "Higher Store Visits During Festive & Wedding Seasons",
+    campaignObjective: "Store Visits and Product Inquiries",
     sampleClientType: "Fashion Boutiques, Jewelry Showrooms, Dental Clinics & Salons",
     ctaText: "Get Retail Marketing Plan",
   },
@@ -133,13 +128,13 @@ export default function IndustryShowcase() {
         <div className="max-w-3xl mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-xs font-semibold uppercase tracking-wider mb-4">
             <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
-            Tailored Industry Solutions
+            Industry Solutions
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif mb-4">
-            Custom creative marketing built for Odisha's key sectors.
+            Marketing Solutions for Businesses Across Odisha
           </h2>
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-            Whether you run a cafe on VIP Road, a fitness club, an oceanfront resort, a plotted township, or an educational institution, Buzzler crafts creative reels and targeted ad funnels designed specifically for your local audience.
+            Buzzler helps businesses in Puri, Bhubaneswar and across Odisha reach their target audiences through creative campaigns, professional video production, social media marketing, and performance advertising. Explore how our marketing approach can support different industries.
           </p>
         </div>
 
@@ -196,7 +191,7 @@ export default function IndustryShowcase() {
 
                 <div className="p-4 rounded-2xl bg-amber-50/70 border border-amber-200/80">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-amber-950 block mb-1">
-                    How Buzzler Drives Demand
+                    How Buzzler Approaches The Challenge
                   </span>
                   <p className="text-xs sm:text-sm text-stone-800 leading-relaxed">
                     {activeIndustry.buzzlerEngine}
@@ -207,7 +202,7 @@ export default function IndustryShowcase() {
               {/* Key Deliverables */}
               <div>
                 <span className="text-xs uppercase font-bold tracking-wider text-stone-400 block mb-2.5">
-                  Package Deliverables:
+                  Campaign Deliverables:
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {activeIndustry.deliverables.map((item, idx) => (
@@ -233,19 +228,19 @@ export default function IndustryShowcase() {
                     <Icon className="w-6 h-6 text-[#F59E0B]" />
                   </div>
                   <span className="text-xs font-mono font-bold text-amber-400">
-                    TARGET OUTCOME
+                    CAMPAIGN OBJECTIVE
                   </span>
                 </div>
 
                 <div>
                   <span className="text-xs text-stone-400 uppercase tracking-wider block mb-1">
-                    Focus Objective
+                    Primary Goal
                   </span>
                   <h4 className="text-2xl sm:text-3xl font-bold font-serif text-[#FAF7F2]">
-                    {activeIndustry.metricSample}
+                    {activeIndustry.campaignObjective}
                   </h4>
                   <p className="text-xs text-stone-300 mt-2 leading-relaxed">
-                    Designed around customized shot lists, high-definition video production, and localized ad targeting in Puri, Bhubaneswar & coastal Odisha.
+                    Customized creative campaigns designed around regional consumer habits in Puri, Bhubaneswar & coastal Odisha.
                   </p>
                 </div>
 
@@ -260,7 +255,7 @@ export default function IndustryShowcase() {
                   </div>
                   <div className="flex items-center gap-2 text-xs text-stone-300">
                     <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
-                    <span>Full commercial ad usage rights included</span>
+                    <span>Commercial video usage rights for paid ad campaigns</span>
                   </div>
                 </div>
               </div>
