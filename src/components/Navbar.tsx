@@ -40,7 +40,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-10 h-10 rounded-xl overflow-hidden border border-[#E2DBD0] bg-white shadow-xs group-hover:shadow-md transition-all duration-200">
               <Image
-                src="/buzzler-logo.jpg"
+                src="/buzzler-new-logo.jpeg"
                 alt="Buzzler Agency Logo"
                 fill
                 sizes="40px"

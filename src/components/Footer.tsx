@@ -15,7 +15,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3">
               <div className="relative w-10 h-10 rounded-xl overflow-hidden border border-stone-700 bg-white">
                 <Image
-                  src="/buzzler-logo.jpg"
+                  src="/buzzler-new-logo.jpeg"
                   alt="Buzzler Agency Logo"
                   fill
                   sizes="40px"

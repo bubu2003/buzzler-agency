@@ -80,8 +80,8 @@ export default function AboutPage() {
               <div className="p-8 rounded-3xl bg-stone-900 text-white relative overflow-hidden shadow-xl">
                 <div className="w-16 h-16 rounded-2xl overflow-hidden border border-white/20 mb-6 bg-white relative">
                   <Image
-                    src="/buzzler-logo.jpg"
-                    alt="Buzzler Agency Bee Mark"
+                    src="/buzzler-new-logo.jpeg"
+                    alt="Buzzler Agency Logo Mark"
                     fill
                     sizes="64px"
                     className="object-cover"

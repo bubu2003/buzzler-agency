@@ -21,47 +21,48 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.buzzler.co.in"),
-  title: "Buzzler Agency | Creative Performance Marketing & 4K Reels in Puri, Odisha",
-  description:
-    "Make your brand the buzz of Puri. High-converting 4K video reels, Meta & Google ads, and WhatsApp lead funnels for real estate, cafes, gyms, colleges, and hotels in Puri and Odisha.",
-  keywords: [
-    "digital marketing agency in Puri",
-    "social media marketing Puri",
-    "real estate marketing Puri",
-    "plotted township marketing Odisha",
-    "cafe restaurant marketing Puri",
-    "gym fitness advertising Puri",
-    "school college admission marketing Odisha",
-    "hotel digital marketing Puri",
-    "video reels ads production Puri Odisha",
-    "Meta ads agency Puri",
-  ],
-  authors: [{ name: "Buzzler Agency" }],
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png", sizes: "192x192" },
-      { url: "/buzzler-logo-transparent.png", sizes: "512x512" },
-    ],
-    apple: [
-      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-    shortcut: "/favicon.ico",
+
+  title: {
+    default: "Buzzler Agency | Creative & Digital Marketing Agency in Odisha",
+    template: "%s | Buzzler Agency",
   },
+
+  description:
+    "Buzzler helps brands grow through creative video production, Google and Meta Ads, influencer marketing and branding across Odisha.",
+
+  applicationName: "Buzzler Agency",
+
+  authors: [{ name: "Buzzler Agency" }],
+
   openGraph: {
-    title: "Buzzler Agency | Creative Performance Marketing in Puri, Odisha",
+    title: "Buzzler Agency | Creative & Digital Marketing Agency in Odisha",
     description:
-      "Make your brand the buzz of Puri. High-impact video reels, performance ads, and WhatsApp customer funnels for real estate, dining, gyms, and hospitality.",
-    type: "website",
+      "Creative campaigns, video production, performance advertising and influencer marketing for growing brands in Odisha.",
+    url: "https://www.buzzler.co.in",
+    siteName: "Buzzler Agency",
     locale: "en_IN",
+    type: "website",
     images: [
       {
-        url: "/buzzler-logo.jpg",
+        url: "/buzzler-new-logo.jpeg",
         width: 1200,
         height: 630,
-        alt: "Buzzler Agency Puri Odisha",
+        alt: "Buzzler Agency",
       },
     ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Buzzler Agency | Creative & Digital Marketing Agency in Odisha",
+    description:
+      "Video production, performance advertising, influencer marketing and branding across Odisha.",
+    images: ["/buzzler-new-logo.jpeg"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -72,41 +73,16 @@ export default function RootLayout({
 }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Buzzler Agency",
-    "image": "https://www.buzzler.co.in/buzzler-logo.jpg",
-    "telephone": "+91-7873343141",
-    "url": "https://www.buzzler.co.in",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Puri",
-      "addressRegion": "Odisha",
-      "postalCode": "752001",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 19.8135,
-      "longitude": 85.8312
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
-      "opens": "09:30",
-      "closes": "19:00"
-    },
-    "sameAs": [
-      "https://www.instagram.com/buzzler.agency"
+    "@type": "Organization",
+    "@id": "https://www.buzzler.co.in/#organization",
+    name: "Buzzler Agency",
+    url: "https://www.buzzler.co.in",
+    logo: "https://www.buzzler.co.in/buzzler-new-logo.jpeg",
+    description:
+      "Buzzler is a creative and digital marketing agency serving brands across Odisha through video production, performance advertising, influencer marketing and branding.",
+    sameAs: [
+      "https://www.instagram.com/buzzler.agency",
     ],
-    "priceRange": "₹₹",
-    "description": "Video-first digital marketing, Meta and Google performance ads, and creator collaborations for cafes, gyms, colleges, schools, and hotels in Puri and Odisha."
   };
 
   return (
