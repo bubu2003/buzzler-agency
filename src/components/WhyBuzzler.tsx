@@ -1,14 +1,9 @@
-"use client";
-
-import React from "react";
 import Link from "next/link";
 import {
   MapPin,
   Video,
   Languages,
   ShieldCheck,
-  TrendingDown,
-  Sparkles,
   ArrowUpRight,
   SunMedium,
   CheckCircle,
@@ -17,26 +12,26 @@ import {
 const pillars = [
   {
     icon: MapPin,
-    title: "We Live and Breathe Puri & Odisha",
-    subtitle: "Local Market Mastery",
+    title: "Understanding the Puri & Odisha Market",
+    subtitle: "Local Market Understanding",
     description:
-      "Unlike remote agencies, our team is right here in Odisha. We understand student admission cycles, weekend dining surges from Bhubaneswar, festival footfall peaks, and coastal tourist behaviors.",
+      "Effective marketing starts with understanding the audience. We consider regional preferences, tourism patterns, local events and seasonal demand when developing campaigns for businesses in Puri, Bhubaneswar and across Odisha.",
     points: [
-      "Dedicated on-ground video production across Puri, Bhubaneswar & coastal Odisha",
-      "In-depth knowledge of local consumer psychology and purchasing habits",
-      "Campaign calendar timed precisely to regional festivals & seasonal demand",
+      "On-ground video production across Puri, Bhubaneswar and coastal Odisha",
+      "Campaign strategies informed by regional audiences and consumer preferences",
+      "Content planning around relevant festivals, events and seasonal demand",
     ],
   },
   {
     icon: Video,
-    title: "Video-First Creative Craft",
+    title: "Creative Video Production & Storytelling",
     subtitle: "Emotional Visual Storytelling",
     description:
-      "Modern audiences engage with dynamic vertical video. We produce cinematic 4K vertical reels, high-energy gym cinematics, campus showcase tours, and food sizzlers that generate immediate customer action.",
+      "We create visual content that helps businesses showcase their products, services and experiences. From Instagram Reels and YouTube Shorts to campus films, property walkthroughs and promotional videos, our approach combines planning, filming and post-production.",
     points: [
-      "High-definition camera setups, stabilized gimbals & aerial drone footage",
-      "Sound design synchronized with trending audio algorithms",
-      "Vertical video crafted specifically for Instagram Reels & YouTube Shorts",
+      "Professional camera setups, stabilized gimbals and aerial footage where available",
+      "Music selection, editing and sound design suited to each video",
+      "Vertical video formats designed for Instagram Reels and YouTube Shorts",
     ],
   },
   {
@@ -44,7 +39,7 @@ const pillars = [
     title: "Multilingual Fluency",
     subtitle: "Odia • Bengali • Hindi • English",
     description:
-      "Odisha's audience is multilingual and culturally nuanced. From local Odia youth and visiting Bengali tourists to pilgrims and corporate decision-makers, we write messaging that connects authentically.",
+      "We understand that audiences across Odisha and neighboring regions communicate in different languages. Our multilingual content approach helps businesses connect with local customers, regional visitors and wider audiences through relevant messaging.",
     points: [
       "Localized ad copy that sounds native and culturally resonant",
       "Creative concepts that respect local traditions while embracing modern trends",
@@ -53,14 +48,14 @@ const pillars = [
   },
   {
     icon: ShieldCheck,
-    title: "Honest, Measurable ROI",
-    subtitle: "Real Inquiries & Leads, Not Bot Views",
+    title: "Transparent Marketing & Performance Tracking",
+    subtitle: "Campaign Insights & Business Inquiries",
     description:
-      "We evaluate success by tangible business outcomes: verified phone calls, direct WhatsApp leads, table reservations, membership signups, and student enrollment inquiries.",
+      "We focus on meaningful campaign indicators such as phone calls, WhatsApp inquiries, website visits and customer leads. Our reporting helps businesses understand how their advertising campaigns are performing and where improvements can be made.",
     points: [
-      "Transparent monthly reporting of ad spend and cost-per-lead",
-      "Direct Click-to-WhatsApp conversion tracking",
-      "Zero inflated bot followers, fake reviews, or vanity metrics",
+      "Transparent reporting of advertising spend and campaign performance",
+      "WhatsApp, phone call and inquiry tracking where technically supported",
+      "A focus on genuine audience engagement rather than inflated vanity metrics",
     ],
   },
 ];
@@ -76,20 +71,24 @@ export default function WhyBuzzler() {
             The Buzzler Advantage
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif mb-4">
-            Rooted in Odisha. Driven by verifiable business growth.
+            A Creative Agency in Odisha Focused on Business Growth
           </h2>
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-            Generic digital agencies treat every business the same with cookie-cutter posts. Here is why ambitious cafes, gyms, colleges, real estate brands, and hotels across Puri and Odisha partner with Buzzler to scale.
+            Buzzler helps businesses in Puri, Bhubaneswar and across Odisha
+            strengthen their brands through creative campaigns, professional
+            video production, social media marketing and performance advertising.
+            Our approach combines regional market understanding with creative
+            execution tailored to each business.
           </p>
         </div>
 
         {/* 4 Pillars Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {pillars.map((pillar, index) => {
+          {pillars.map((pillar) => {
             const Icon = pillar.icon;
             return (
               <div
-                key={index}
+                key={pillar.title}
                 className="bg-[#FAF7F2] rounded-3xl p-8 border border-stone-200 hover:border-stone-400/80 transition-all duration-300 hover:shadow-lg flex flex-col justify-between"
               >
                 <div>
@@ -131,17 +130,19 @@ export default function WhyBuzzler() {
                 Odisha Business Strategy
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold font-serif text-[#FAF7F2]">
-                Ready to elevate your brand's presence?
+                Ready to Grow Your Business with Buzzler?
               </h3>
               <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
-                Whether you are gearing up for weekend dining rushes, the college admission season, new gym fitness memberships, or tourist holiday surges, Buzzler builds the marketing engine that sets you apart.
+                Whether you need promotional videos, stronger brand identity,
+                influencer collaborations or targeted advertising, Buzzler can
+                help you plan a marketing approach suited to your business goals.
               </p>
             </div>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#F59E0B] text-black text-sm font-bold hover:bg-amber-400 transition-all shrink-0 shadow-md cursor-pointer"
             >
-              <span>Schedule A Free Strategy Call</span>
+              <span>Discuss Your Marketing Goals</span>
               <ArrowUpRight className="w-4 h-4" />
             </Link>
           </div>
