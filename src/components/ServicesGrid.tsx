@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import {
   Video,
@@ -19,7 +18,7 @@ const services = [
     title: "Social Media Video & 4K Reels",
     subtitle: "Professional video production, promotional films and social media reels.",
     description:
-      "Buzzler provides professional video production and social media video services for businesses in Puri, Bhubaneswar and across Odisha. From Instagram Reels and promotional videos to property walkthroughs and brand films, we help businesses present their products, services and experiences through engaging visual content.",
+      "Buzzler provides professional video production for businesses in Puri, Bhubaneswar and across Odisha. As a creative video production team, we create Instagram Reels, promotional videos, property walkthroughs and brand films that help businesses present their products, services and experiences through engaging visual content.",
     deliverables: [
       "Cafes & Dining: Sizzling dish macro-shots, mocktail pours & dining ambience",
       "Gyms & Fitness: High-energy workout cinematography & real transformation spotlights",
@@ -36,7 +35,7 @@ const services = [
     title: "Meta & Google Ads",
     subtitle: "Targeted Meta and Google advertising for local business growth.",
     description:
-      "We manage Meta Ads on Instagram and Facebook, along with Google Ads campaigns, to help businesses reach relevant audiences. From local lead generation and search campaigns to promotional advertising, we build campaigns around your business goals and track inquiries to understand campaign performance.",
+      "We manage Meta Ads on Instagram and Facebook, along with Google Ads campaigns for businesses in Puri, Bhubaneswar and across Odisha. From local lead generation and search campaigns to promotional advertising, we build campaigns around your business goals and track inquiries to understand campaign performance.",
     deliverables: [
       "Gyms: Direct WhatsApp trial pass lead capture funnels",
       "Colleges: High-intent student admission inquiry campaigns (Search + Social)",
@@ -84,7 +83,11 @@ const services = [
 
 export default function ServicesGrid() {
   return (
-    <section id="services" className="py-24 bg-white border-y border-stone-200/80 relative">
+    <section
+      id="services"
+      aria-labelledby="services-heading"
+      className="py-24 bg-white border-y border-stone-200/80 relative"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -93,15 +96,18 @@ export default function ServicesGrid() {
               <Layers className="w-3.5 h-3.5 text-[#F59E0B]" />
               Four Core Services
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif">
+            <h2
+              id="services-heading"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif"
+            >
               Digital Marketing &amp; Creative Services in Odisha
             </h2>
           </div>
           <p className="text-stone-600 max-w-md text-sm sm:text-base leading-relaxed">
-            Buzzler is a creative and digital marketing agency serving businesses
-            in Puri, Bhubaneswar and across Odisha. We bring together video
+            Buzzler provides creative and digital marketing services to businesses
+            in Puri, Bhubaneswar and across Odisha. Our work brings together video
             production, Meta and Google Ads, influencer marketing, and branding
-            to help businesses build visibility and reach their target audiences.
+            to help businesses build visibility and connect with relevant audiences.
           </p>
         </div>
 
@@ -140,8 +146,8 @@ export default function ServicesGrid() {
                     <span className="text-[11px] uppercase font-bold tracking-wider text-stone-400 block mb-2">
                       Cross-Industry Application:
                     </span>
-                    {service.deliverables.map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-2 text-xs text-stone-700 font-medium">
+                    {service.deliverables.map((item) => (
+                      <div key={item} className="flex items-start gap-2 text-xs text-stone-700 font-medium">
                         <Check className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </div>
