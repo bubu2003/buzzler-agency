@@ -226,7 +226,7 @@ export async function POST(request: Request) {
           },
           body: JSON.stringify({
             from: process.env.RESEND_FROM_EMAIL || "Buzzler Leads <onboarding@resend.dev>",
-            to: [process.env.CONTACT_NOTIFICATION_EMAIL || "hello@buzzleragency.com"],
+            to: [process.env.CONTACT_NOTIFICATION_EMAIL || "bubunbaral343@gmail.com"],
             subject: `New Growth Proposal Lead: ${cleanName} (${cleanBusiness})`,
             html: `
               <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e7e5e4; border-radius: 8px;">
