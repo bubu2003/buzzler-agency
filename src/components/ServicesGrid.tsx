@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import {
   Video,
@@ -11,11 +9,6 @@ import {
   Check,
   Sparkles,
   Layers,
-  ChevronRight,
-  UtensilsCrossed,
-  Dumbbell,
-  GraduationCap,
-  Building2,
 } from "lucide-react";
 
 const services = [
@@ -24,68 +17,68 @@ const services = [
     icon: Video,
     tag: "Visual Storytelling",
     title: "Social Media Video & 4K Reels",
-    subtitle: "High-production vertical reels & aerial films that stop the scroll.",
+    subtitle: "Professional video production, promotional films and social media reels.",
     description:
-      "Modern consumers engage with dynamic vertical video on Instagram and YouTube. We script, film on-location in Puri, Bhubaneswar, and across Odisha with cinema-grade gear and aerial drone views, editing high-retention reels designed to convert attention into customers.",
+      "Buzzler provides professional video production and social media video services for businesses in Puri, Bhubaneswar and across Odisha. From Instagram Reels and promotional videos to property walkthroughs and brand films, we help businesses present their products, services and experiences through engaging visual content.",
     deliverables: [
       "Cafes & Dining: Sizzling dish macro-shots, mocktail pours & dining ambience",
       "Gyms & Fitness: High-energy workout cinematography & real transformation spotlights",
       "Schools & Colleges: Campus facility walkthroughs, laboratories & academic authority",
       "Real Estate & Hotels: Oceanfront views, property walkthroughs & lifestyle storytelling",
-      "Dynamic sound design synchronized with trending audio algorithms",
+      "Music selection and sound design suited to each video",
     ],
-    highlight: "Cinema 4K & Aerial Coverage",
+    highlight: "Professional Video Production",
   },
   {
     id: "ads",
     icon: Target,
     tag: "Paid Acquisition",
     title: "Meta & Google Ads",
-    subtitle: "High-intent search capture & hyper-local social conversion funnels.",
+    subtitle: "Targeted Meta and Google advertising for local business growth.",
     description:
-      "Stop boosting random posts with no clear return. We build targeted performance campaigns on Meta (Instagram & Facebook) and Google Search, connecting high-intent local customers directly to your WhatsApp and phone lines with clear inquiry tracking.",
+      "We manage Meta Ads on Instagram and Facebook, along with Google Ads campaigns, to help businesses reach relevant audiences. From local lead generation and search campaigns to promotional advertising, we build campaigns around your business goals and track inquiries to understand campaign performance.",
     deliverables: [
       "Gyms: Direct WhatsApp trial pass lead capture funnels",
       "Colleges: High-intent student admission inquiry campaigns (Search + Social)",
       "Hotels: Geotargeted weekend staycation campaigns for neighboring cities",
       "Cafes & Retail: Radius-targeted weekend footfall and promotional ad sets",
-      "Transparent monthly reporting of ad spend and verified cost-per-lead",
+      "Campaign inquiry and cost-per-lead reporting",
     ],
-    highlight: "Targeted Local Funnels",
+    highlight: "Targeted Local Advertising",
   },
   {
     id: "influencer",
     icon: Users2,
     tag: "Creator Collaborations",
     title: "Influencer Marketing",
-    subtitle: "Vetted regional creators who drive genuine local awareness.",
+    subtitle: "Regional influencer collaborations that build brand awareness.",
     description:
-      "We connect your brand with authentic content creators across Odisha and West Bengal—food vloggers, fitness creators, lifestyle storytellers, and travel enthusiasts—managing the campaign from brief to publishing with commercial usage rights.",
+      "We help brands collaborate with regional content creators across Odisha and West Bengal. From food vloggers and fitness creators to lifestyle and travel influencers, we coordinate creator selection, campaign briefs, content publishing and performance reporting.",
     deliverables: [
       "Curated food vloggers for restaurant tasting events and review reels",
-      "Local fitness athletes testing and showcasing your gym facilities",
+      "Local fitness creators testing and showcasing your gym facilities",
       "Travel creators documenting resort, hotel, and destination experiences",
-      "Commercial advertising rights included for paid social ad amplification",
-      "Campaign reach, engagement, and direct DM tracking reports",
+      "Paid advertising usage rights, as agreed in campaign terms",
+      "Campaign reach, engagement, and inquiry tracking reports",
     ],
-    highlight: "Vetted Regional Creators",
+    highlight: "Relevant Regional Creators",
   },
   {
     id: "branding",
     icon: Palette,
     tag: "Brand Identity",
     title: "Branding & Identity",
-    subtitle: "Distinct visual design that commands premium market value.",
+    subtitle: "Logo design, brand identity and consistent visual communication.",
     description:
-      "From memorable logo design and brand color systems to physical print collateral and digital social templates. We craft cohesive identities that help your business stand out from generic local competitors.",
+      "We help businesses develop consistent brand identities through logo design, visual systems, typography, packaging and marketing materials. Our branding services help businesses communicate their identity clearly across digital platforms and physical customer touchpoints.",
     deliverables: [
       "Cafes & Restos: Print menus, digital QR menus & branded packaging",
       "Gyms: Brand marks, merchandise graphics & gym interior typography",
       "Schools & Colleges: Admission prospectuses, brochures & signage systems",
       "Hotels: Guest directories, digital key assets & property branding",
-      "Social media brand style guide and Canva/Figma asset library",
+      "Social media brand style guide and design asset templates",
     ],
-    highlight: "Cohesive Visual Identity",
+    highlight: "Consistent Visual Identity",
   },
 ];
 
@@ -101,11 +94,14 @@ export default function ServicesGrid() {
               Four Core Services
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif">
-              Everything your business needs to command attention.
+              Digital Marketing &amp; Creative Services in Odisha
             </h2>
           </div>
           <p className="text-stone-600 max-w-md text-sm sm:text-base leading-relaxed">
-            We don't offer generic templates or disconnected services. Every campaign is built around consumer habits, regional demographics, and competitive positioning across Odisha.
+            Buzzler is a creative and digital marketing agency serving businesses
+            in Puri, Bhubaneswar and across Odisha. We bring together video
+            production, Meta and Google Ads, influencer marketing, and branding
+            to help businesses build visibility and reach their target audiences.
           </p>
         </div>
 
@@ -175,7 +171,7 @@ export default function ServicesGrid() {
                     href={`/contact?service=${service.id}`}
                     className="text-xs font-semibold text-amber-900 bg-amber-100/80 hover:bg-amber-200/80 px-3.5 py-2 min-h-[40px] flex items-center rounded-full transition-colors"
                   >
-                    Inquire Quote
+                    Request a Quote
                   </Link>
                 </div>
               </div>
@@ -194,7 +190,9 @@ export default function ServicesGrid() {
                 Need an integrated monthly marketing retainer?
               </p>
               <p className="text-xs text-stone-600">
-                We combine regular video shoots, targeted Meta/Google ads, and local creator collaborations into one seamless growth retainer.
+                Combine regular video production, Meta and Google Ads management,
+                and influencer collaborations through an integrated monthly
+                marketing plan.
               </p>
             </div>
           </div>
