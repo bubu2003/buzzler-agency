@@ -14,17 +14,17 @@ import {
   CheckCircle2,
   Send,
   Sparkles,
-  Building2,
   ShieldCheck,
-  Calendar,
+  Loader2,
+  AlertCircle,
 } from "lucide-react";
 
 const servicesList = [
-  "Social Media Video (4K Reels & Drone)",
+  "Social Media Video (4K Reels & Aerials)",
   "Meta & Google Ads Management",
   "Influencer & Creator Collaborations",
-  "Brand Identity & Design Collateral",
-  "Full-Growth Retainer (Unified Marketing)",
+  "Branding & Visual Identity",
+  "Full Monthly Growth Retainer",
 ];
 
 const budgetRanges = [
@@ -40,34 +40,61 @@ export default function ContactQuotePage() {
     businessName: "",
     phone: "",
     email: "",
-    businessCategory: "Cafe / Restaurant / Dining",
-    businessScale: "Established (High Footfall / 1-2 Outlets)",
-    services: ["Social Media Video (4K Reels & Drone)"],
+    businessCategory: "Cafe / Restaurant / Bar",
+    growthGoal: "Increase Weekend Footfall & Walk-Ins",
+    services: ["Social Media Video (4K Reels & Aerials)"],
     budget: "₹35,000 – ₹75,000 / month (Growth)",
-    targetSeason: "Immediate (This Month)",
     message: "",
+    hp: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const toggleService = (srv: string) => {
-    if (formData.services.includes(srv)) {
-      setFormData({
-        ...formData,
-        services: formData.services.filter((s) => s !== srv),
+    setFormData((prev) => ({
+      ...prev,
+      services: prev.services.includes(srv)
+        ? prev.services.filter((s) => s !== srv)
+        : [...prev.services, srv],
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setErrorMessage(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          message: formData.budget
+            ? `[Budget: ${formData.budget}] ${formData.message}`.trim()
+            : formData.message,
+        }),
       });
-    } else {
-      setFormData({
-        ...formData,
-        services: [...formData.services, srv],
-      });
+
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({}));
+        throw new Error(errorData.error || "Failed to submit request. Please try again.");
+      }
+
+      setSubmitted(true);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Network error. Please reach us via WhatsApp directly.";
+      setErrorMessage(msg);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+  const whatsappPrefilledUrl = `https://wa.me/917873343141?text=${encodeURIComponent(
+    `Hi Buzzler Agency, I just submitted a proposal request on buzzler.co.in for ${formData.businessName || "my business"}. My contact number is ${formData.phone}.`
+  )}`;
 
   return (
     <main className="min-h-screen bg-[#FAF7F2] text-[#141413] flex flex-col justify-between">
@@ -99,92 +126,90 @@ export default function ContactQuotePage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            {/* Left Contact & Agency Details */}
+            {/* Left Fast Actions Column */}
             <div className="lg:col-span-5 space-y-6">
-              {/* Direct WhatsApp Callout */}
-              <a
-                href="https://wa.me/917873343141?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20request%20a%20marketing%20quote%20for%20my%20business%20in%20Puri."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block p-6 rounded-3xl bg-emerald-50 border border-emerald-200/80 hover:border-emerald-500 hover:shadow-md transition-all group"
-              >
-                <div className="flex items-center gap-3.5 mb-2">
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center group-hover:scale-105 transition-transform">
-                    <MessageSquare className="w-6 h-6 fill-emerald-600 text-emerald-600" />
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-200/60 px-2 py-0.5 rounded">
-                      Fastest Direct Response
+              <div className="p-8 rounded-3xl bg-white border border-stone-200 shadow-sm space-y-6">
+                <div>
+                  <span className="text-xs font-bold text-amber-700 tracking-wider uppercase block mb-1">
+                    Direct Contact Channels
+                  </span>
+                  <h2 className="text-xl font-bold font-serif text-stone-900">
+                    Prefer direct conversation?
+                  </h2>
+                </div>
+
+                <div className="space-y-3">
+                  <a
+                    href="https://wa.me/917873343141?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20discuss%20a%20marketing%20strategy%20for%20my%20business%20in%20Odisha."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200 hover:border-emerald-500 transition-all group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center">
+                        <MessageSquare className="w-5 h-5 fill-white" />
+                      </div>
+                      <div>
+                        <span className="text-[11px] font-bold text-emerald-800 uppercase tracking-wider block">
+                          Instant Response
+                        </span>
+                        <span className="text-sm font-bold text-emerald-950">
+                          Chat on WhatsApp (+91 78733 43141)
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="tel:+917873343141"
+                    className="flex items-center justify-between p-4 rounded-2xl bg-stone-50 border border-stone-200 hover:border-stone-400 transition-all group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-stone-900 text-white flex items-center justify-center">
+                        <Phone className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <span className="text-[11px] font-bold text-stone-500 uppercase tracking-wider block">
+                          Phone Consultation
+                        </span>
+                        <span className="text-sm font-bold text-stone-900">
+                          +91 78733 43141 (Mon–Sat, 9:30am–7pm)
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="mailto:hello@buzzleragency.com"
+                    className="flex items-center justify-between p-4 rounded-2xl bg-stone-50 border border-stone-200 hover:border-stone-400 transition-all group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-700 flex items-center justify-center">
+                        <Mail className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <span className="text-[11px] font-bold text-stone-500 uppercase tracking-wider block">
+                          Email Inquiries
+                        </span>
+                        <span className="text-sm font-bold text-stone-900">
+                          hello@buzzleragency.com
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div className="pt-4 border-t border-stone-100 space-y-3 text-xs text-stone-600">
+                  <div className="flex items-start gap-2.5">
+                    <MapPin className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
+                    <span>
+                      <strong>Service Area:</strong> Based in Puri, serving businesses in Bhubaneswar and across Odisha.
                     </span>
-                    <h3 className="text-lg font-bold text-stone-900 font-serif mt-0.5">
-                      Chat on WhatsApp
-                    </h3>
                   </div>
-                </div>
-                <p className="text-xs text-stone-600 leading-relaxed">
-                  Connect directly with our founding team on WhatsApp: <strong>+91 78733 43141</strong>. Instant answers regarding shoot schedules and ad pricing.
-                </p>
-              </a>
-
-              {/* Direct Phone Callout */}
-              <a
-                href="tel:+917873343141"
-                className="block p-6 rounded-3xl bg-white border border-stone-200 hover:border-stone-400 hover:shadow-md transition-all group"
-              >
-                <div className="flex items-center gap-3.5 mb-2">
-                  <div className="w-12 h-12 rounded-2xl bg-stone-100 text-stone-800 flex items-center justify-center group-hover:scale-105 transition-transform">
-                    <Phone className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-stone-500">
-                      Direct Telephone
-                    </span>
-                    <h3 className="text-lg font-bold text-stone-900 font-serif mt-0.5">
-                      +91 78733 43141
-                    </h3>
-                  </div>
-                </div>
-                <p className="text-xs text-stone-600">
-                  Monday to Saturday: 9:30 AM – 7:00 PM IST.
-                </p>
-              </a>
-
-              {/* Office Location & Map Details */}
-              <div className="p-6 rounded-3xl bg-white border border-stone-200 space-y-4">
-                <div className="flex items-start gap-3 text-xs text-stone-700">
-                  <MapPin className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="block text-stone-900">Puri Agency Office:</strong>
-                    Marine Drive Road, Swargadwar, Puri, Odisha 752001
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3 text-xs text-stone-700">
-                  <Clock className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="block text-stone-900">On-Site Consultations:</strong>
-                    We visit hotels across Marine Drive, VIP Road, Swargadwar, Konark Marine Drive, and Bhubaneswar for property walkthroughs.
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3 text-xs text-stone-700">
-                  <Mail className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="block text-stone-900">Email Address:</strong>
-                    hello@buzzleragency.com
-                  </div>
-                </div>
-
-                {/* Simulated Google Map Badge */}
-                <div className="pt-2">
-                  <div className="w-full h-36 rounded-2xl bg-stone-100 border border-stone-200 flex flex-col items-center justify-center text-center p-4 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-[radial-gradient(#F59E0B_1px,transparent_1px)] [background-size:16px_16px] opacity-20" />
-                    <MapPin className="w-8 h-8 text-[#F59E0B] mb-1" />
-                    <span className="text-xs font-bold text-stone-900 relative z-10">
-                      Marine Drive • Puri, Odisha
-                    </span>
-                    <span className="text-[10px] text-stone-500 relative z-10">
-                      Local Hospitality Studio & Drone Base
+                  <div className="flex items-start gap-2.5">
+                    <Clock className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
+                    <span>
+                      <strong>Consultations:</strong> Virtual strategy calls and on-site business visits by arrangement.
                     </span>
                   </div>
                 </div>
@@ -194,7 +219,7 @@ export default function ContactQuotePage() {
               <div className="p-4 rounded-2xl bg-amber-50/70 border border-amber-200/80 flex items-center gap-3 text-xs text-amber-950 font-medium">
                 <ShieldCheck className="w-5 h-5 text-amber-700 shrink-0" />
                 <span>
-                  <strong>Buzzler Promise:</strong> 100% confidential. No spam. You will speak directly with our senior hospitality marketing leads.
+                  <strong>Buzzler Promise:</strong> Your contact details will be used to respond to your inquiry. Our team will contact you about your request.
                 </span>
               </div>
             </div>
@@ -202,7 +227,7 @@ export default function ContactQuotePage() {
             {/* Right Complete Quote Form */}
             <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-stone-200 shadow-xl">
               {submitted ? (
-                <div className="py-12 text-center space-y-4">
+                <div className="py-12 text-center space-y-4 animate-in fade-in zoom-in-95 duration-200">
                   <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
@@ -210,17 +235,56 @@ export default function ContactQuotePage() {
                     Quote Request Received!
                   </h2>
                   <p className="text-sm text-stone-600 max-w-md mx-auto">
-                    Thank you, <strong>{formData.name}</strong>. The Buzzler team will review <strong>{formData.businessName || "your business"}</strong> and contact you via WhatsApp or phone at <strong>{formData.phone}</strong> within 24 hours.
+                    Thank you, <strong>{formData.name}</strong>. The Buzzler team will review requirements for <strong>{formData.businessName || "your business"}</strong> and contact you via phone or WhatsApp at <strong>{formData.phone}</strong>.
                   </p>
-                  <button
-                    onClick={() => setSubmitted(false)}
-                    className="mt-4 px-6 py-2.5 rounded-full bg-stone-900 text-white text-xs font-bold hover:bg-black transition-colors"
-                  >
-                    Submit Another Inquiry
-                  </button>
+                  <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a
+                      href={whatsappPrefilledUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-700 transition-colors shadow-sm"
+                    >
+                      <MessageSquare className="w-4 h-4" />
+                      <span>Speed Up Response on WhatsApp</span>
+                    </a>
+                    <button
+                      onClick={() => {
+                        setSubmitted(false);
+                        setFormData({
+                          name: "",
+                          businessName: "",
+                          phone: "",
+                          email: "",
+                          businessCategory: "Cafe / Restaurant / Bar",
+                          growthGoal: "Increase Weekend Footfall & Walk-Ins",
+                          services: ["Social Media Video (4K Reels & Aerials)"],
+                          budget: "₹35,000 – ₹75,000 / month (Growth)",
+                          message: "",
+                          hp: "",
+                        });
+                      }}
+                      className="px-5 py-2.5 rounded-full bg-stone-100 text-stone-700 text-xs font-semibold hover:bg-stone-200 transition-colors cursor-pointer"
+                    >
+                      Submit Another Inquiry
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Honeypot field */}
+                  <div className="hidden" aria-hidden="true">
+                    <label htmlFor="quote-hp">Do not fill this</label>
+                    <input
+                      id="quote-hp"
+                      name="hp"
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={formData.hp}
+                      onChange={(e) => setFormData({ ...formData, hp: e.target.value })}
+                    />
+                  </div>
+
                   <div>
                     <h2 className="text-2xl font-bold font-serif text-stone-900">
                       Business Growth Quote Request
@@ -230,13 +294,25 @@ export default function ContactQuotePage() {
                     </p>
                   </div>
 
+                  {errorMessage && (
+                    <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-xs text-red-700 flex items-center gap-2">
+                      <AlertCircle className="w-4 h-4 shrink-0" />
+                      <span>{errorMessage}</span>
+                    </div>
+                  )}
+
                   {/* Name & Business Name */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
+                      <label
+                        htmlFor="quote-name"
+                        className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5"
+                      >
                         Your Full Name *
                       </label>
                       <input
+                        id="quote-name"
+                        name="name"
                         type="text"
                         required
                         placeholder="e.g. Sambit Mohapatra"
@@ -246,17 +322,20 @@ export default function ContactQuotePage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
+                      <label
+                        htmlFor="quote-business"
+                        className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5"
+                      >
                         Business / Brand Name *
                       </label>
                       <input
+                        id="quote-business"
+                        name="businessName"
                         type="text"
                         required
-                        placeholder="e.g. The Coastal Bean / IronPulse Gym"
+                        placeholder="e.g. Bay Breeze Cafe & Kitchen"
                         value={formData.businessName}
-                        onChange={(e) =>
-                          setFormData({ ...formData, businessName: e.target.value })
-                        }
+                        onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
                         className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"
                       />
                     </div>
@@ -265,25 +344,35 @@ export default function ContactQuotePage() {
                   {/* Phone & Email */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
+                      <label
+                        htmlFor="quote-phone"
+                        className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5"
+                      >
                         Phone / WhatsApp Number *
                       </label>
                       <input
+                        id="quote-phone"
+                        name="phone"
                         type="tel"
                         required
-                        placeholder="+91 78733 43141"
+                        placeholder="+91 98765 43210"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
+                      <label
+                        htmlFor="quote-email"
+                        className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5"
+                      >
                         Email Address (Optional)
                       </label>
                       <input
+                        id="quote-email"
+                        name="email"
                         type="email"
-                        placeholder="director@business.com"
+                        placeholder="owner@brand.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"
@@ -291,50 +380,60 @@ export default function ContactQuotePage() {
                     </div>
                   </div>
 
-                  {/* Business Category & Scale */}
+                  {/* Business Category & Goal */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
-                        Business Category
+                      <label
+                        htmlFor="quote-category"
+                        className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5"
+                      >
+                        Industry / Category
                       </label>
                       <select
+                        id="quote-category"
+                        name="businessCategory"
                         value={formData.businessCategory}
-                        onChange={(e) =>
-                          setFormData({ ...formData, businessCategory: e.target.value })
-                        }
+                        onChange={(e) => setFormData({ ...formData, businessCategory: e.target.value })}
                         className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"
                       >
-                        <option>Cafe / Restaurant / Bar / Dining</option>
-                        <option>Gym / Fitness / CrossFit Club</option>
-                        <option>School / College / Educational Institute</option>
+                        <option>Cafe / Restaurant / Bar</option>
+                        <option>Gym / Fitness / CrossFit Studio</option>
+                        <option>Real Estate / Plotted Township</option>
+                        <option>School / College / Institute</option>
                         <option>Hotel / Resort / Homestay</option>
-                        <option>Clinic / Healthcare / Wellness / Salon</option>
-                        <option>Retail Store / Local Brand / Showroom</option>
+                        <option>Healthcare Clinic / Salon / Spa</option>
+                        <option>Retail Showroom / Fashion Brand</option>
+                        <option>Other Local Business</option>
                       </select>
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
-                        Business Scale / Footfall
+                      <label
+                        htmlFor="quote-goal"
+                        className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5"
+                      >
+                        Primary Campaign Goal
                       </label>
                       <select
-                        value={formData.businessScale}
-                        onChange={(e) =>
-                          setFormData({ ...formData, businessScale: e.target.value })
-                        }
+                        id="quote-goal"
+                        name="growthGoal"
+                        value={formData.growthGoal}
+                        onChange={(e) => setFormData({ ...formData, growthGoal: e.target.value })}
                         className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"
                       >
-                        <option>Boutique / Starter (Single Location)</option>
-                        <option>Established (High Footfall / 1-2 Outlets)</option>
-                        <option>Flagship / Large Campus / Multi-Branch</option>
+                        <option>Increase Weekend Footfall & Walk-Ins</option>
+                        <option>Lead Generation (Real Estate / Admissions / Memberships)</option>
+                        <option>Direct WhatsApp Bookings / Orders</option>
+                        <option>Elevate Brand Prestige & Reputation</option>
+                        <option>Grand Opening / Re-launch Campaign</option>
                       </select>
                     </div>
                   </div>
 
-                  {/* Multi-Service Select */}
+                  {/* Services Multi-Select */}
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-2">
-                      Services Required (Select all that apply)
+                      Services of Interest (Select all that apply)
                     </label>
                     <div className="flex flex-wrap gap-2">
                       {servicesList.map((srv) => {
@@ -343,6 +442,7 @@ export default function ContactQuotePage() {
                           <button
                             type="button"
                             key={srv}
+                            aria-pressed={isSelected}
                             onClick={() => toggleService(srv)}
                             className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-all cursor-pointer ${
                               isSelected
@@ -359,10 +459,15 @@ export default function ContactQuotePage() {
 
                   {/* Budget Expectation */}
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
+                    <label
+                      htmlFor="quote-budget"
+                      className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5"
+                    >
                       Estimated Monthly Budget
                     </label>
                     <select
+                      id="quote-budget"
+                      name="budget"
                       value={formData.budget}
                       onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                       className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"
@@ -375,10 +480,15 @@ export default function ContactQuotePage() {
 
                   {/* Notes & Specific Goals */}
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
+                    <label
+                      htmlFor="quote-message"
+                      className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5"
+                    >
                       Specific Growth Goals or Deadlines (Optional)
                     </label>
                     <textarea
+                      id="quote-message"
+                      name="message"
                       rows={3}
                       placeholder="e.g. We want to pack weekend tables, drive student admissions, fill early morning gym slots, or launch our new location..."
                       value={formData.message}
@@ -389,11 +499,25 @@ export default function ContactQuotePage() {
 
                   <button
                     type="submit"
-                    className="w-full py-4 px-6 rounded-full bg-[#141413] text-[#FAF7F2] text-sm font-bold hover:bg-black transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
+                    disabled={isSubmitting}
+                    className="w-full py-4 px-6 rounded-full bg-[#141413] text-[#FAF7F2] text-sm font-bold hover:bg-black transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    <Send className="w-4 h-4 text-[#F59E0B]" />
-                    <span>Submit Proposal Request</span>
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 text-[#F59E0B] animate-spin" />
+                        <span>Submitting Request...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4 text-[#F59E0B]" />
+                        <span>Submit Proposal Request</span>
+                      </>
+                    )}
                   </button>
+
+                  <p className="text-[11px] text-stone-400 text-center">
+                    Your contact details will be used to respond to your inquiry. Our team will contact you about your request.
+                  </p>
                 </form>
               )}
             </div>

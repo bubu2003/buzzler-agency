@@ -44,6 +44,7 @@ export default function ClosingCTA() {
     growthGoal: "Increase Weekend Footfall & Walk-Ins",
     services: ["Social Media Video (4K Reels & Aerials)"],
     message: "",
+    hp: "", // Honeypot spam trap
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -222,6 +223,7 @@ export default function ClosingCTA() {
                         growthGoal: "Increase Weekend Footfall & Walk-Ins",
                         services: ["Social Media Video (4K Reels & Aerials)"],
                         message: "",
+                        hp: "",
                       });
                     }}
                     className="px-5 py-2.5 rounded-full bg-stone-100 text-stone-700 text-xs font-semibold hover:bg-stone-200 cursor-pointer"
@@ -232,6 +234,20 @@ export default function ClosingCTA() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Honeypot field for bot filtering */}
+                <div className="hidden" aria-hidden="true">
+                  <label htmlFor="contact-hp">Do not fill this</label>
+                  <input
+                    id="contact-hp"
+                    name="hp"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={formData.hp}
+                    onChange={(e) => setFormData({ ...formData, hp: e.target.value })}
+                  />
+                </div>
+
                 <div>
                   <h3 className="text-2xl font-bold font-serif text-stone-900">
                     Request A Custom Growth Proposal
