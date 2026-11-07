@@ -51,17 +51,12 @@ export default function ClosingCTA() {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const toggleService = (srv: string) => {
-    if (formData.services.includes(srv)) {
-      setFormData({
-        ...formData,
-        services: formData.services.filter((s) => s !== srv),
-      });
-    } else {
-      setFormData({
-        ...formData,
-        services: [...formData.services, srv],
-      });
-    }
+    setFormData((prev) => ({
+      ...prev,
+      services: prev.services.includes(srv)
+        ? prev.services.filter((s) => s !== srv)
+        : [...prev.services, srv],
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -109,10 +104,10 @@ export default function ClosingCTA() {
                 Start The Conversation
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif leading-[1.12]">
-                Ready to grow your brand in Odisha?
+                Looking for a Digital Marketing Agency in Odisha?
               </h2>
               <p className="mt-4 text-stone-600 text-sm sm:text-base leading-relaxed">
-                Whether you need high-retention video reels, targeted Meta & Google ad funnels, creator collaborations, or a full monthly growth retainer, Buzzler is ready to tailor a strategy for your business.
+                From professional video production and branding to influencer collaborations and Meta & Google Ads, Buzzler helps businesses in Puri, Bhubaneswar and across Odisha plan creative marketing campaigns around their business goals.
               </p>
             </div>
 
@@ -166,19 +161,25 @@ export default function ClosingCTA() {
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
                 <span>
-                  <strong>Service Area:</strong> On-ground across Puri, Bhubaneswar, Cuttack & coastal Odisha.
+                  <strong>Service Area:</strong> Based in Puri, serving businesses in Bhubaneswar and across Odisha.
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
                 <span>
-                  <strong>Consultations:</strong> On-site business visits across Puri & Bhubaneswar, or virtual strategy calls.
+                  <strong>Consultations:</strong> Virtual strategy calls and on-site business visits by arrangement.
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
                 <Mail className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
                 <span>
-                  <strong>Email Inquiries:</strong> hello@buzzleragency.com
+                  <strong>Email Inquiries:</strong>{" "}
+                  <a
+                    href="mailto:hello@buzzleragency.com"
+                    className="underline underline-offset-2 hover:text-amber-800"
+                  >
+                    hello@buzzleragency.com
+                  </a>
                 </span>
               </div>
             </div>
@@ -249,10 +250,15 @@ export default function ClosingCTA() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
+                    <label
+                      htmlFor="contact-name"
+                      className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5"
+                    >
                       Your Name *
                     </label>
                     <input
+                      id="contact-name"
+                      name="name"
                       type="text"
                       required
                       placeholder="e.g. Rajesh Mohanty"
@@ -263,10 +269,15 @@ export default function ClosingCTA() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
+                    <label
+                      htmlFor="contact-business"
+                      className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5"
+                    >
                       Business / Brand Name *
                     </label>
                     <input
+                      id="contact-business"
+                      name="businessName"
                       type="text"
                       required
                       placeholder="e.g. Coastal Bean Cafe / IronPulse Gym"
@@ -281,10 +292,15 @@ export default function ClosingCTA() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
+                    <label
+                      htmlFor="contact-phone"
+                      className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5"
+                    >
                       Phone / WhatsApp Number *
                     </label>
                     <input
+                      id="contact-phone"
+                      name="phone"
                       type="tel"
                       required
                       placeholder="+91 98765 43210"
@@ -297,10 +313,15 @@ export default function ClosingCTA() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
+                    <label
+                      htmlFor="contact-email"
+                      className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5"
+                    >
                       Email Address (Optional)
                     </label>
                     <input
+                      id="contact-email"
+                      name="email"
                       type="email"
                       placeholder="owner@brand.com"
                       value={formData.email}
@@ -315,10 +336,15 @@ export default function ClosingCTA() {
                 {/* Business Sector & Growth Goal */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
+                    <label
+                      htmlFor="contact-sector"
+                      className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5"
+                    >
                       Business Sector
                     </label>
                     <select
+                      id="contact-sector"
+                      name="businessCategory"
                       value={formData.businessCategory}
                       onChange={(e) =>
                         setFormData({ ...formData, businessCategory: e.target.value })
@@ -332,10 +358,15 @@ export default function ClosingCTA() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
+                    <label
+                      htmlFor="contact-goal"
+                      className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5"
+                    >
                       Primary Growth Goal
                     </label>
                     <select
+                      id="contact-goal"
+                      name="growthGoal"
                       value={formData.growthGoal}
                       onChange={(e) =>
                         setFormData({ ...formData, growthGoal: e.target.value })
@@ -363,6 +394,7 @@ export default function ClosingCTA() {
                         <button
                           type="button"
                           key={service}
+                          aria-pressed={selected}
                           onClick={() => toggleService(service)}
                           className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-all cursor-pointer ${
                             selected
@@ -379,10 +411,15 @@ export default function ClosingCTA() {
 
                 {/* Message */}
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">
+                  <label
+                    htmlFor="contact-message"
+                    className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5"
+                  >
                     Specific Goals or Target Timeline (Optional)
                   </label>
                   <textarea
+                    id="contact-message"
+                    name="message"
                     rows={3}
                     placeholder="Tell us about your current challenges, upcoming launch, admission window, or target goals..."
                     value={formData.message}
@@ -413,7 +450,7 @@ export default function ClosingCTA() {
                 </button>
 
                 <p className="text-[11px] text-stone-400 text-center">
-                  100% confidential. No spam. You will hear directly from our team in Odisha.
+                  Your contact details will be used to respond to your inquiry. Our team will contact you about your request.
                 </p>
               </form>
             )}
