@@ -10,7 +10,7 @@ import {
   Sparkles,
   MapPin,
   TrendingUp,
-  Eye,
+  Clapperboard,
   MessageSquare,
   CheckCircle2,
   Volume2,
@@ -32,7 +32,7 @@ export const industryPresets = [
     businessName: "Shreedham Township Puri",
     location: "Puri Coastal Corridor, Odisha",
     hook: "“Rate sunile shock heijibe” native Odia hook & middle-class land asset investment reels",
-    views: "5 Master Reels Live",
+    deliverableLabel: "5 Master Campaign Reels",
     reach: "Puri, Bhubaneswar, Cuttack & NRI Odias",
     reelsHighlight: "Odia viral hook + Puri infrastructure boom & affordable plot plans",
     primaryMetric: "Direct WhatsApp Inquiries",
@@ -45,11 +45,11 @@ export const industryPresets = [
     id: "cafe",
     icon: UtensilsCrossed,
     label: "Cafe & Restaurant",
-    categoryBadge: "F&B • Nightlife • Dining",
-    businessName: "The Coastal Bean & Grill",
+    categoryBadge: "Example Blueprint • Dining",
+    businessName: "Example Cafe & Restaurant",
     location: "VIP Road & Sea Beach, Puri",
     hook: "Sizzling seafood sizzler reels & weekend coastal live-music food vlog collabs",
-    views: "Curated local food reach",
+    deliverableLabel: "Proposed: 8x 4K Food Reels",
     reach: "Puri, Cuttack & Bhubaneswar youth/families",
     reelsHighlight: "Steam rising from claypot biryani + golden coffee latte art",
     primaryMetric: "Weekend Table Reservation Inquiries",
@@ -62,11 +62,11 @@ export const industryPresets = [
     id: "gym",
     icon: Dumbbell,
     label: "Gym & Fitness Studio",
-    categoryBadge: "Health • Strength • CrossFit",
-    businessName: "IronPulse Strength Club",
+    categoryBadge: "Example Blueprint • Fitness",
+    businessName: "Example Fitness Studio",
     location: "Grand Road / College Square, Puri",
     hook: "High-octane member transformation stories & free 3-day WhatsApp workout pass ads",
-    views: "Targeted 5km local radius",
+    deliverableLabel: "Proposed: 6x Workout Reels",
     reach: "18-35 age group in Puri & surrounding colleges",
     reelsHighlight: "Heavy barbell deadlifts + sweat-drenched cinematic athlete spotlights",
     primaryMetric: "Trial Pass Inquiries",
@@ -79,11 +79,11 @@ export const industryPresets = [
     id: "hotel",
     icon: Building2,
     label: "Hotel & Resort",
-    categoryBadge: "Hospitality • Tourism • Stays",
-    businessName: "Bay Breeze Ocean Resort",
+    categoryBadge: "Example Blueprint • Stays",
+    businessName: "Example Hotel & Resort",
     location: "Marine Drive & Golden Beach, Puri",
     hook: "Sunrise sea-view balcony reels & direct WhatsApp booking funnels bypassing OTAs",
-    views: "Regional travelers in Kolkata & Odisha",
+    deliverableLabel: "Proposed: 4K Aerial Balcony Tours",
     reach: "Kolkata, Ranchi, Jamshedpur & Bhubaneswar",
     reelsHighlight: "Aerial ocean flyover + candle-lit beachfront dinner setup",
     primaryMetric: "Direct Booking Inquiries",
@@ -96,11 +96,11 @@ export const industryPresets = [
     id: "college",
     icon: GraduationCap,
     label: "School & College",
-    categoryBadge: "Education • Academics • Campus",
-    businessName: "Heritage International Academy",
+    categoryBadge: "Example Blueprint • Education",
+    businessName: "Example School & College",
     location: "Puri-Bhubaneswar Highway Corridor",
     hook: "Campus tour, smart-lab highlights, and high-trust admission season parent ads",
-    views: "Odisha parent & student reach",
+    deliverableLabel: "Proposed: Campus Showcase Film",
     reach: "Coastal Odisha, Khordha, Puri & Cuttack districts",
     reelsHighlight: "Robotics lab innovations + sports complex aerial drone tour",
     primaryMetric: "Qualified Admission Inquiries",
@@ -262,9 +262,10 @@ export default function Hero() {
               {/* Left Column: Vertical Dynamic Reel Simulator */}
               <div className="lg:col-span-5 flex justify-center">
                 <div className="relative w-64 h-[390px] sm:w-72 sm:h-[430px] rounded-3xl overflow-hidden shadow-2xl border-4 border-stone-900 bg-stone-900 text-white flex flex-col justify-between p-4 group">
-                  {/* If video source exists, play actual video */}
+                  {/* If video source exists, play actual video with key to prevent element reuse */}
                   {activePreset.videoSrc ? (
                     <video
+                      key={activePreset.id}
                       ref={videoRef}
                       src={activePreset.videoSrc}
                       playsInline
@@ -333,9 +334,9 @@ export default function Hero() {
                       {activePreset.reelsHighlight}
                     </p>
                     <div className="flex items-center justify-between text-[11px] text-stone-300 pt-1 border-t border-white/10">
-                      <span className="flex items-center gap-1">
-                        <Eye className="w-3 h-3 text-amber-400" />
-                        {activePreset.views}
+                      <span className="flex items-center gap-1.5">
+                        <Clapperboard className="w-3 h-3 text-amber-400 shrink-0" />
+                        <span className="text-[10px]">{activePreset.deliverableLabel}</span>
                       </span>
                       <span className="text-amber-300 font-semibold text-[10px]">
                         {activePreset.primaryMetric}
@@ -353,7 +354,7 @@ export default function Hero() {
                     Strategy Profile: {activePreset.label}
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-stone-900 font-serif">
-                    How Buzzler attracts customers to {activePreset.businessName}
+                    How Buzzler Builds Marketing Campaigns for {activePreset.businessName}
                   </h3>
                   <p className="text-sm text-stone-600">
                     Customized creative angles and local ad geotargeting tailored to customer habits in Puri, Bhubaneswar & coastal Odisha.
