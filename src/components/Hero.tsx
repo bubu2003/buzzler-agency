@@ -151,20 +151,20 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-900/[0.04] border border-stone-300/80 mb-6 shadow-2xs hover:bg-stone-900/[0.07] transition-all max-w-full">
             <span className="flex h-2 w-2 rounded-full bg-[#F59E0B] animate-pulse shrink-0" />
             <span className="hidden sm:inline text-xs font-semibold uppercase tracking-wider text-stone-800">
-              Creative & Digital Marketing Agency
+              Creative Agency Serving Puri & Businesses Across Odisha
             </span>
             <span className="sm:hidden text-[11px] font-semibold uppercase tracking-wider text-stone-800">
-              Creative Agency
+              Creative Agency Serving Puri & Odisha
             </span>
             <span className="text-stone-300">|</span>
             <span className="text-xs font-medium text-stone-600 flex items-center gap-1 shrink-0">
-              <MapPin className="w-3 h-3 text-[#F59E0B]" /> Odisha, India
+              <MapPin className="w-3 h-3 text-[#F59E0B]" /> Puri, Odisha
             </span>
           </div>
 
-          {/* Primary keyword in H1 */}
+          {/* Single primary H1 heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#141413] leading-[1.08] mb-6 font-serif">
-            Creative & Digital Marketing Agency in{" "}
+            Creative Agency in{" "}
             <span className="relative inline-block text-stone-900">
               Odisha.
               <svg
@@ -183,9 +183,9 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* Clear service description */}
+          {/* Clear supporting paragraph */}
           <p className="text-lg sm:text-xl text-stone-600 max-w-3xl mb-8 leading-relaxed font-normal">
-            Buzzler helps ambitious businesses grow through high-impact video production, performance ads on Meta & Google, authentic influencer marketing, and distinct branding across Puri, Bhubaneswar, and Odisha.
+            Buzzler helps businesses in Puri, Bhubaneswar and across Odisha grow through creative branding, professional video production, social media marketing, influencer collaborations, and targeted Meta &amp; Google Ads. We create marketing campaigns tailored to your brand, audience and business goals.
           </p>
 
           {/* Dual CTAs + WhatsApp */}
@@ -209,11 +209,11 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Proof of Work Highlight Pill */}
+          {/* Featured Project Pill */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-amber-100/80 border border-amber-300/80 text-xs text-amber-950 font-medium mb-12">
             <Sparkles className="w-4 h-4 text-amber-700 shrink-0" />
             <span>
-              <strong>Proof of Work:</strong> 5 live vertical reels produced for <strong>Shreedham Township</strong> in Puri. Tap below to preview.
+              <strong>Featured Project:</strong> Explore five vertical video reels produced for <strong>Shreedham Township</strong> in Puri. Tap below to preview.
             </span>
           </div>
         </div>
@@ -225,10 +225,10 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-stone-100 gap-4">
               <div>
                 <span className="text-[11px] font-bold uppercase tracking-wider text-amber-700 bg-amber-100/70 px-2.5 py-1 rounded-full">
-                  Industry Strategy Playbooks
+                  Industry Playbooks
                 </span>
-                <h2 className="text-lg font-bold text-stone-900 mt-1 font-serif">
-                  Select your sector to see how Buzzler creates demand:
+                <h2 className="text-lg sm:text-xl font-bold text-stone-900 mt-1 font-serif">
+                  Creative Marketing Solutions for Different Industries
                 </h2>
               </div>
 
@@ -292,7 +292,7 @@ export default function Hero() {
                   {/* Reel Top Bar */}
                   <div className="flex items-center justify-between text-xs font-medium z-10">
                     <span className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-xs text-[11px] text-amber-300 border border-white/10">
-                      <Sparkles className="w-3 h-3 text-[#F59E0B]" />
+                      <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
                       Buzzler 4K Reel
                     </span>
                     {activePreset.videoSrc && (
