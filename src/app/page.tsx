@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ReelsShowcase from "@/components/ReelsShowcase";
@@ -11,6 +12,22 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import BlogPreview from "@/components/BlogPreview";
 import ClosingCTA from "@/components/ClosingCTA";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Creative Agency in Odisha | Buzzler",
+  description:
+    "Buzzler is a creative and digital marketing agency in Odisha offering video production, branding, social media marketing, influencer collaborations, and Meta & Google Ads.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Creative Agency in Odisha | Buzzler",
+    description:
+      "Creative campaigns, video production, branding and performance marketing for businesses across Puri, Bhubaneswar and Odisha.",
+    url: "https://www.buzzler.co.in/",
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (

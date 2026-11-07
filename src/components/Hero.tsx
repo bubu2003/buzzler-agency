@@ -49,14 +49,14 @@ export const industryPresets = [
     businessName: "The Coastal Bean & Grill",
     location: "VIP Road & Sea Beach, Puri",
     hook: "Sizzling seafood sizzler reels & weekend coastal live-music food vlog collabs",
-    views: "240K+ food lover views",
+    views: "Curated local food reach",
     reach: "Puri, Cuttack & Bhubaneswar youth/families",
     reelsHighlight: "Steam rising from claypot biryani + golden coffee latte art",
-    primaryMetric: "+45% Weekend Table Footfall",
+    primaryMetric: "Weekend Table Reservation Inquiries",
     monthlyDeliverable: "8x Sizzling 4K Food Reels + Local Foodie Collabs",
     bgGradient: "radial-gradient(circle at 50% 30%, #f97316 0%, #1c1917 80%)",
     videoSrc: undefined,
-    handle: "@buzzler.odisha",
+    handle: "@buzzler.agency",
   },
   {
     id: "gym",
@@ -66,14 +66,14 @@ export const industryPresets = [
     businessName: "IronPulse Strength Club",
     location: "Grand Road / College Square, Puri",
     hook: "High-octane member transformation stories & free 3-day WhatsApp workout pass ads",
-    views: "165K+ local fitness views",
+    views: "Targeted 5km local radius",
     reach: "18-35 age group in Puri & surrounding colleges",
     reelsHighlight: "Heavy barbell deadlifts + sweat-drenched cinematic athlete spotlights",
-    primaryMetric: "140+ Trial WhatsApp Leads / Mo",
+    primaryMetric: "Trial Pass Inquiries",
     monthlyDeliverable: "6x High-Energy Reels + Meta Membership Ad Funnel",
     bgGradient: "radial-gradient(circle at 50% 30%, #ef4444 0%, #1c1917 80%)",
     videoSrc: undefined,
-    handle: "@buzzler.odisha",
+    handle: "@buzzler.agency",
   },
   {
     id: "hotel",
@@ -83,14 +83,14 @@ export const industryPresets = [
     businessName: "Bay Breeze Ocean Resort",
     location: "Marine Drive & Golden Beach, Puri",
     hook: "Sunrise sea-view balcony reels & direct WhatsApp booking funnels bypassing OTAs",
-    views: "195K+ travelers reached",
+    views: "Regional travelers in Kolkata & Odisha",
     reach: "Kolkata, Ranchi, Jamshedpur & Bhubaneswar",
-    reelsHighlight: "Drone ocean flyover + candle-lit beachfront dinner setup",
-    primaryMetric: "-25% OTA Commission Loss",
-    monthlyDeliverable: "4K Drone Balcony Tours + Kolkata Weekend Ad Funnel",
+    reelsHighlight: "Aerial ocean flyover + candle-lit beachfront dinner setup",
+    primaryMetric: "Direct Booking Inquiries",
+    monthlyDeliverable: "4K Aerial Balcony Tours + Weekend Traveler Ad Funnel",
     bgGradient: "radial-gradient(circle at 50% 30%, #f59e0b 0%, #1c1917 80%)",
     videoSrc: undefined,
-    handle: "@buzzler.odisha",
+    handle: "@buzzler.agency",
   },
   {
     id: "college",
@@ -99,15 +99,15 @@ export const industryPresets = [
     categoryBadge: "Education • Academics • Campus",
     businessName: "Heritage International Academy",
     location: "Puri-Bhubaneswar Highway Corridor",
-    hook: "Drone campus tour, smart-lab highlights, and high-trust admission season parent ads",
-    views: "310K+ parent & student views",
+    hook: "Campus tour, smart-lab highlights, and high-trust admission season parent ads",
+    views: "Odisha parent & student reach",
     reach: "Coastal Odisha, Khordha, Puri & Cuttack districts",
     reelsHighlight: "Robotics lab innovations + sports complex aerial drone tour",
-    primaryMetric: "380+ Verified Admission Inquiries",
+    primaryMetric: "Qualified Admission Inquiries",
     monthlyDeliverable: "Campus Showcase Film + Google Search Admission Ads",
     bgGradient: "radial-gradient(circle at 50% 30%, #3b82f6 0%, #1c1917 80%)",
     videoSrc: undefined,
-    handle: "@buzzler.odisha",
+    handle: "@buzzler.agency",
   },
 ];
 
@@ -147,26 +147,26 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-          {/* Eyebrow badge with pixel bee detail */}
+          {/* Eyebrow badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-900/[0.04] border border-stone-300/80 mb-6 shadow-2xs hover:bg-stone-900/[0.07] transition-all max-w-full">
             <span className="flex h-2 w-2 rounded-full bg-[#F59E0B] animate-pulse shrink-0" />
             <span className="hidden sm:inline text-xs font-semibold uppercase tracking-wider text-stone-800">
-              Creative Performance Marketing for Puri & Odisha Brands
+              Creative & Digital Marketing Agency
             </span>
             <span className="sm:hidden text-[11px] font-semibold uppercase tracking-wider text-stone-800">
-              Creative Marketing • Odisha
+              Creative Agency
             </span>
             <span className="text-stone-300">|</span>
             <span className="text-xs font-medium text-stone-600 flex items-center gap-1 shrink-0">
-              <MapPin className="w-3 h-3 text-[#F59E0B]" /> Puri, Odisha
+              <MapPin className="w-3 h-3 text-[#F59E0B]" /> Odisha, India
             </span>
           </div>
 
-          {/* Main Editorial Headline */}
+          {/* Primary keyword in H1 */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#141413] leading-[1.08] mb-6 font-serif">
-            Make your brand the{" "}
+            Creative & Digital Marketing Agency in{" "}
             <span className="relative inline-block text-stone-900">
-              buzz of Puri.
+              Odisha.
               <svg
                 className="absolute -bottom-2 left-0 w-full h-3 text-[#F59E0B] opacity-80"
                 viewBox="0 0 300 12"
@@ -183,9 +183,9 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* Concise supporting copy highlighting versatility */}
+          {/* Clear service description */}
           <p className="text-lg sm:text-xl text-stone-600 max-w-3xl mb-8 leading-relaxed font-normal">
-            Video-first creative content, high-converting Meta & Google ads, and authentic local storytelling crafted for <strong>real estate, cafes, restaurants, gyms, hotels, schools & colleges</strong> across Puri and Odisha.
+            Buzzler helps ambitious businesses grow through high-impact video production, performance ads on Meta & Google, authentic influencer marketing, and distinct branding across Puri, Bhubaneswar, and Odisha.
           </p>
 
           {/* Dual CTAs + WhatsApp */}
@@ -199,7 +199,7 @@ export default function Hero() {
             </Link>
 
             <a
-              href="https://wa.me/917873343141?text=Hi%20Buzzler,%20I'd%20like%20to%20discuss%20marketing%20for%20my%20business%20in%20Puri."
+              href="https://wa.me/917873343141?text=Hi%20Buzzler,%20I'd%20like%20to%20discuss%20marketing%20for%20my%20business%20in%20Odisha."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-white text-stone-800 font-semibold text-sm hover:bg-stone-50 border border-stone-300 shadow-2xs hover:shadow-xs transition-all"
@@ -218,14 +218,14 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Tactile Multi-Industry Proof Simulator */}
+        {/* Multi-Industry Proof Simulator */}
         <div className="mt-4 max-w-5xl mx-auto">
           <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200/90 shadow-xl relative">
             {/* Header bar of the simulator */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-stone-100 gap-4">
               <div>
                 <span className="text-[11px] font-bold uppercase tracking-wider text-amber-700 bg-amber-100/70 px-2.5 py-1 rounded-full">
-                  Live Reel & Funnel Engine
+                  Industry Strategy Playbooks
                 </span>
                 <h2 className="text-lg font-bold text-stone-900 mt-1 font-serif">
                   Select your sector to see how Buzzler creates demand:
@@ -356,7 +356,7 @@ export default function Hero() {
                     How Buzzler attracts customers to {activePreset.businessName}
                   </h3>
                   <p className="text-sm text-stone-600">
-                    Customized creative angles and local ad geotargeting tailored to the buyer journey in Puri, Bhubaneswar & coastal Odisha.
+                    Customized creative angles and local ad geotargeting tailored to customer habits in Puri, Bhubaneswar & coastal Odisha.
                   </p>
                 </div>
 
@@ -373,7 +373,7 @@ export default function Hero() {
 
                   <div className="p-3.5 rounded-2xl bg-[#FAF7F2] border border-stone-200">
                     <span className="text-[11px] uppercase font-bold tracking-wider text-stone-500">
-                      Ad Geotargeting & Audience
+                      Target Audience & Reach
                     </span>
                     <p className="text-sm font-semibold text-stone-900 mt-1">
                       {activePreset.reach}
@@ -409,7 +409,7 @@ export default function Hero() {
                 {/* Action button inside mockup */}
                 <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <span className="text-xs text-stone-500">
-                    No lock-in contracts • Tailored quote per sector
+                    Tailored strategy • Transparent scope per sector
                   </span>
                   <Link
                     href={`/contact?industry=${activePreset.id}`}

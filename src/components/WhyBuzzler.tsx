@@ -20,11 +20,11 @@ const pillars = [
     title: "We Live and Breathe Puri & Odisha",
     subtitle: "Local Market Mastery",
     description:
-      "Unlike remote metro agencies, we are right here on the ground. We understand local student admission cycles, weekend dining surges from Bhubaneswar, festival footfall peaks, and holiday tourist behaviors.",
+      "Unlike remote agencies, our team is right here in Odisha. We understand student admission cycles, weekend dining surges from Bhubaneswar, festival footfall peaks, and coastal tourist behaviors.",
     points: [
-      "On-site filming within 24-48 hours across Puri, Konark & Bhubaneswar",
-      "In-depth knowledge of local consumer psychology and spending habits",
-      "Campaign calendar timed precisely to regional festivals & holiday surges",
+      "Dedicated on-ground video production across Puri, Bhubaneswar & coastal Odisha",
+      "In-depth knowledge of local consumer psychology and purchasing habits",
+      "Campaign calendar timed precisely to regional festivals & seasonal demand",
     ],
   },
   {
@@ -32,31 +32,31 @@ const pillars = [
     title: "Video-First Creative Craft",
     subtitle: "Emotional Visual Storytelling",
     description:
-      "People don't read dry brochures or boring static posters anymore. We produce cinematic 4K vertical reels, high-energy gym cinematics, drone campus tours, and food sizzlers that generate immediate customer action.",
+      "Modern audiences engage with dynamic vertical video. We produce cinematic 4K vertical reels, high-energy gym cinematics, campus showcase tours, and food sizzlers that generate immediate customer action.",
     points: [
-      "Dedicated cinema cameras, fast primes & licensed drone pilots",
+      "High-definition camera setups, stabilized gimbals & aerial drone footage",
       "Sound design synchronized with trending audio algorithms",
       "Vertical video crafted specifically for Instagram Reels & YouTube Shorts",
     ],
   },
   {
     icon: Languages,
-    title: "Four-Language Fluency",
+    title: "Multilingual Fluency",
     subtitle: "Odia • Bengali • Hindi • English",
     description:
-      "Odisha's audience is multi-lingual and culturally nuanced. From local Odia youth and visiting Bengali tourists to North Indian pilgrims and corporate leaders, we write messaging that connects authentically.",
+      "Odisha's audience is multilingual and culturally nuanced. From local Odia youth and visiting Bengali tourists to pilgrims and corporate decision-makers, we write messaging that connects authentically.",
     points: [
-      "Localized ad copy that sounds native, not robotic machine translation",
-      "Culturally sensitive creative honoring local traditions and youth trends",
-      "Multi-lingual video voiceovers, subtitles, and social captions",
+      "Localized ad copy that sounds native and culturally resonant",
+      "Creative concepts that respect local traditions while embracing modern trends",
+      "Multilingual video voiceovers, subtitles, and social captions",
     ],
   },
   {
     icon: ShieldCheck,
     title: "Honest, Measurable ROI",
-    subtitle: "Real Leads & Footfall, Not Bot Views",
+    subtitle: "Real Inquiries & Leads, Not Bot Views",
     description:
-      "We judge our success by one metric: your bottom-line business growth. Verified phone calls, direct WhatsApp leads, table reservations, gym memberships, and student enrollment inquiries.",
+      "We evaluate success by tangible business outcomes: verified phone calls, direct WhatsApp leads, table reservations, membership signups, and student enrollment inquiries.",
     points: [
       "Transparent monthly reporting of ad spend and cost-per-lead",
       "Direct Click-to-WhatsApp conversion tracking",
@@ -76,14 +76,14 @@ export default function WhyBuzzler() {
             The Buzzler Advantage
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif mb-4">
-            Built in Puri. Driven by real business growth.
+            Rooted in Odisha. Driven by verifiable business growth.
           </h2>
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-            Generic digital agencies treat every business the same with cookie-cutter posts. Here is why ambitious cafes, gyms, colleges, and hotels in Puri and Odisha partner with Buzzler to scale.
+            Generic digital agencies treat every business the same with cookie-cutter posts. Here is why ambitious cafes, gyms, colleges, real estate brands, and hotels across Puri and Odisha partner with Buzzler to scale.
           </p>
         </div>
 
-        {/* 4 Pillars Grid (Clay-style tactile rounded cards) */}
+        {/* 4 Pillars Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
@@ -128,13 +128,13 @@ export default function WhyBuzzler() {
           <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
             <div className="space-y-2 max-w-2xl">
               <span className="text-xs uppercase font-bold tracking-wider text-amber-400">
-                Puri & Odisha Business Insight
+                Odisha Business Strategy
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold font-serif text-[#FAF7F2]">
-                Is your brand ready to outshine local competitors?
+                Ready to elevate your brand's presence?
               </h3>
               <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
-                Whether you're gearing up for weekend cafe rushes, the college admission season, summer gym fitness batches, or tourist holiday surges, Buzzler builds the engine that puts you ahead.
+                Whether you are gearing up for weekend dining rushes, the college admission season, new gym fitness memberships, or tourist holiday surges, Buzzler builds the marketing engine that sets you apart.
               </p>
             </div>
             <Link

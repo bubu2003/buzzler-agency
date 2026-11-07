@@ -22,70 +22,70 @@ const services = [
   {
     id: "video",
     icon: Video,
-    tag: "Visual Storytelling Engine",
+    tag: "Visual Storytelling",
     title: "Social Media Video & 4K Reels",
-    subtitle: "High-production vertical reels & drone films that stop the scroll.",
+    subtitle: "High-production vertical reels & aerial films that stop the scroll.",
     description:
-      "Customers buy what they feel on Instagram. We script, film on-site in Puri and Bhubaneswar with cinema cameras and licensed drones, and edit high-retention vertical reels that turn viewers into paying patrons.",
+      "Modern consumers engage with dynamic vertical video on Instagram and YouTube. We script, film on-location in Puri, Bhubaneswar, and across Odisha with cinema-grade gear and aerial drone views, editing high-retention reels designed to convert attention into customers.",
     deliverables: [
-      "Cafes & Restos: Sizzling dish macro-shots, cocktail pouring & live ambience",
-      "Gyms: High-octane workout cinematography & real body transformations",
-      "Colleges: Drone campus flyovers, robotics labs & faculty authority spotlight",
-      "Hotels: Balcony ocean views, sunset beach dining & suite walkthroughs",
+      "Cafes & Dining: Sizzling dish macro-shots, mocktail pours & dining ambience",
+      "Gyms & Fitness: High-energy workout cinematography & real transformation spotlights",
+      "Schools & Colleges: Campus facility walkthroughs, laboratories & academic authority",
+      "Real Estate & Hotels: Oceanfront views, property walkthroughs & lifestyle storytelling",
       "Dynamic sound design synchronized with trending audio algorithms",
     ],
-    highlight: "Cinema 4K & Drone Coverage",
+    highlight: "Cinema 4K & Aerial Coverage",
   },
   {
     id: "ads",
     icon: Target,
-    tag: "Direct Revenue & Leads",
+    tag: "Paid Acquisition",
     title: "Meta & Google Ads",
     subtitle: "High-intent search capture & hyper-local social conversion funnels.",
     description:
-      "Stop wasting budget boosting random posts. We capture high-intent Google searchers and retarget local demographics across Puri, Bhubaneswar, Cuttack, and Bengal travelers with direct Click-to-WhatsApp and lead generation ads.",
+      "Stop boosting random posts with no clear return. We build targeted performance campaigns on Meta (Instagram & Facebook) and Google Search, connecting high-intent local customers directly to your WhatsApp and phone lines with clear inquiry tracking.",
     deliverables: [
-      "Gyms: 'Claim Free 3-Day Trial Pass' direct WhatsApp lead capture",
-      "Colleges: High-intent student admission inquiries (Google Search + Meta)",
-      "Hotels: Geotargeted Kolkata/Ranchi long-weekend direct room booking funnels",
-      "Cafes: Thursday-Saturday radius ads driving weekend table reservations",
-      "Transparent monthly ROAS and verified cost-per-lead reporting",
+      "Gyms: Direct WhatsApp trial pass lead capture funnels",
+      "Colleges: High-intent student admission inquiry campaigns (Search + Social)",
+      "Hotels: Geotargeted weekend staycation campaigns for neighboring cities",
+      "Cafes & Retail: Radius-targeted weekend footfall and promotional ad sets",
+      "Transparent monthly reporting of ad spend and verified cost-per-lead",
     ],
-    highlight: "Hyper-Local Lead Funnels",
+    highlight: "Targeted Local Funnels",
   },
   {
     id: "influencer",
     icon: Users2,
-    tag: "Social Proof & Reach",
-    title: "Influencer Collaborations",
-    subtitle: "Vetted creators who bring genuine footfall, not fake bot engagement.",
+    tag: "Creator Collaborations",
+    title: "Influencer Marketing",
+    subtitle: "Vetted regional creators who drive genuine local awareness.",
     description:
-      "No inflated follower counts or useless barter deals. We curate verified regional creators from Odisha and West Bengal—foodies, fitness athletes, educators, and travel vloggers—with complete commercial ad usage rights.",
+      "We connect your brand with authentic content creators across Odisha and West Bengal—food vloggers, fitness creators, lifestyle storytellers, and travel enthusiasts—managing the campaign from brief to publishing with commercial usage rights.",
     deliverables: [
-      "Curated food vloggers for cafe tasting events and viral review reels",
-      "Local fitness creators and athletes testing your gym facilities",
-      "Verified travel storytellers documenting resort and homestay stays",
-      "Full commercial advertising rights granted for paid ad amplification",
-      "Post-campaign reach, engagement, and direct DM attribution reports",
+      "Curated food vloggers for restaurant tasting events and review reels",
+      "Local fitness athletes testing and showcasing your gym facilities",
+      "Travel creators documenting resort, hotel, and destination experiences",
+      "Commercial advertising rights included for paid social ad amplification",
+      "Campaign reach, engagement, and direct DM tracking reports",
     ],
-    highlight: "Vetted Creator Roster",
+    highlight: "Vetted Regional Creators",
   },
   {
     id: "branding",
     icon: Palette,
-    tag: "Visual Identity & Print",
+    tag: "Brand Identity",
     title: "Branding & Identity",
-    subtitle: "End-to-end creative design that commands premium prices.",
+    subtitle: "Distinct visual design that commands premium market value.",
     description:
-      "From bespoke logos and visual design tokens to physical print collateral and digital assets. We build a cohesive, memorable brand identity that separates you from cheap local competitors.",
+      "From memorable logo design and brand color systems to physical print collateral and digital social templates. We craft cohesive identities that help your business stand out from generic local competitors.",
     deliverables: [
-      "Cafes & Restos: Premium print menus, digital QR menus & packaging design",
-      "Gyms: Brand marks, merchandise/apparel design & wall typography graphics",
-      "Schools & Colleges: Annual admission prospectuses, brochures & signage",
-      "Hotels: In-room guest directories, keycard sleeves & entrance facades",
-      "Social media Canva/Figma asset library customized for your staff",
+      "Cafes & Restos: Print menus, digital QR menus & branded packaging",
+      "Gyms: Brand marks, merchandise graphics & gym interior typography",
+      "Schools & Colleges: Admission prospectuses, brochures & signage systems",
+      "Hotels: Guest directories, digital key assets & property branding",
+      "Social media brand style guide and Canva/Figma asset library",
     ],
-    highlight: "Premium Market Positioning",
+    highlight: "Cohesive Visual Identity",
   },
 ];
 
@@ -98,18 +98,18 @@ export default function ServicesGrid() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-200/70 text-xs font-semibold uppercase tracking-wider mb-3">
               <Layers className="w-3.5 h-3.5 text-[#F59E0B]" />
-              Four High-Impact Pillars
+              Four Core Services
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif">
               Everything your business needs to command attention.
             </h2>
           </div>
           <p className="text-stone-600 max-w-md text-sm sm:text-base leading-relaxed">
-            We don't offer generic templates or disconnected services. Every campaign is built specifically around the buyer habits, demographics, and competitive landscape in Puri and Odisha.
+            We don't offer generic templates or disconnected services. Every campaign is built around consumer habits, regional demographics, and competitive positioning across Odisha.
           </p>
         </div>
 
-        {/* Services Grid (Clay-style tactile card cards) */}
+        {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {services.map((service) => {
             const Icon = service.icon;
@@ -167,7 +167,7 @@ export default function ServicesGrid() {
                     }
                     className="inline-flex items-center gap-1 text-xs font-bold text-stone-900 hover:text-amber-700 transition-colors py-2 min-h-[40px]"
                   >
-                    <span>View Deep-Dive & Process</span>
+                    <span>View Service Details</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </Link>
 
@@ -183,7 +183,7 @@ export default function ServicesGrid() {
           })}
         </div>
 
-        {/* Custom Multi-Channel Retainer Banner */}
+        {/* Retainer Banner */}
         <div className="mt-12 bg-amber-50/70 border border-amber-200/80 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-amber-200/70 flex items-center justify-center shrink-0">
@@ -191,10 +191,10 @@ export default function ServicesGrid() {
             </div>
             <div>
               <p className="text-sm font-bold text-stone-900">
-                Need an all-in-one monthly creative & ads growth engine?
+                Need an integrated monthly marketing retainer?
               </p>
               <p className="text-xs text-stone-600">
-                We combine regular video shoots + targeted Meta/Google ads + local creator visits into one integrated retainer for businesses across Puri and Odisha.
+                We combine regular video shoots, targeted Meta/Google ads, and local creator collaborations into one seamless growth retainer.
               </p>
             </div>
           </div>

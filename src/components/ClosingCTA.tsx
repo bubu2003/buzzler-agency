@@ -11,19 +11,22 @@ import {
   CheckCircle2,
   Send,
   Sparkles,
+  Loader2,
+  AlertCircle,
 } from "lucide-react";
 
 const availableServices = [
-  "Social Media Video (4K Reels / Drone)",
+  "Social Media Video (4K Reels & Aerials)",
   "Meta & Google Ads Management",
   "Influencer & Creator Collaborations",
-  "Branding & Print / Digital Collateral",
+  "Branding & Visual Identity",
   "Full Monthly Growth Retainer",
 ];
 
 const businessCategories = [
   "Cafe / Restaurant / Bar",
   "Gym / Fitness / CrossFit Studio",
+  "Real Estate / Plotted Township",
   "School / College / Institute",
   "Hotel / Resort / Homestay",
   "Healthcare Clinic / Salon / Spa",
@@ -39,11 +42,13 @@ export default function ClosingCTA() {
     email: "",
     businessCategory: "Cafe / Restaurant / Bar",
     growthGoal: "Increase Weekend Footfall & Walk-Ins",
-    services: ["Social Media Video (4K Reels / Drone)"],
+    services: ["Social Media Video (4K Reels & Aerials)"],
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const toggleService = (srv: string) => {
     if (formData.services.includes(srv)) {
@@ -59,10 +64,35 @@ export default function ClosingCTA() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMessage(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({}));
+        throw new Error(errorData.error || "Failed to submit request. Please try again.");
+      }
+
+      setSubmitted(true);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Network error. Please reach us via WhatsApp directly.";
+      setErrorMessage(msg);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
+  const whatsappPrefilledUrl = `https://wa.me/917873343141?text=${encodeURIComponent(
+    `Hi Buzzler Agency, I just submitted a proposal request on buzzler.co.in for ${formData.businessName || "my business"}. My contact number is ${formData.phone}.`
+  )}`;
 
   return (
     <section id="quote" className="py-24 bg-[#FAF7F2] relative overflow-hidden">
@@ -79,17 +109,17 @@ export default function ClosingCTA() {
                 Start The Conversation
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#141413] font-serif leading-[1.12]">
-                Ready to make your brand the buzz of Puri?
+                Ready to grow your brand in Odisha?
               </h2>
               <p className="mt-4 text-stone-600 text-sm sm:text-base leading-relaxed">
-                Whether you need viral food reels for your cafe, new membership signups for your gym, student admissions for your college, or direct bookings for your resort, Buzzler is ready to tailor a strategy for you.
+                Whether you need high-retention video reels, targeted Meta & Google ad funnels, creator collaborations, or a full monthly growth retainer, Buzzler is ready to tailor a strategy for your business.
               </p>
             </div>
 
             {/* Quick Connect Cards */}
             <div className="space-y-3">
               <a
-                href="https://wa.me/917873343141?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20request%20a%20marketing%20quote%20for%20my%20business%20in%20Puri."
+                href="https://wa.me/917873343141?text=Hi%20Buzzler%20Agency,%20I'd%20like%20to%20request%20a%20marketing%20quote%20for%20my%20business%20in%20Odisha."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-between p-4 rounded-2xl bg-white border border-stone-200 hover:border-emerald-500 hover:shadow-md transition-all group"
@@ -131,18 +161,18 @@ export default function ClosingCTA() {
               </a>
             </div>
 
-            {/* Local Office Details */}
+            {/* Accurate Service Area Description */}
             <div className="p-5 rounded-2xl bg-white border border-stone-200 space-y-3 text-xs text-stone-600">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
                 <span>
-                  <strong>Office Location:</strong> Marine Drive Road, Near Swargadwar, Puri, Odisha 752001
+                  <strong>Service Area:</strong> On-ground across Puri, Bhubaneswar, Cuttack & coastal Odisha.
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
                 <span>
-                  <strong>On-Site Consultations:</strong> We visit your business premises in Puri, Konark, or Bhubaneswar for in-person walkthroughs.
+                  <strong>Consultations:</strong> On-site business visits across Puri & Bhubaneswar, or virtual strategy calls.
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
@@ -162,17 +192,42 @@ export default function ClosingCTA() {
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-bold font-serif text-stone-900">
-                  Proposal Request Received!
+                  Proposal Request Submitted!
                 </h3>
                 <p className="text-sm text-stone-600 max-w-md mx-auto">
-                  Thank you, <strong>{formData.name}</strong>. The Buzzler team will review <strong>{formData.businessName || "your business"}</strong> and contact you via WhatsApp / Phone at <strong>{formData.phone}</strong> within 24 hours.
+                  Thank you, <strong>{formData.name}</strong>. Your details for <strong>{formData.businessName || "your business"}</strong> have been successfully received. A Buzzler strategist will review your requirements and reach out via phone or WhatsApp at <strong>{formData.phone}</strong>.
                 </p>
-                <button
-                  onClick={() => setSubmitted(false)}
-                  className="mt-4 px-6 py-2.5 rounded-full bg-stone-900 text-white text-xs font-bold hover:bg-black cursor-pointer"
-                >
-                  Submit Another Request
-                </button>
+
+                <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <a
+                    href={whatsappPrefilledUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-700 transition-colors shadow-sm"
+                  >
+                    <MessageSquare className="w-4 h-4" />
+                    <span>Speed Up Response on WhatsApp</span>
+                  </a>
+
+                  <button
+                    onClick={() => {
+                      setSubmitted(false);
+                      setFormData({
+                        name: "",
+                        businessName: "",
+                        phone: "",
+                        email: "",
+                        businessCategory: "Cafe / Restaurant / Bar",
+                        growthGoal: "Increase Weekend Footfall & Walk-Ins",
+                        services: ["Social Media Video (4K Reels & Aerials)"],
+                        message: "",
+                      });
+                    }}
+                    className="px-5 py-2.5 rounded-full bg-stone-100 text-stone-700 text-xs font-semibold hover:bg-stone-200 cursor-pointer"
+                  >
+                    Submit Another Request
+                  </button>
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -181,9 +236,16 @@ export default function ClosingCTA() {
                     Request A Custom Growth Proposal
                   </h3>
                   <p className="text-xs text-stone-500 mt-1">
-                    Fill out your business details below and we will prepare a tailored marketing scope.
+                    Fill out your business details below and our team will prepare a tailored scope and quotation.
                   </p>
                 </div>
+
+                {errorMessage && (
+                  <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-xs text-red-700 flex items-center gap-2">
+                    <AlertCircle className="w-4 h-4 shrink-0" />
+                    <span>{errorMessage}</span>
+                  </div>
+                )}
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
@@ -281,7 +343,7 @@ export default function ClosingCTA() {
                       className="w-full px-4 py-2.5 rounded-xl border border-stone-200 text-sm bg-white focus:outline-hidden focus:ring-2 focus:ring-[#F59E0B]"
                     >
                       <option>Increase Weekend Footfall & Walk-Ins</option>
-                      <option>High-Volume Lead Generation (Members / Admissions)</option>
+                      <option>Lead Generation (Real Estate / Admissions / Memberships)</option>
                       <option>Direct WhatsApp Bookings / Orders</option>
                       <option>Elevate Brand Prestige & Reputation</option>
                       <option>Grand Opening / Re-launch Campaign</option>
@@ -334,14 +396,24 @@ export default function ClosingCTA() {
                 {/* Submit button */}
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-[#141413] text-[#FAF7F2] text-sm font-bold hover:bg-black transition-all shadow-md hover:shadow-lg cursor-pointer"
+                  disabled={isSubmitting}
+                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-[#141413] text-[#FAF7F2] text-sm font-bold hover:bg-black transition-all shadow-md hover:shadow-lg cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-4 h-4 text-[#F59E0B]" />
-                  <span>Send Proposal Request</span>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 text-[#F59E0B] animate-spin" />
+                      <span>Submitting Request...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4 text-[#F59E0B]" />
+                      <span>Send Proposal Request</span>
+                    </>
+                  )}
                 </button>
 
                 <p className="text-[11px] text-stone-400 text-center">
-                  100% confidential. No spam. You will hear directly from our founding team in Puri.
+                  100% confidential. No spam. You will hear directly from our team in Odisha.
                 </p>
               </form>
             )}

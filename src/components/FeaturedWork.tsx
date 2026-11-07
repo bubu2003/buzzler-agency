@@ -59,9 +59,9 @@ const projects: ProjectDemo[] = [
       "WhatsApp Lead Inquiries",
     ],
     conceptObjective:
-      "Drive qualified plot inquiries for premium land near Puri by connecting the upcoming infrastructure boom, Jagannath Puri spiritual heritage, and smart salaried financial habits.",
+      "Drive qualified plot inquiries for premium land near Puri by connecting upcoming infrastructure developments, Jagannath Puri spiritual heritage, and smart financial habits.",
     creativeExecution:
-      "High-energy native Odia hook 'Rate sunile shock heijibe' combined with relatable Hindi financial angles on middle-class salary allocation and real estate investment timing.",
+      "High-energy native Odia hook 'Rate sunile shock heijibe' combined with relatable financial angles on salary allocation and long-term land asset value in coastal Odisha.",
     sampleReelTitle: "Rate Sunile Shock Heijibe: Puri Real Estate Smart Investment",
     deliverablesList: [
       "5x 4K Master Vertical Instagram Reels (Odia & Hindi)",
@@ -80,15 +80,15 @@ const projects: ProjectDemo[] = [
     location: "VIP Road / Sea Beach, Puri",
     servicesProvided: ["4K Sizzling Food Reels", "Local Foodie Influencer Collabs", "Weekend Footfall Meta Ads"],
     conceptObjective:
-      "Transform an artisanal beachside cafe into the #1 youth and tourist hotspot in Puri, driving packed weekend table queues and consistent weekday laptop-work diners.",
+      "Position an artisanal beachside cafe as a premier youth and tourist destination in Puri, driving weekend table reservations and weekday cafe visits.",
     creativeExecution:
-      "High-contrast, macro food cinematography featuring sizzling seafood platters, steaming artisanal pour-overs, and cheesy pizza pulls, paired with trending audio and weekend date-night angles.",
+      "High-contrast, macro food cinematography featuring signature seafood platters, steaming artisanal pour-overs, and cheesy pizza pulls, paired with trending audio and weekend dining angles.",
     sampleReelTitle: "Fresh Catch to Pour-Over: The Ultimate Beach Cafe Experience",
     deliverablesList: [
       "8x 4K Master Vertical Food & Ambience Reels",
-      "Invited 3 Local Food Influencers from Puri & Bhubaneswar",
-      "Radius-Fenced Meta Ads Driving WhatsApp Table Bookings",
-      "Google Business Profile Optimization for 'Best Cafe in Puri'",
+      "Curated local food influencer invite tastings in Puri & Bhubaneswar",
+      "Radius-targeted Meta ads driving direct WhatsApp table bookings",
+      "Google Business Profile optimization for local dining searches",
     ],
     gradientTheme: "from-orange-600 via-amber-600 to-stone-900",
   },
@@ -97,18 +97,18 @@ const projects: ProjectDemo[] = [
     badge: "Strategic Blueprint • Gym & Fitness",
     industryTag: "Health & Fitness",
     title: "IronPulse Strength & CrossFit Club",
-    propertyType: "Premium 5,000 sq.ft Strength & Conditioning Facility",
+    propertyType: "Premium Strength & Conditioning Facility",
     location: "Grand Road / College Square, Puri",
     servicesProvided: ["Cinematic Workout Reels", "Transformation Interviews", "Free 3-Day Pass Meta Funnel"],
     conceptObjective:
-      "Position IronPulse as the most elite training facility in Puri, filling early morning and evening batches with serious fitness enthusiasts and college youth.",
+      "Position IronPulse as a premier training facility in Puri, filling morning and evening workout batches with fitness enthusiasts and young professionals.",
     creativeExecution:
-      "High-octane workout cinematography featuring heavy deadlifts, kettlebell swings, and emotional member transformation stories with a frictionless 'Claim Free 3-Day Pass on WhatsApp' CTA.",
+      "High-energy workout cinematography featuring heavy compound lifts, conditioning drills, and authentic member transformation stories with a frictionless 'Claim Free 3-Day Pass on WhatsApp' CTA.",
     sampleReelTitle: "Heavy Metal & Hard Work: The IronPulse Transformation",
     deliverablesList: [
       "6x High-Energy Vertical Training Reels",
       "Cinematic Before/After Member Video Testimonials",
-      "Hyper-Local Meta Ad Campaign Targeting 18-35 Age Group",
+      "Hyper-Local Meta Ad Campaign Targeting 18-35 Demographics",
       "Automated WhatsApp Greeting for Instant Trial Pass Delivery",
     ],
     gradientTheme: "from-red-600 via-stone-800 to-stone-950",
@@ -118,19 +118,19 @@ const projects: ProjectDemo[] = [
     badge: "Strategic Blueprint • School & College",
     industryTag: "Education & Academics",
     title: "Heritage International Academy & College",
-    propertyType: "CBSE Affiliated Senior Secondary & Junior College",
+    propertyType: "Senior Secondary & Junior College",
     location: "Puri-Bhubaneswar Highway Corridor",
-    servicesProvided: ["Campus Drone Film", "Admissions Lead Funnel", "Parent Testimonial Series"],
+    servicesProvided: ["Campus Showcase Film", "Admissions Lead Funnel", "Parent Testimonial Series"],
     conceptObjective:
-      "Establish the institution as the premier choice for holistic academic excellence in coastal Odisha, driving over 400 verified parent admission inquiries ahead of the new academic session.",
+      "Establish the institution as a trusted choice for academic excellence in coastal Odisha, generating qualified parent admission inquiries ahead of the new academic session.",
     creativeExecution:
-      "Inspiring campus drone flyovers showing modern STEM labs, sports complexes, and arts studios, coupled with authentic interviews with teachers, top rankers, and proud parents.",
+      "Inspiring campus films highlighting modern STEM labs, sports infrastructure, and library facilities, coupled with authentic interviews with teachers, achievers, and parents.",
     sampleReelTitle: "Where Curiosity Meets Excellence: Welcome to Heritage Academy",
     deliverablesList: [
-      "Master 4K Campus Drone Tour & Facility Showcase Film",
-      "Google Search Ads targeting 'Best CBSE School near Puri & Bhubaneswar'",
-      "Multi-Lingual Parent Testimonials (Odia, English & Hindi)",
-      "WhatsApp & Direct Calling Lead Capture Funnel for Admissions Office",
+      "Master 4K Campus Tour & Facility Showcase Film",
+      "Google Search Ads targeting regional school and college admissions",
+      "Multilingual Parent Testimonials (Odia, English & Hindi)",
+      "WhatsApp & Direct Phone Inquiry Capture Funnel for Admissions Office",
     ],
     gradientTheme: "from-blue-700 via-indigo-900 to-stone-950",
   },
@@ -139,19 +139,19 @@ const projects: ProjectDemo[] = [
     badge: "Strategic Blueprint • Hotel & Resort",
     industryTag: "Hospitality & Stays",
     title: "Bay Breeze Grand Resort & Spa",
-    propertyType: "54-Key Luxury Oceanfront Beach Resort",
+    propertyType: "Luxury Oceanfront Beach Resort",
     location: "Marine Drive, Golden Beach, Puri",
-    servicesProvided: ["Cinematic Drone 4K", "Direct Booking Meta Funnel", "Kolkata Weekend Angle"],
+    servicesProvided: ["Cinematic Aerial 4K", "Direct Booking Meta Funnel", "Regional Traveler Campaign"],
     conceptObjective:
-      "Position the resort as the premier weekend getaway destination for affluent Kolkata and Bhubaneswar travelers looking for private ocean-view balconies and sunset beach dining.",
+      "Position the resort as a premier weekend getaway destination for Kolkata and Bhubaneswar travelers looking for ocean-view balconies and beachside dining.",
     creativeExecution:
-      "A 6-part vertical video series capturing golden hour waves, chef's fresh seafood catch, and luxury bathroom amenities, paired with localized Bengali & English ad copy.",
+      "A vertical video series capturing golden-hour coastal waves, chef's fresh seafood preparations, and luxury room amenities, paired with localized ad copy for regional travelers.",
     sampleReelTitle: "Golden Beach Sunrise to Candlelight Ocean Dining",
     deliverablesList: [
       "6x 4K Master Vertical Reels (Color-graded for Instagram)",
-      "Drone Aerial Ocean Permitted Footage Package",
-      "Kolkata & Ranchi Geo-Fenced Meta Direct WhatsApp Ad Sets",
-      "22% Commission Reduction Strategy Bypassing OTAs",
+      "Aerial Coastal Ocean Footage Package",
+      "Geotargeted Meta Ad Sets for Kolkata & Bhubaneswar Travelers",
+      "Direct Click-to-WhatsApp Booking Inquiry Funnel",
     ],
     gradientTheme: "from-amber-600 via-orange-500 to-amber-900",
   },
@@ -225,7 +225,7 @@ export default function FeaturedWork() {
             href="/work"
             className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-900 hover:text-black bg-amber-100/80 hover:bg-amber-200/80 px-4 py-2 rounded-full transition-colors shrink-0"
           >
-            <span>View All Case Studies & Blueprints</span>
+            <span>View All Case Studies</span>
             <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>
@@ -254,7 +254,7 @@ export default function FeaturedWork() {
           ))}
         </div>
 
-        {/* Detailed Featured Project Showcase Card (Clay-style tactile depth) */}
+        {/* Detailed Featured Project Showcase Card */}
         <div className="bg-white rounded-3xl border border-stone-200 shadow-xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12">
             {/* Visual Reel Stage Preview */}
