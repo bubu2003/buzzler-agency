@@ -27,7 +27,7 @@ const industries = [
     deliverables: [
       "4K vertical reels of signature dishes, live mocktails & dining ambience",
       "Local food creator collaborations & trending Instagram audio styling",
-      "Google Business Profile optimization for 'best cafe near me' & local food searches",
+      "Google Business Profile optimization for relevant local cafe and restaurant searches",
       "Weekend brunch & festive promotional ad campaigns",
     ],
     campaignObjective: "Table Reservations and Local Customer Inquiries",
@@ -65,7 +65,7 @@ const industries = [
     buzzlerEngine:
       "We create property showcases, room walkthroughs, and destination-focused video content, supported by social media and advertising campaigns designed to reach travelers considering stays in Puri and other destinations.",
     deliverables: [
-      "Cinematic aerial ocean flyovers and room walkthroughs",
+      "Professional hotel room walkthroughs and destination showcase videos",
       "Weekend getaway social ad campaigns targeting Kolkata & Bhubaneswar",
       "Direct Click-to-WhatsApp inquiry funnels for vacationers",
       "Multilingual copy and subtitles in Bengali, Odia, Hindi, and English",
@@ -255,7 +255,7 @@ export default function IndustryShowcase() {
                   </div>
                   <div className="flex items-center gap-2 text-xs text-stone-300">
                     <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
-                    <span>Commercial video usage rights for paid ad campaigns</span>
+                    <span>Client usage rights for social media &amp; marketing campaigns</span>
                   </div>
                 </div>
               </div>
